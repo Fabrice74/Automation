@@ -1,5 +1,6 @@
 ## LAB1
 This lab is a first simple lab composed of 2 routers reachable by my Ansible VM.
+Objectif of the lab is to push the first ansible commands.
 
 ## LAB Topology
 The lab will be done on EVE-NG
