@@ -1,3 +1,6 @@
+## LAB1
+This lab is a first simple lab composed of 2 routers reachable by my Ansible VM.
+
 ## LAB Topology
 The lab will be done on EVE-NG
 Lab name: Automation-lab1-2routers.unl
