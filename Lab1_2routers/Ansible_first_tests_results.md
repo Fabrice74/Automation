@@ -1,4 +1,4 @@
-osboxes@osboxes:/usr/local/lib/python2.7/dist-packages/ansible$ ansible routers -i hosts -m raw -a "show version"
+#osboxes@osboxes:/usr/local/lib/python2.7/dist-packages/ansible$ ansible routers -i hosts -m raw -a "show version"
 192.168.65.101 | SUCCESS | rc=0 >>
 Cisco IOS Software, Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T, DEVELOPMENT TEST SOFTWARE
 Technical Support: http://www.cisco.com/techsupport
