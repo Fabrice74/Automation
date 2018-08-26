@@ -29,3 +29,10 @@ Lab name: Automation-lab1-2routers.unl
   10.0.0.1              10.0.0.2/24
      |----------------------|
 ```
+
+## Runned commands
+I runned some ansible simple commands with raw module:
+$ ansible ios -i hosts -m raw -a "show arp"
+$ ansible ios -i hosts -m raw -a "show ip arp"
+
+One result is in the file:
