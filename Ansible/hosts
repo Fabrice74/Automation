@@ -4,8 +4,11 @@
 [group2]
 192.168.65.102
 
-[all:vars]
-ansible_user=ansible
-ansible_ssh_pass=ansible
-ansible_connection=smart
+[linux]
+192.168.65.149
+127.0.0.1
 
+[all:vars]
+ansible_user=osboxes
+ansible_ssh_pass=osboxes.org
+ansible_connection=smart

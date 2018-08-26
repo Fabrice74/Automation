@@ -1,0 +1,9 @@
+---
+- name: Execute show arp
+  hosts: all
+  gather_facts: no
+  tasks:
+#    - raw: "show ip arp"
+#      when: "'group2' in group_names"
+#      register: show
+    - debug: var="inventory_hostname=192.168.65.102"

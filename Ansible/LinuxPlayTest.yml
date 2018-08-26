@@ -1,0 +1,13 @@
+---
+- hosts: linux
+  remote_user: osboxes
+  gather_facts: no
+  tasks:
+    - name: ls /home
+      command: ls -al /home
+      register: result
+    - debug: var=result.stdout_lines
+    - name: Copy ansible inventory file to client
+      copy: src=/home/osboxes/Dropbox/Git/Automation/Ansible/hosts 
+              dest=/home/osboxes/Dropbox/Git/Automation/Ansible/hostsCopy 
+                owner=osboxes group=osboxes mode=0644

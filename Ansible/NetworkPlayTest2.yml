@@ -1,0 +1,14 @@
+---
+- name: Execute show arp
+  hosts: all
+  gather_facts: no
+  tasks:
+#    - raw: "show ip arp"
+#      when: "'group2' in group_names"
+#      register: show
+    - debug: var=hostvars
+  #add a comment
+  #tasks:
+  #  - name: test connection
+  #    ping:
+  #    remote_user: yourname
