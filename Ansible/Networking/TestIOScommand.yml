@@ -1,0 +1,14 @@
+---
+- name: Execute show ip arp on IOS devices
+  hosts: r3
+  gather_facts: no
+  tasks:
+    - name: Remove Ethernet0/1 IPv4 and IPv6 address
+      ios_l3_interface:
+        name: Ethernet0/1
+        state: absent
+
+    - name: Set Ethernet0/1 IPv4 address
+      ios_l3_interface:
+        name: Ethernet0/1
+        ipv4: 10.0.0.3/24

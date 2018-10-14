@@ -1,0 +1,21 @@
+---
+- name: Execute show ip arp on IOS devices
+  hosts: r1
+  gather_facts: no
+  tasks:
+    - name: run multiple commands and evaluate the output
+      ios_command:
+        commands:
+          - show version
+          - sh ip interface brief
+        wait_for:
+          - result[0] contains IOS
+          - result[1] contains "Ethernet0/0"
+
+    - name: run command that requires answering a prompt
+      ios_command:
+        commands:
+          - command: 'clear counters Ethernet0/0'
+            prompt: '[confirm]'
+            answer: "\r"
+            #answer: "c"  #is also working
