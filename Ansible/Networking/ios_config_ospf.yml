@@ -1,0 +1,10 @@
+---
+- name: CONFIGURE OSPF ON CISCO IOS
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: IOS | Configure OSPF
+      ios_config:
+        lines:
+        - network 10.0.0.0 0.0.0.255 area 0
+        parents: ['router ospf 1']

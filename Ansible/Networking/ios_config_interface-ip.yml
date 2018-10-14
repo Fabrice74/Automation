@@ -1,7 +1,5 @@
 ---
-- name: Execute show ip arp on IOS devices
-  hosts: r3
-  gather_facts: no
+- gather_facts: no
   tasks:
     - name: Remove Ethernet0/1 IPv4 and IPv6 address
       ios_l3_interface:
@@ -21,3 +19,7 @@
     - name: Test reachability to 10.0.0.1 using default vrf
       ios_ping:
         dest: 10.0.0.1
+
+    - name: save running to startup when modified
+      ios_config:
+        save_when: modified

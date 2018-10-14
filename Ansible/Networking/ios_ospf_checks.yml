@@ -1,0 +1,38 @@
+---
+### Variables declaration ###
+- hosts: ios
+  vars:
+    commands:
+      - "show ip ospf {{ process.id }}"
+      - "show ip ospf {{ process.id }} neighbor"
+      - "show ip ospf {{ process.id }} database database-summary"
+      - "show ip ospf {{ process.id }} traffic"
+      #- "show ip ospf {{ process.id }} fast-reroute"
+      #- "show bfd neighbor client ospf"
+      - "show ip ospf {{ process.id }} interface"  # not parsed
+      - "show ip ospf {{ process.id }} database"  # not parsed
+      - "show version"  # not parsed
+    process:
+      id: 1
+      has_ispf: true
+      has_bfd: true
+      has_ttlsec: true
+      ref_bw: 1000
+      max_lsa5: 5000
+      hosts: all
+      gather_facts: no
+
+### Playbook tasks ###
+
+  name: "BLOCK >> Get data, log, and parse from device"
+  tasks:
+    - name: "IOS >> Collect OSPF PID {{ process.id }} info from routers"
+      ios_command:
+        commands: "{{ commands }}"
+      register: CLI_OUTPUT
+
+    - name: "DEBUG >> Write CLI  output (stdout) to console"
+      debug:
+        var: CLI_OUTPUT
+        #msg: "{{ CLI_OUTPUT.stdout_lines | to_nice_json }}"
+        verbosity: 1
