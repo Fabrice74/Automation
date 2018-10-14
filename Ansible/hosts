@@ -9,6 +9,6 @@
 127.0.0.1
 
 [all:vars]
-ansible_user=osboxes
-ansible_ssh_pass=osboxes.org
+ansible_user=ansible
+ansible_ssh_pass=ansible
 ansible_connection=smart

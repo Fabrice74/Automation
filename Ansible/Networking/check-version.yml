@@ -1,0 +1,13 @@
+---
+- hosts: all
+  gather_facts: no
+  vars:
+    version: 15.4
+
+  tasks:
+  - name: GET VERSION
+    ios_command:
+      commands: show version
+    register: result
+  - fail: msg="Wrong Cisco IOS version"
+    when: "not ('{{version}}' in result.stdout[0])"

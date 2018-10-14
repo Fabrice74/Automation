@@ -1,0 +1,7 @@
+---
+- hosts: routers
+  gather_facts: no
+  tasks:
+  - name: "Configure log logging"
+    ios_command:
+      commands: show ip arp

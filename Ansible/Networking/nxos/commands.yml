@@ -1,0 +1,3 @@
+---
+show_arp: show ip arp
+show_cef: show ip cef

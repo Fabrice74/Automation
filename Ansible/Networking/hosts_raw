@@ -1,0 +1,9 @@
+[routers]
+192.168.65.101
+192.168.65.102
+192.168.65.103
+
+[all:vars]
+ansible_user=ansible
+ansible_ssh_pass=ansible
+host_key_checking = false

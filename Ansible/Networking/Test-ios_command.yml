@@ -1,0 +1,16 @@
+---
+- name: Execute show ip arp on IOS devices
+  hosts: ios
+  gather_facts: no
+  tasks:
+  - name: run show ip arp on remote devices
+    ios_command:
+      commands: show ip arp vrf mgt
+
+- name: Execute show ip arp on NXOS devices
+  hosts: nxos
+  gather_facts: no
+  tasks:
+  - name: run show ip arp on remote devices
+    ios_command:
+      commands: show  arp vrf mgt

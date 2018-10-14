@@ -1,0 +1,14 @@
+
+Prefix               Next Hop             Interface
+0.0.0.0/0            no route
+0.0.0.0/8            drop
+0.0.0.0/32           receive              
+10.0.0.0/24          attached             Ethernet0/1
+10.0.0.0/32          receive              Ethernet0/1
+10.0.0.2/32          receive              Ethernet0/1
+10.0.0.255/32        receive              Ethernet0/1
+127.0.0.0/8          drop
+224.0.0.0/4          drop
+224.0.0.0/24         receive              
+240.0.0.0/4          drop
+255.255.255.255/32   receive              

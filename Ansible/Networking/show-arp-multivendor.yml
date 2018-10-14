@@ -1,0 +1,10 @@
+---
+- hosts: all
+  gather_facts: no
+  vars_files:
+    - "{{os}}/commands.yml"
+  tasks:
+    - name: Show arp
+      raw: "{{show_arp}}"
+      register: result
+    - debug: var=result.stdout_lines

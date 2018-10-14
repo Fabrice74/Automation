@@ -1,0 +1,29 @@
+---
+- hosts: ios
+  vars:
+    ping_target:
+      - '10.0.0.1'
+      - '10.0.0.2'
+  tasks:
+  - name: "Ping targets with ios_command and failed_when"
+    ios_command:
+      commands: ping {{item}}
+    with_items: "{{ping_target}}"
+    ignore_errors: yes
+    register: result
+    failed_when: "not '!!' in result.stdout[0]"
+
+
+  - name: "Ping targets with ios_command and wait-for"
+    ios_command:
+      commands: ping {{item}}
+      timeout: 3
+      retries: 1
+      wait_for:
+        - result[0] contains "!!!"
+    with_items: "{{ping_target}}"
+    ignore_errors: yes
+
+  - name: Test reachability to 10.10.10.10 using default vrf
+    ios_ping:
+      dest: 10.0.0.1

@@ -1,0 +1,25 @@
+---
+- hosts: localhost
+  connection: localhost
+  tasks:
+  - name: DELETE OLD LOG FILE
+    file: path=version_report.txt state=absent
+  - name: CREATE NEW LOG FILE
+    file: path=version_report.txt state=touch
+
+
+- hosts: all
+#  gather_facts: no
+  vars:
+    version: 15.5
+  tasks:
+  - name: GET VERSION
+    ios_command:
+      commands: show version
+    register: result
+  - name: FAILED CHECK
+    lineinfile:
+      dest: version_report.txt
+      regexp: "{{inventory_hostname}}"
+      line: "{{inventory_hostname}}: wrong IOS version"
+    when: "not ('Version {{version}}' in result.stdout[0])"

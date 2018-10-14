@@ -1,0 +1,8 @@
+---
+- name: Dump variables for each host
+  hosts: all
+  connection: local
+  gather_facts: no
+  tasks:
+    - name: display host variables
+      debug: var=hostvars

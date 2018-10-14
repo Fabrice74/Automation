@@ -1,0 +1,7 @@
+---
+# Needed for connection to the hosts
+ansible_user: ansible
+ansible_ssh_pass: ansible
+#ansible_connection=smart
+StrictHostKeyChecking: no
+gather_facts: no

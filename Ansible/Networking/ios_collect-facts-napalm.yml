@@ -1,0 +1,12 @@
+---
+- hosts: r1
+  tasks:
+    - name: Collect all facts from the device
+      napalm_get_facts:
+        hostname: r1
+        username: ansible
+        dev_os: ios
+        password: ansible
+        filter: 'facts,interfaces'
+      register: facts
+    - debug: var=facts
