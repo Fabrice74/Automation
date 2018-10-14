@@ -12,3 +12,8 @@
       ios_l3_interface:
         name: Ethernet0/1
         ipv4: 10.0.0.3/24
+
+    - name: make Ethernet0/1 up
+      ios_interface:
+        name:  Ethernet0/1
+        enabled: True
