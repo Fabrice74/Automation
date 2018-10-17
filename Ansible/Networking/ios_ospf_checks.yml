@@ -33,6 +33,23 @@
 
     - name: "DEBUG >> Write CLI  output (stdout) to console"
       debug:
-        var: CLI_OUTPUT
-        #msg: "{{ CLI_OUTPUT.stdout_lines | to_nice_json }}"
-        verbosity: 1
+        #var: CLI_OUTPUT
+        msg: "{{ CLI_OUTPUT.stdout_lines | to_nice_json }}"
+        #verbosity: 1
+
+    - name: "LOG >> Write CLI output (stdout) to log path"
+      template:
+        src: "templates/log.j2"
+        dest: "{{ inventory_hostname }}.txt"
+        mode: 0444
+        force: false
+        newline_sequence: '\r\n'
+    #when: "hostvars.localhost.log"
+      #changed_when: false
+
+    - name: "SYS >> Parse IOS text output into structured data"
+      set_fact:
+        OSPF_BASIC: "{{ CLI_OUTPUT.stdout[0] | ios_ospf_basic }}"
+        OSPF_NBR: "{{ CLI_OUTPUT.stdout[1] | ios_ospf_neighbor }}"
+        OSPF_DB: "{{ CLI_OUTPUT.stdout[2] | ios_ospf_dbsum }}"
+        OSPF_TRAF: "{{ CLI_OUTPUT.stdout[3] | ios_ospf_traffic }}"

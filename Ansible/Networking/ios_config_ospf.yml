@@ -8,3 +8,7 @@
         lines:
         - network 10.0.0.0 0.0.0.255 area 0
         parents: ['router ospf 1']
+
+    - name: save running to startup when modified
+      ios_config:
+        save_when: modified

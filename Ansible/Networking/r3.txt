@@ -1,0 +1,278 @@
+!!!
+!!! Start command: show ip ospf 1
+!!!
+Routing Process "ospf 1" with ID 10.0.0.3
+ Start time: 00:18:12.088, Time elapsed: 00:01:54.127
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ Number of areas transit capable is 0
+ External flood list length 0
+ IETF NSF helper support enabled
+ Cisco NSF helper support enabled
+ Reference bandwidth unit is 100 mbps
+    Area BACKBONE(0)
+        Number of interfaces in this area is 1
+	Area has no authentication
+	SPF algorithm last executed 00:00:58.990 ago
+	SPF algorithm executed 3 times
+	Area ranges are
+	Number of LSA 4. Checksum Sum 0x01B02D
+	Number of opaque link LSA 0. Checksum Sum 0x000000
+	Number of DCbitless LSA 0
+	Number of indication LSA 0
+	Number of DoNotAge LSA 0
+	Flood list length 0
+!!!
+!!! End command:   show ip ospf 1
+!!!
+!!!
+!!! Start command: show ip ospf 1 neighbor
+!!!
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.0.0.1          1   FULL/DROTHER    00:00:38    10.0.0.1        Ethernet0/1
+10.0.0.2          1   FULL/BDR        00:00:30    10.0.0.2        Ethernet0/1
+!!!
+!!! End command:   show ip ospf 1 neighbor
+!!!
+!!!
+!!! Start command: show ip ospf 1 database database-summary
+!!!
+OSPF Router with ID (10.0.0.3) (Process ID 1)
+
+Area 0 database summary
+  LSA Type      Count    Delete   Maxage
+  Router        3        0        0       
+  Network       1        0        0       
+  Summary Net   0        0        0       
+  Summary ASBR  0        0        0       
+  Type-7 Ext    0        0        0       
+    Prefixes redistributed in Type-7  0
+  Opaque Link   0        0        0       
+  Opaque Area   0        0        0       
+  Subtotal      4        0        0       
+
+Process 1 database summary
+  LSA Type      Count    Delete   Maxage
+  Router        3        0        0       
+  Network       1        0        0       
+  Summary Net   0        0        0       
+  Summary ASBR  0        0        0       
+  Type-7 Ext    0        0        0       
+  Opaque Link   0        0        0       
+  Opaque Area   0        0        0       
+  Type-5 Ext    0        0        0       
+      Prefixes redistributed in Type-5  0
+  Opaque AS     0        0        0       
+  Non-self      2       
+  Total         4        0        0
+!!!
+!!! End command:   show ip ospf 1 database database-summary
+!!!
+!!!
+!!! Start command: show ip ospf 1 traffic
+!!!
+OSPF Router with ID (10.0.0.3) (Process ID 1)
+
+OSPF queue statistics for process ID 1:
+
+                   InputQ     UpdateQ    OutputQ
+  Limit            0          200        0         
+  Drops            0          0          0         
+  Max delay [msec] 1          1          0         
+  Max size         2          2          2         
+    Invalid        0          0          0         
+    Hello          0          0          0         
+    DB des         1          1          2         
+    LS req         1          1          0         
+    LS upd         0          0          0         
+    LS ack         0          0          0         
+  Current size     0          0          0         
+    Invalid        0          0          0         
+    Hello          0          0          0         
+    DB des         0          0          0         
+    LS req         0          0          0         
+    LS upd         0          0          0         
+    LS ack         0          0          0         
+
+
+Interface statistics:
+
+
+    Interface Ethernet0/1
+
+Last clearing of interface traffic counters never
+
+OSPF packets received/sent
+  Type          Packets              Bytes
+  RX Invalid    0                    0
+  RX Hello      26                   1336
+  RX DB des     6                    232
+  RX LS req     2                    96
+  RX LS upd     4                    256
+  RX LS ack     5                    340
+  RX Total      43                   2260
+
+  TX Failed     0                    0
+  TX Hello      16                   1324
+  TX DB des     5                    400
+  TX LS req     2                    112
+  TX LS upd     8                    772
+  TX LS ack     1                    84
+  TX Total      32                   2692
+
+OSPF header errors
+  Length 0, Instance ID 0, Checksum 0, Auth Type 0,
+  Version 0, Bad Source 0, No Virtual Link 0,
+  Area Mismatch 0, No Sham Link 0, Self Originated 0,
+  Duplicate ID 0, Hello 0, MTU Mismatch 0,
+  Nbr Ignored 0, LLS 0, Unknown Neighbor 0,
+  Authentication 0, TTL Check Fail 0, Test discard 0
+
+OSPF LSA errors
+  Type 0, Length 0, Data 0, Checksum 0
+
+
+
+Summary traffic statistics for process ID 1:
+
+OSPF packets received/sent
+
+  Type          Packets              Bytes
+  RX Invalid    0                    0
+  RX Hello      26                   1336
+  RX DB des     6                    232
+  RX LS req     2                    96
+  RX LS upd     4                    256
+  RX LS ack     5                    340
+  RX Total      43                   2260
+
+  TX Failed     0                    0
+  TX Hello      16                   1324
+  TX DB des     5                    400
+  TX LS req     2                    112
+  TX LS upd     8                    772
+  TX LS ack     1                    84
+  TX Total      32                   2692
+
+OSPF header errors
+  Length 0, Instance ID 0, Checksum 0, Auth Type 0,
+  Version 0, Bad Source 0, No Virtual Link 0,
+  Area Mismatch 0, No Sham Link 0, Self Originated 0,
+  Duplicate ID 0, Hello 0, MTU Mismatch 0,
+  Nbr Ignored 0, LLS 0, Unknown Neighbor 0,
+  Authentication 0, TTL Check Fail 0, Test discard 0
+
+OSPF LSA errors
+  Type 0, Length 0, Data 0, Checksum 0
+!!!
+!!! End command:   show ip ospf 1 traffic
+!!!
+!!!
+!!! Start command: show ip ospf 1 interface
+!!!
+Ethernet0/1 is up, line protocol is up 
+  Internet Address 10.0.0.3/24, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 10.0.0.3, Network Type BROADCAST, Cost: 10
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           10        no          no            Base
+  Transmit Delay is 1 sec, State DR, Priority 1
+  Designated Router (ID) 10.0.0.3, Interface address 10.0.0.3
+  Backup Designated router (ID) 10.0.0.2, Interface address 10.0.0.2
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+    Hello due in 00:00:08
+  Supports Link-local Signaling (LLS)
+  Cisco NSF helper support enabled
+  IETF NSF helper support enabled
+  Index 1/1, flood queue length 0
+  Next 0x0(0)/0x0(0)
+  Last flood scan length is 1, maximum is 2
+  Last flood scan time is 0 msec, maximum is 0 msec
+  Neighbor Count is 2, Adjacent neighbor count is 2 
+    Adjacent with neighbor 10.0.0.1
+    Adjacent with neighbor 10.0.0.2  (Backup Designated Router)
+  Suppress hello for 0 neighbor(s)
+!!!
+!!! End command:   show ip ospf 1 interface
+!!!
+!!!
+!!! Start command: show ip ospf 1 database
+!!!
+OSPF Router with ID (10.0.0.3) (Process ID 1)
+
+		Router Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum Link count
+10.0.0.1        10.0.0.1        70          0x80000002 0x00807A 1
+10.0.0.2        10.0.0.2        75          0x80000002 0x007E79 1
+10.0.0.3        10.0.0.3        74          0x80000002 0x007C78 1
+
+		Net Link States (Area 0)
+
+Link ID         ADV Router      Age         Seq#       Checksum
+10.0.0.3        10.0.0.3        69          0x80000002 0x0034C2
+!!!
+!!! End command:   show ip ospf 1 database
+!!!
+!!!
+!!! Start command: show version
+!!!
+Cisco IOS Software, Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T, DEVELOPMENT TEST SOFTWARE
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2013 by Cisco Systems, Inc.
+Compiled Sat 23-Nov-13 03:28 by prod_rel_team
+
+ROM: Bootstrap program is Linux
+
+R3 uptime is 20 minutes
+System returned to ROM by reload at 0
+System image file is "unix:/opt/unetlab/addons/iol/bin/i86bi-linux-l3-adventerprisek9-15.4"
+Last reload reason: Unknown reason
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Linux Unix (Intel-x86) processor with 367096K bytes of memory.
+Processor board ID 67108912
+4 Ethernet interfaces
+1024K bytes of NVRAM.
+
+
+
+Configuration register is 0x0
+!!!
+!!! End command:   show version
+!!!
