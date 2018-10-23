@@ -1,0 +1,13 @@
+---
+- hosts: 127.0.0.1
+  order: sorted
+  gather_facts: False
+  vars:
+    IPADDRESS: 192.168.165/28
+  tasks:
+    - debug:
+        msg:  ip address {{IPADDRESS}}
+
+    - shell: echo 'test'
+      register: foo
+    - debug: msg="the echo was {{ foo.stdout }}"

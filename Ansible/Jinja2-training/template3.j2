@@ -1,0 +1,45 @@
+hostname: {{hostname}}
+!
+router bgp {{asn}}
+{% for n in neighbors %}
+ neighbor {{n.address}} remote-as {{n.asn}}
+ neighbor {{n.address}} description {{n.description}}
+ {% if n.policy is defined -%}
+ neighbor {{n.address}} route-map {{n.policy}} in
+ {% endif -%}
+ {% if n.prefixes is defined -%}
+ neighbor {{n.address}} prefix-list bgp-neighbor-{{n.address}} in
+ {% endif -%}
+ {% if n.state is defined -%}
+ {%   if n.state == "down" -%}
+ neighbor {{n.address}} shutdown
+ {%   endif -%}
+ {% endif -%}
+ !
+{% endfor %}
+!
+! -- prefix-list creation --
+{% for n in neighbors %}
+{%   if n.prefixes is defined -%}
+{%     for prefix in n.prefixes %}
+ip prefix-list bgp-neighbor-{{n.address}} seq {{loop.index}} permit {{prefix}}
+{%     endfor %}
+{%   endif -%}
+!
+{% endfor %}
+!
+! -- prefix-list creation 2nd way --
+{% for n in neighbors if n.prefixes is defined -%}
+{%   for prefix in n.prefixes %}
+ip prefix-list bgp-neighbor-{{n.address}} seq {{loop.index}} permit {{prefix}}
+{%   endfor %}
+!
+{% endfor %}
+!
+!
+{% for intf in interfaces %}
+!
+interface {{intf.name}}
+ip address {{intf.address|ipaddr("address")}} {{intf.address|ipaddr("netmask")}}
+{% endfor %}
+!

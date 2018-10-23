@@ -1,0 +1,42 @@
+hostname: h1
+!
+router bgp 65500
+ neighbor 172.16.0.1 remote-as 65001
+ neighbor 172.16.0.1 description ISP-A
+ neighbor 172.16.0.1 prefix-list bgp-neighbor-172.16.0.1 in
+ !
+ neighbor 172.16.1.1 remote-as 65002
+ neighbor 172.16.1.1 description ISP-B
+ neighbor 172.16.1.1 route-map Backup-Out in
+ neighbor 172.16.1.1 shutdown
+ !
+ neighbor 192.168.0.1 remote-as 65500
+ neighbor 192.168.0.1 description Core-1
+ neighbor 192.168.0.1 route-map IBGP in
+ neighbor 192.168.0.1 prefix-list bgp-neighbor-192.168.0.1 in
+ !
+!
+! -- prefix-list creation --
+ip prefix-list bgp-neighbor-172.16.0.1 seq 1 permit 172.16.0.0/16
+ip prefix-list bgp-neighbor-172.16.0.1 seq 2 permit 172.17.0.0/16
+!
+!
+ip prefix-list bgp-neighbor-192.168.0.1 seq 1 permit 192.168.0.0/20
+ip prefix-list bgp-neighbor-192.168.0.1 seq 2 permit 192.168.128.0/20
+!
+!
+! -- prefix-list creation 2nd way --
+ip prefix-list bgp-neighbor-172.16.0.1 seq 1 permit 172.16.0.0/16
+ip prefix-list bgp-neighbor-172.16.0.1 seq 2 permit 172.17.0.0/16
+!
+ip prefix-list bgp-neighbor-192.168.0.1 seq 1 permit 192.168.0.0/20
+ip prefix-list bgp-neighbor-192.168.0.1 seq 2 permit 192.168.128.0/20
+!
+!
+!
+!
+interface Ethernet0
+ip address 192.168.1.1 255.255.255.0
+!
+interface Ethernet1
+ip address 192.168.2.1 255.255.255.0

@@ -1,0 +1,42 @@
+---
+# Needed for connection to the hosts
+ansible_user: ansible
+ansible_ssh_pass: ansible
+#ansible_connection=smart
+StrictHostKeyChecking: no
+gather_facts: no
+
+hostname: R1-GVA
+syslog:
+  - 172.16.0.1
+  - 172.1.1.1
+
+banner: |
+  |============================
+  |Access to device prohibited
+  |============================
+
+loopback: { id: 0, ip: 172.16.0.1 }
+LAN: { ip: 172.16.10.1 }
+WAN:
+0: { ip: 172.16.22.2, mask: 255.255.255.240 }
+
+vlans:
+  mgmt: { id: 10, description: management }
+  user: { id: 20, description: Users }
+
+interfaces:
+  fa0/0: { ip: 1.1.1.1, mask: 255.255.255.0, vlan: mgmt }
+  fa0/1: { ip: 1.1.2.1, mask: 255.255.255.240, vlan: user }
+  fa0/2: { ip: 1.1.2.1, vlan: user }
+
+
+passwords:
+    cisco: c1sc0
+    admin: DoNotTouch
+    guest: guest
+    default: noPassword
+users:
+- { username: cisco, password: cisco }
+- { username: admin, password: admin, privilege: 15}
+- { username: autocommand, password: auto, autocommand: vty}

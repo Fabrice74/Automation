@@ -1,0 +1,8 @@
+{% for user in users %}
+username {{user.username}} password {{user.password}}
+username {{user.username}} privilege {{user.privilege|default("2")}}
+{% if user.autocommand is defined %}
+username {{user.username}} autocommand {{user.autocommand|default("test")}}
+{% endif %}
+!
+{% endfor %}

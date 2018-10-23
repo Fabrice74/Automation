@@ -1,0 +1,26 @@
+---
+hostname: Edge
+loopback: 192.168.0.1
+asn: 65500
+banner: |
+multiline string
+should have 6 lines but does not
+interfaces:
+  - { name: Ethernet0, address: 192.168.1.1/24 }
+  - { name: Ethernet1, address: 192.168.2.1/24 }
+neighbors:
+  - description: ISP-A
+    address: 172.16.0.1
+    asn: 65001
+    prefixes: [ 172.16.0.0/16, 172.17.0.0/16 ]
+  - description: ISP-B
+    state: down
+    address: 172.16.1.1
+    asn: 65002
+    policy: Backup-Out
+  - description: Core-1
+    address: 192.168.0.1
+    asn: 65500
+    state: present
+    policy: IBGP
+    prefixes: [ "192.168.0.0/20", "192.168.128.0/20" ]}

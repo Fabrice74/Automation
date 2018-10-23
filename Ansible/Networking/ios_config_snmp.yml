@@ -1,0 +1,13 @@
+---
+- name: CONFIGURE SNMP ON CISCO IOS
+  hosts: r1
+  #gather_facts: no
+  tasks:
+    - name: IOS | Configure SNMP
+      ios_config:
+        lines:
+        - "snmp-server community public RO"
+
+#    - name: save running to startup when modified
+#      ios_config:
+#        save_when: modified

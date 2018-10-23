@@ -1,0 +1,12 @@
+hostname{{hostname}}
+!
+interface loopback {{loopback.id}}
+ ip address {{loopback.ip}} {{loopback.subnet|default("255.255.255.255")}}
+!
+{% for name,intf in interfaces %}
+interface {{name}}
+ description {{intf.vlan}}_vlan_{{vlans[intf.vlan].id}}
+ ip address {{intf.ip}} {{intf.mask|default("255.255.255.0")}}
+ no shutdown
+!
+{% endfor %}

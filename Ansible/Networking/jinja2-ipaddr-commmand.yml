@@ -1,0 +1,15 @@
+---
+- hosts: 127.0.0.1
+  order: sorted
+  gather_facts: False
+  vars:
+    IPADDRESS: 192.168.1.165/28
+  tasks:
+    - debug:
+        msg:
+          - ip address {{IPADDRESS | ipaddr('address')}}
+          - netmask1 {{IPADDRESS | ipaddr('netmask')}}
+          - netmask2 {{IPADDRESS | ipv4('netmask')}}
+          - ip address {{IPADDRESS | ipv4(1)}}
+          - wildcard {{IPADDRESS | ipaddr('wildcard')}}
+          - IP & wildcard {{IPADDRESS | ipaddr('network_wildcard')}}
