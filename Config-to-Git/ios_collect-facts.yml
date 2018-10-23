@@ -1,8 +1,0 @@
----
-- hosts: r1
-  tasks:
-    - name: Collect all facts from the device
-      ios_facts:
-        gather_subset: all
-      register: facts
-    - debug: var=facts
