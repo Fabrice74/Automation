@@ -1,0 +1,26 @@
+#
+# Get configuration from managed hosts using "show running" command
+# based on https://github.com/ipspace/ansible-examples/blob/master/Config-to-Git/gc_show.yml
+---
+- name:  Get device configuration
+  hosts: all
+  tasks:
+  - name: Make sure we're in the right branch
+    shell: git checkout {{git_branch|default('master')}}
+    args:
+      chdir: "{{git_repository}}"
+    delegate_to: localhost
+    run_once: true
+    changed_when: no
+
+  - name: Grab configuration
+    ios_command:
+      commands: show running
+    register: cfg
+  - set_fact: config={{ cfg.stdout[0]|regex_replace("\A[^!]*","") }}
+
+  - name: Save configuration to local file
+    copy:
+      content: "{{config}}"
+      dest: "{{git_repository}}/{{inventory_hostname}}.cfg"
+    delegate_to: localhost
