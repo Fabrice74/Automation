@@ -1,0 +1,56 @@
+napalm_facts:
+    fqdn: R1.lab.local
+    hostname: R1
+    interface_list:
+    - Ethernet0/0
+    - Ethernet0/1
+    - Ethernet0/2
+    - Ethernet0/3
+    model: Unknown
+    os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+        DEVELOPMENT TEST SOFTWARE
+    serial_number: '67108880'
+    uptime: 9780
+    vendor: Cisco
+napalm_fqdn: R1.lab.local
+napalm_hostname: R1
+napalm_interface_list:
+- Ethernet0/0
+- Ethernet0/1
+- Ethernet0/2
+- Ethernet0/3
+napalm_interfaces:
+    Ethernet0/0:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: AA:BB:CC:00:10:00
+        speed: 10
+    Ethernet0/1:
+        description: ''
+        is_enabled: true
+        is_up: true
+        last_flapped: -1.0
+        mac_address: AA:BB:CC:00:10:10
+        speed: 10
+    Ethernet0/2:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: AA:BB:CC:00:10:20
+        speed: 10
+    Ethernet0/3:
+        description: ''
+        is_enabled: false
+        is_up: false
+        last_flapped: -1.0
+        mac_address: AA:BB:CC:00:10:30
+        speed: 10
+napalm_model: Unknown
+napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+    DEVELOPMENT TEST SOFTWARE
+napalm_serial_number: '67108880'
+napalm_uptime: 9780
+napalm_vendor: Cisco

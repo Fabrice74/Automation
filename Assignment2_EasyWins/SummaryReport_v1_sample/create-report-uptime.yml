@@ -1,0 +1,16 @@
+---
+- name:  Collect SNMP and vendor-specific facts from devices. Create a text report
+  hosts: all
+  vars:
+  - results: results
+  tasks:
+  # I reuse the facts already collecting with collect-ios_facts_napalm.yml
+  - include_vars: "{{results}}/{{inventory_hostname}}_napalm.yml"
+  - file: path={{results}}/uptime.log state=touch
+    # touch (new in 1.4), an empty file will be created if the path does not exist, while an existing file or
+    # directory will receive updated file access and modification times
+    run_once: true
+  - lineinfile:
+      dest: "{{results}}/uptime.log"
+      regexp: "{{napalm_hostname}}"
+      line:   "{{napalm_hostname}} {{napalm_facts.uptime}}"

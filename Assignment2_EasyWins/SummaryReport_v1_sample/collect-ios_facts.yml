@@ -1,0 +1,13 @@
+---
+- name: Collect IOS Facts from devices. Save them to files
+  hosts: all
+  vars:
+  - results: results
+  tasks:
+  - file: path={{results}} state=directory  #If directory, all intermediate subdirectories will be created if they do not exist.
+    run_once: true  #even if multiple host in host file, task will be executed one time only
+  - ios_facts:
+      gather_subset: all
+    register: result
+  - copy: content="{{result.ansible_facts|to_nice_yaml(indent=4)}}" dest={{results}}/{{inventory_hostname}}.yml
+  - copy: content="{{result.ansible_facts}}" dest={{results}}/{{inventory_hostname}}.json

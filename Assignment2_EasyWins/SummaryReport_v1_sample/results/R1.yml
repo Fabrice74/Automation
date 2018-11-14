@@ -1,0 +1,92 @@
+ansible_net_all_ipv4_addresses:
+- 10.0.0.1
+- 192.168.65.101
+ansible_net_all_ipv6_addresses: []
+ansible_net_config: "Building configuration...\n\nCurrent configuration : 1605 bytes\n\
+    !\n! Last configuration change at 22:40:20 EET Wed Nov 14 2018 by ansible\n!\n\
+    version 15.4\nservice timestamps debug datetime msec\nservice timestamps log datetime\
+    \ msec\nno service password-encryption\n!\nhostname R1\n!\nboot-start-marker\n\
+    boot-end-marker\n!\naqm-register-fnf\n!\nvrf definition mgt\n !\n address-family\
+    \ ipv4\n exit-address-family\n!\nenable password cisco\n!\nno aaa new-model\n\
+    clock timezone EET 2 0\nmmi polling-interval 60\nno mmi auto-configure\nno mmi\
+    \ pvc\nmmi snmp-timeout 180\n!\n!\n!\n!\n!\n!\n\n\n!\n!\n!\n!\nno ip domain lookup\n\
+    ip domain name lab.local\nip cef\nlogin on-success log\nno ipv6 cef\n!\nmultilink\
+    \ bundle-name authenticated\n!\n!\n!\n!\n!\n!\n!\n!\nusername ansible privilege\
+    \ 15 password 0 ansible\nusername cisco privilege 15 password 0 cisco\nusername\
+    \ nx privilege 15 password 0 nx\n!\nredundancy\n!\n!\nip ssh version 2\n! \n!\n\
+    !\n!\n!\n!\n!\n!\n!\n!\n!\n!\n!\ninterface Ethernet0/0\n vrf forwarding mgt\n\
+    \ ip address 192.168.65.101 255.255.255.0\n!\ninterface Ethernet0/1\n ip address\
+    \ 10.0.0.1 255.255.255.0\n!\ninterface Ethernet0/2\n no ip address\n shutdown\n\
+    !\ninterface Ethernet0/3\n no ip address\n shutdown\n!\nrouter ospf 1\n network\
+    \ 10.0.0.0 0.0.0.255 area 0\n!\nip forward-protocol nd\n!\n!\nno ip http server\n\
+    no ip http secure-server\nip route vrf mgt 0.0.0.0 0.0.0.0 192.168.65.1\n!\n!\n\
+    snmp-server community cisco RO\n!\n!\ncontrol-plane\n!\n!\n!\n!\n!\n!\n!\n!\n\
+    line con 0\n logging synchronous\nline aux 0\nline vty 0 4\n exec-timeout 60 0\n\
+    \ logging synchronous\n login local\n transport input ssh\n!\nevent manager applet\
+    \ CLIlog\n event cli pattern \".*\" sync no skip no\n action 1.0 syslog priority\
+    \ informational msg \"$_cli_msg\"\n action 2.0 set _exit_status \"1\"\n!\nend"
+ansible_net_filesystems:
+- 'system:'
+ansible_net_filesystems_info:
+    'system:': {}
+ansible_net_gather_subset:
+- hardware
+- default
+- interfaces
+- config
+ansible_net_hostname: R1
+ansible_net_image: unix:/opt/unetlab/addons/iol/bin/i86bi-linux-l3-adventerprisek9-15.4
+ansible_net_interfaces:
+    Ethernet0/0:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 192.168.65.101
+            subnet: '24'
+        lineprotocol: 'up '
+        macaddress: aabb.cc00.1000
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: AmdP2
+    Ethernet0/1:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.0.0.1
+            subnet: '24'
+        lineprotocol: 'up '
+        macaddress: aabb.cc00.1010
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: AmdP2
+    Ethernet0/2:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: aabb.cc00.1020
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: AmdP2
+    Ethernet0/3:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: aabb.cc00.1030
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: AmdP2
+ansible_net_memfree_mb: 299268
+ansible_net_memtotal_mb: 367096
+ansible_net_model: null
+ansible_net_serialnum: '67108880'
+ansible_net_version: 15.4(1)T

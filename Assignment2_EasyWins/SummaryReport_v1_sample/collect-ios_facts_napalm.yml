@@ -1,0 +1,18 @@
+---
+- name: Collect IOS Facts from devices. Save them to files
+  hosts: all
+  connection: local
+  vars:
+  - results: results
+  tasks:
+    - file: path={{results}} state=directory
+      run_once: true
+    - napalm_get_facts:
+        hostname: "{{ ansible_host }}"
+        username: "{{ ansible_user }}"
+        dev_os: "{{ ansible_os }}"
+        password: "{{ ansible_ssh_pass }}"
+        filter: [facts, interfaces]
+      register: result
+    - copy: content="{{result.ansible_facts|to_nice_yaml(indent=4)}}" dest={{results}}/{{inventory_hostname}}_napalm.yml
+    - copy: content="{{result.ansible_facts}}" dest={{results}}/{{inventory_hostname}}_napalm.json
