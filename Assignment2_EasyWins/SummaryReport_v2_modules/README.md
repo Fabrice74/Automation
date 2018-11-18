@@ -20,4 +20,3 @@ $ ansible-playbook framework-uptime.yml --extra-vars "dst=template"
 $ ansible-playbook framework-uptime.yml --extra-vars "src=vars dst=template"
     => KO, the Jinja2 template doesn't loop correctly into the devices file facts. The report give 3 times the uptime of R1
 '''
-<span style="color:blue">some *blue* text</span>.
