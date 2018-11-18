@@ -6,7 +6,7 @@ In this example, in order to generalize the solution:
 - creation of "Create reports" modules
 - CLI parameters used for flexibility (include one read and one create module)
 
-'''
+```
 $ ansible-playbook framework-uptime.yml
     => OK (default collect:napalm ; default report:text)
 
@@ -19,4 +19,4 @@ $ ansible-playbook framework-uptime.yml --extra-vars "dst=template"
 
 $ ansible-playbook framework-uptime.yml --extra-vars "src=vars dst=template"
     => KO, the Jinja2 template doesn't loop correctly into the devices file facts. The report give 3 times the uptime of R1
-'''
+```
