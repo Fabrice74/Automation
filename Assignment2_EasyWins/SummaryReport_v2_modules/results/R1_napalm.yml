@@ -10,7 +10,7 @@ napalm_facts:
     os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
         DEVELOPMENT TEST SOFTWARE
     serial_number: '67108880'
-    uptime: 74640
+    uptime: 61
     vendor: Cisco
 napalm_fqdn: R1.lab.local
 napalm_hostname: R1
@@ -52,5 +52,5 @@ napalm_model: Unknown
 napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
     DEVELOPMENT TEST SOFTWARE
 napalm_serial_number: '67108880'
-napalm_uptime: 74640
+napalm_uptime: 60
 napalm_vendor: Cisco

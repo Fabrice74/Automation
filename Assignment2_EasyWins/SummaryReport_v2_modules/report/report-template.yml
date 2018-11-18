@@ -1,0 +1,20 @@
+#
+# Generate "create report from a template" module
+#
+# Variables
+#   results - output directory
+#   fmt     - desired template
+#   output  - destination file name
+#
+---
+# Check if uptime information from NAPALM are present or not. Fail if not present
+- name: Check presence of UPTIME information
+  fail:
+    msg: "napalm_facts.uptime is required"
+  failed_when: napalm_facts.uptime is not defined
+
+# Choose a jinja2 template to report the result
+- template:
+    src:  "template/uptime-{{fmt|default('text')}}.j2"
+    dest: "{{results}}/{{output|default('uptime.log')}}"
+  run_once: true

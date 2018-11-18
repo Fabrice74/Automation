@@ -1,0 +1,12 @@
+!
+R1
+R1.lab.local
+R1                      74580
+!
+R2
+R1.lab.local
+R2                      74580
+!
+R3
+R1.lab.local
+R3                      74580

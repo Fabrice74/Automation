@@ -1,0 +1,13 @@
+---
+- file: path="{{results}}/uptime.log" state=touch
+  changed_when: false
+# Check if uptime information from NAPALM are present or not. Fail if not present
+- name: Check presence of UPTIME information
+  fail:
+    msg: "napalm_facts.uptime is required"
+  failed_when: napalm_facts.uptime is not defined
+
+- lineinfile:
+    dest:   "{{results}}/uptime.log"
+    regexp: "{{napalm_hostname}}"
+    line:   "{{'%-20s %8s'|format(napalm_hostname,napalm_facts.uptime)}}"

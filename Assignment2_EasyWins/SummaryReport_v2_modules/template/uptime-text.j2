@@ -1,0 +1,6 @@
+{% for host,facts in hostvars|dictsort %}
+!
+{{host}}
+{{napalm_fqdn}}
+{{'%-20s %8s'|format(facts.inventory_hostname,napalm_facts.uptime)}}
+{% endfor %}

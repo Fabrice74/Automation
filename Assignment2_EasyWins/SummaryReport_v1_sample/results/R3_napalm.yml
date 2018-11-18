@@ -10,7 +10,7 @@ napalm_facts:
     os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
         DEVELOPMENT TEST SOFTWARE
     serial_number: '67108912'
-    uptime: 9780
+    uptime: 164760
     vendor: Cisco
 napalm_fqdn: R3.lab.local
 napalm_hostname: R3
@@ -52,5 +52,5 @@ napalm_model: Unknown
 napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
     DEVELOPMENT TEST SOFTWARE
 napalm_serial_number: '67108912'
-napalm_uptime: 9780
+napalm_uptime: 164760
 napalm_vendor: Cisco

@@ -1,0 +1,9 @@
+[routers]
+R1  ansible_host=192.168.65.101
+R2  ansible_host=192.168.65.102
+R3  ansible_host=192.168.65.103
+
+[all:vars]
+ansible_user=ansible
+ansible_ssh_pass=ansible
+ansible_os=ios

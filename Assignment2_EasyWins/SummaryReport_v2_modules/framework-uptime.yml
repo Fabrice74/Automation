@@ -1,0 +1,14 @@
+---
+- name: Read data. Create report.
+  hosts: all
+  vars:
+  - results: "{{inventory_dir}}/results"
+  tasks:
+  # Framework starts with collectiong facts.
+  # Could be :
+  #     - napalm    > for collecting fact with napalm
+  #     - vars    > for collecting fact from text files.
+  - include: "read/read-{{src|default('napalm')}}.yml"
+
+
+  - include: "report/report-{{dst|default('text')}}.yml"
