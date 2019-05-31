@@ -1,0 +1,19 @@
+---
+# This playbook collect a Printour from Multiple Devices
+# and copy the result one file per Device
+
+- hosts: localhost
+  tasks:
+  - file: path=results state=absent
+  - file: path=results state=directory
+- hosts: ios
+  tasks:
+  - ios_command:
+      commands:
+      - show arp
+    register: result
+  - copy:
+      content: |
+        {{ result.stdout[0] }}
+      dest: "results/{{inventory_hostname}}_show_arp.txt"
+    delegate_to: localhost

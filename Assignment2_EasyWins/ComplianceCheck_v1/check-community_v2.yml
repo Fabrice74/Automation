@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+  - name: "Check: SNMP community {{snmp_community}} is not defined"
+    ios_command:
+      commands: "show snmp community"
+    register: result
+    failed_when: "not('name: '~snmp_community in result.stdout[0])"

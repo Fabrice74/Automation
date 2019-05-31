@@ -1,0 +1,21 @@
+---
+- hosts: all
+  vars:
+    results: results
+  tasks:
+  - name: "Collect SNMP community"
+    ios_command:
+      commands: "show snmp community"
+    register: result
+  #  failed_when: "not('name: '~snmp_community in result.stdout[0])"
+
+  - debug: var=result
+
+
+
+# Generate report
+  - name: "Generate report with J2 template"
+    template:
+        src: reports/test.j2
+        dest: results/errors.log
+    run_once: true

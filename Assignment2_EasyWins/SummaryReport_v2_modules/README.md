@@ -1,7 +1,7 @@
 # Create simple summary reports (with modules)
 based on https://github.com/ipspace/ansible-examples/tree/master/Summary-Reports
 
-In this example, in order to generalize the solution:
+In this example, the following modifications have been done to generalize the solution:
 - creation of "Collect" modules
 - creation of "Create reports" modules
 - CLI parameters used for flexibility (include one read and one create module)

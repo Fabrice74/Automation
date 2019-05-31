@@ -1,0 +1,32 @@
+---
+- hosts: all
+  vars:
+    results: results
+  tasks:
+  - name: "Check: SNMP community {{snmp_community}} is not defined"
+    ios_command:
+      commands: "show snmp community"
+    register: result
+    failed_when: "not('name: '~snmp_community in result.stdout[0])"
+  - debug: var=result
+#  - name: "Set_fact: error_no_community {{snmp_community}} checks"
+#    set_fact: error_no_community=1
+#    when: "not('name: '~snmp_community in result.stdout[0])"
+
+  - file: path=results state=directory
+    run_once: true
+# debuging
+  - name: "Create debug files yaml"
+    copy: content="{{result.stdout[0]|to_nice_yaml(indent=4)}}" dest={{results}}/{{inventory_hostname}}.yml
+  - name: "Create debug files json"
+    copy: content="{{result.stdout[0]}}" dest={{results}}/{{inventory_hostname}}.json
+# Generate report
+  - name: "Generate report with J2 template"
+    template:
+        src: reports/json-simple.j2
+        dest: results/errors.log
+    vars:
+      allhosts: "{{hostvars}}"
+    run_once: true
+# Debuging show all vars
+#  - debug: var=vars

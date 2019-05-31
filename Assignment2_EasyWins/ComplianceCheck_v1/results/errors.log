@@ -1,0 +1,48 @@
+R1: Present SNMP community |debug:Community name: ILMI
+Community Index: ILMI
+Community SecurityName: ILMI
+storage-type: read-only	 active
+
+
+Community name: R1
+Community Index: R1
+Community SecurityName: R1
+storage-type: nonvolatile	 active
+
+
+Community name: cisco
+Community Index: cisco
+Community SecurityName: cisco
+storage-type: nonvolatile	 active
+R2: Present SNMP community |debug:Community name: ILMI
+Community Index: ILMI
+Community SecurityName: ILMI
+storage-type: read-only	 active
+
+
+Community name: R1
+Community Index: R1
+Community SecurityName: R1
+storage-type: nonvolatile	 active
+
+
+Community name: cisco
+Community Index: cisco
+Community SecurityName: cisco
+storage-type: nonvolatile	 active
+R3: Present SNMP community |debug:Community name: ILMI
+Community Index: ILMI
+Community SecurityName: ILMI
+storage-type: read-only	 active
+
+
+Community name: R1
+Community Index: R1
+Community SecurityName: R1
+storage-type: nonvolatile	 active
+
+
+Community name: cisco
+Community Index: cisco
+Community SecurityName: cisco
+storage-type: nonvolatile	 active

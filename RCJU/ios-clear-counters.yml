@@ -1,0 +1,16 @@
+---
+- name: Execute show version
+  hosts: ios
+  gather_facts: yes
+  tasks:
+    - cli_command:
+        command: clear counters
+        prompt:
+        - "[confirm]"
+        answer:
+        - y
+
+# Only cli_commands can use prompt and answer parameters.
+# (cli_command) module: Supported parameters include: answer, check_all, command, prompt, sendonly"}
+# (ios_command) module: Supported parameters include: auth_pass, authorize, commands, host, interval, match,
+#                       password, port, provider, retries, ssh_keyfile, timeout, username, wait_for"}

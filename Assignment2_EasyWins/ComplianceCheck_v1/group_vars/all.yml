@@ -1,0 +1,4 @@
+---
+snmp_server: 192.168.65.1
+snmp_community: cisco
+syslog_server: 192.168.65.1

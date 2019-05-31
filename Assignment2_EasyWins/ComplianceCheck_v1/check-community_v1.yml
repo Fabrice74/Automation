@@ -1,0 +1,15 @@
+---
+- hosts: all
+  vars:
+    results: results
+  tasks:
+  - name: "Check: SNMP community {{snmp_community}} is not defined"
+    ios_command:
+      commands: "show snmp community"
+    register: result
+  - set_fact: error_no_community=1
+    when: "not('name: '~snmp_community in result.stdout[0])"
+
+# debuging
+  - copy: content="{{result.stdout[0]|to_nice_yaml(indent=4)}}" dest={{results}}/{{inventory_hostname}}.yml
+  - copy: content="{{result.stdout[0]}}" dest={{results}}/{{inventory_hostname}}.json

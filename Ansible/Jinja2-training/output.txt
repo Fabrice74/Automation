@@ -1,42 +1,507 @@
-hostname: h1
-!
-router bgp 65500
- neighbor 172.16.0.1 remote-as 65001
- neighbor 172.16.0.1 description ISP-A
- neighbor 172.16.0.1 prefix-list bgp-neighbor-172.16.0.1 in
- !
- neighbor 172.16.1.1 remote-as 65002
- neighbor 172.16.1.1 description ISP-B
- neighbor 172.16.1.1 route-map Backup-Out in
- neighbor 172.16.1.1 shutdown
- !
- neighbor 192.168.0.1 remote-as 65500
- neighbor 192.168.0.1 description Core-1
- neighbor 192.168.0.1 route-map IBGP in
- neighbor 192.168.0.1 prefix-list bgp-neighbor-192.168.0.1 in
- !
-!
-! -- prefix-list creation --
-ip prefix-list bgp-neighbor-172.16.0.1 seq 1 permit 172.16.0.0/16
-ip prefix-list bgp-neighbor-172.16.0.1 seq 2 permit 172.17.0.0/16
-!
-!
-ip prefix-list bgp-neighbor-192.168.0.1 seq 1 permit 192.168.0.0/20
-ip prefix-list bgp-neighbor-192.168.0.1 seq 2 permit 192.168.128.0/20
-!
-!
-! -- prefix-list creation 2nd way --
-ip prefix-list bgp-neighbor-172.16.0.1 seq 1 permit 172.16.0.0/16
-ip prefix-list bgp-neighbor-172.16.0.1 seq 2 permit 172.17.0.0/16
-!
-ip prefix-list bgp-neighbor-192.168.0.1 seq 1 permit 192.168.0.0/20
-ip prefix-list bgp-neighbor-192.168.0.1 seq 2 permit 192.168.128.0/20
-!
-!
-!
-!
-interface Ethernet0
-ip address 192.168.1.1 255.255.255.0
-!
-interface Ethernet1
-ip address 192.168.2.1 255.255.255.0
+
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_1 match destination-address 172.16.202.1/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_1 then static-nat prefix 10.250.32.1/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_2 match destination-address 172.16.202.2/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_2 then static-nat prefix 10.250.32.2/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_3 match destination-address 172.16.202.3/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_3 then static-nat prefix 10.250.32.3/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_4 match destination-address 172.16.202.4/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_4 then static-nat prefix 10.250.32.4/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_5 match destination-address 172.16.202.5/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_5 then static-nat prefix 10.250.32.5/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_6 match destination-address 172.16.202.6/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_6 then static-nat prefix 10.250.32.6/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_7 match destination-address 172.16.202.7/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_7 then static-nat prefix 10.250.32.7/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_8 match destination-address 172.16.202.8/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_8 then static-nat prefix 10.250.32.8/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_9 match destination-address 172.16.202.9/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_9 then static-nat prefix 10.250.32.9/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_10 match destination-address 172.16.202.10/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_10 then static-nat prefix 10.250.32.10/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_11 match destination-address 172.16.202.11/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_11 then static-nat prefix 10.250.32.11/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_12 match destination-address 172.16.202.12/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_12 then static-nat prefix 10.250.32.12/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_13 match destination-address 172.16.202.13/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_13 then static-nat prefix 10.250.32.13/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_14 match destination-address 172.16.202.14/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_14 then static-nat prefix 10.250.32.14/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_15 match destination-address 172.16.202.15/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_15 then static-nat prefix 10.250.32.15/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_16 match destination-address 172.16.202.16/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_16 then static-nat prefix 10.250.32.16/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_17 match destination-address 172.16.202.17/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_17 then static-nat prefix 10.250.32.17/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_18 match destination-address 172.16.202.18/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_18 then static-nat prefix 10.250.32.18/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_19 match destination-address 172.16.202.19/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_19 then static-nat prefix 10.250.32.19/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_20 match destination-address 172.16.202.20/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_20 then static-nat prefix 10.250.32.20/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_21 match destination-address 172.16.202.21/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_21 then static-nat prefix 10.250.32.21/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_22 match destination-address 172.16.202.22/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_22 then static-nat prefix 10.250.32.22/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_23 match destination-address 172.16.202.23/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_23 then static-nat prefix 10.250.32.23/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_24 match destination-address 172.16.202.24/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_24 then static-nat prefix 10.250.32.24/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_25 match destination-address 172.16.202.25/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_25 then static-nat prefix 10.250.32.25/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_26 match destination-address 172.16.202.26/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_26 then static-nat prefix 10.250.32.26/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_27 match destination-address 172.16.202.27/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_27 then static-nat prefix 10.250.32.27/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_28 match destination-address 172.16.202.28/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_28 then static-nat prefix 10.250.32.28/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_29 match destination-address 172.16.202.29/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_29 then static-nat prefix 10.250.32.29/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_30 match destination-address 172.16.202.30/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_30 then static-nat prefix 10.250.32.30/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_31 match destination-address 172.16.202.31/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_31 then static-nat prefix 10.250.32.31/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_32 match destination-address 172.16.202.32/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_32 then static-nat prefix 10.250.32.32/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_33 match destination-address 172.16.202.33/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_33 then static-nat prefix 10.250.32.33/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_34 match destination-address 172.16.202.34/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_34 then static-nat prefix 10.250.32.34/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_35 match destination-address 172.16.202.35/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_35 then static-nat prefix 10.250.32.35/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_36 match destination-address 172.16.202.36/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_36 then static-nat prefix 10.250.32.36/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_37 match destination-address 172.16.202.37/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_37 then static-nat prefix 10.250.32.37/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_38 match destination-address 172.16.202.38/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_38 then static-nat prefix 10.250.32.38/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_39 match destination-address 172.16.202.39/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_39 then static-nat prefix 10.250.32.39/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_40 match destination-address 172.16.202.40/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_40 then static-nat prefix 10.250.32.40/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_41 match destination-address 172.16.202.41/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_41 then static-nat prefix 10.250.32.41/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_42 match destination-address 172.16.202.42/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_42 then static-nat prefix 10.250.32.42/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_43 match destination-address 172.16.202.43/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_43 then static-nat prefix 10.250.32.43/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_44 match destination-address 172.16.202.44/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_44 then static-nat prefix 10.250.32.44/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_45 match destination-address 172.16.202.45/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_45 then static-nat prefix 10.250.32.45/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_46 match destination-address 172.16.202.46/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_46 then static-nat prefix 10.250.32.46/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_47 match destination-address 172.16.202.47/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_47 then static-nat prefix 10.250.32.47/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_48 match destination-address 172.16.202.48/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_48 then static-nat prefix 10.250.32.48/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_49 match destination-address 172.16.202.49/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_49 then static-nat prefix 10.250.32.49/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_50 match destination-address 172.16.202.50/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_50 then static-nat prefix 10.250.32.50/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_51 match destination-address 172.16.202.51/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_51 then static-nat prefix 10.250.32.51/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_52 match destination-address 172.16.202.52/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_52 then static-nat prefix 10.250.32.52/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_53 match destination-address 172.16.202.53/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_53 then static-nat prefix 10.250.32.53/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_54 match destination-address 172.16.202.54/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_54 then static-nat prefix 10.250.32.54/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_55 match destination-address 172.16.202.55/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_55 then static-nat prefix 10.250.32.55/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_56 match destination-address 172.16.202.56/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_56 then static-nat prefix 10.250.32.56/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_57 match destination-address 172.16.202.57/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_57 then static-nat prefix 10.250.32.57/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_58 match destination-address 172.16.202.58/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_58 then static-nat prefix 10.250.32.58/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_59 match destination-address 172.16.202.59/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_59 then static-nat prefix 10.250.32.59/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_60 match destination-address 172.16.202.60/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_60 then static-nat prefix 10.250.32.60/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_61 match destination-address 172.16.202.61/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_61 then static-nat prefix 10.250.32.61/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_62 match destination-address 172.16.202.62/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_62 then static-nat prefix 10.250.32.62/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_63 match destination-address 172.16.202.63/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_63 then static-nat prefix 10.250.32.63/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_64 match destination-address 172.16.202.64/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_64 then static-nat prefix 10.250.32.64/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_65 match destination-address 172.16.202.65/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_65 then static-nat prefix 10.250.32.65/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_66 match destination-address 172.16.202.66/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_66 then static-nat prefix 10.250.32.66/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_67 match destination-address 172.16.202.67/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_67 then static-nat prefix 10.250.32.67/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_68 match destination-address 172.16.202.68/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_68 then static-nat prefix 10.250.32.68/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_69 match destination-address 172.16.202.69/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_69 then static-nat prefix 10.250.32.69/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_70 match destination-address 172.16.202.70/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_70 then static-nat prefix 10.250.32.70/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_71 match destination-address 172.16.202.71/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_71 then static-nat prefix 10.250.32.71/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_72 match destination-address 172.16.202.72/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_72 then static-nat prefix 10.250.32.72/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_73 match destination-address 172.16.202.73/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_73 then static-nat prefix 10.250.32.73/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_74 match destination-address 172.16.202.74/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_74 then static-nat prefix 10.250.32.74/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_75 match destination-address 172.16.202.75/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_75 then static-nat prefix 10.250.32.75/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_76 match destination-address 172.16.202.76/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_76 then static-nat prefix 10.250.32.76/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_77 match destination-address 172.16.202.77/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_77 then static-nat prefix 10.250.32.77/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_78 match destination-address 172.16.202.78/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_78 then static-nat prefix 10.250.32.78/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_79 match destination-address 172.16.202.79/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_79 then static-nat prefix 10.250.32.79/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_80 match destination-address 172.16.202.80/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_80 then static-nat prefix 10.250.32.80/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_81 match destination-address 172.16.202.81/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_81 then static-nat prefix 10.250.32.81/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_82 match destination-address 172.16.202.82/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_82 then static-nat prefix 10.250.32.82/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_83 match destination-address 172.16.202.83/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_83 then static-nat prefix 10.250.32.83/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_84 match destination-address 172.16.202.84/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_84 then static-nat prefix 10.250.32.84/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_85 match destination-address 172.16.202.85/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_85 then static-nat prefix 10.250.32.85/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_86 match destination-address 172.16.202.86/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_86 then static-nat prefix 10.250.32.86/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_87 match destination-address 172.16.202.87/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_87 then static-nat prefix 10.250.32.87/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_88 match destination-address 172.16.202.88/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_88 then static-nat prefix 10.250.32.88/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_89 match destination-address 172.16.202.89/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_89 then static-nat prefix 10.250.32.89/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_90 match destination-address 172.16.202.90/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_90 then static-nat prefix 10.250.32.90/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_91 match destination-address 172.16.202.91/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_91 then static-nat prefix 10.250.32.91/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_92 match destination-address 172.16.202.92/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_92 then static-nat prefix 10.250.32.92/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_93 match destination-address 172.16.202.93/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_93 then static-nat prefix 10.250.32.93/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_94 match destination-address 172.16.202.94/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_94 then static-nat prefix 10.250.32.94/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_95 match destination-address 172.16.202.95/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_95 then static-nat prefix 10.250.32.95/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_96 match destination-address 172.16.202.96/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_96 then static-nat prefix 10.250.32.96/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_97 match destination-address 172.16.202.97/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_97 then static-nat prefix 10.250.32.97/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_98 match destination-address 172.16.202.98/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_98 then static-nat prefix 10.250.32.98/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_99 match destination-address 172.16.202.99/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_99 then static-nat prefix 10.250.32.99/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_100 match destination-address 172.16.202.100/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_100 then static-nat prefix 10.250.32.100/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_101 match destination-address 172.16.202.101/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_101 then static-nat prefix 10.250.32.101/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_102 match destination-address 172.16.202.102/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_102 then static-nat prefix 10.250.32.102/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_103 match destination-address 172.16.202.103/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_103 then static-nat prefix 10.250.32.103/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_104 match destination-address 172.16.202.104/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_104 then static-nat prefix 10.250.32.104/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_105 match destination-address 172.16.202.105/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_105 then static-nat prefix 10.250.32.105/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_106 match destination-address 172.16.202.106/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_106 then static-nat prefix 10.250.32.106/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_107 match destination-address 172.16.202.107/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_107 then static-nat prefix 10.250.32.107/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_108 match destination-address 172.16.202.108/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_108 then static-nat prefix 10.250.32.108/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_109 match destination-address 172.16.202.109/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_109 then static-nat prefix 10.250.32.109/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_110 match destination-address 172.16.202.110/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_110 then static-nat prefix 10.250.32.110/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_111 match destination-address 172.16.202.111/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_111 then static-nat prefix 10.250.32.111/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_112 match destination-address 172.16.202.112/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_112 then static-nat prefix 10.250.32.112/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_113 match destination-address 172.16.202.113/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_113 then static-nat prefix 10.250.32.113/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_114 match destination-address 172.16.202.114/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_114 then static-nat prefix 10.250.32.114/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_115 match destination-address 172.16.202.115/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_115 then static-nat prefix 10.250.32.115/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_116 match destination-address 172.16.202.116/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_116 then static-nat prefix 10.250.32.116/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_117 match destination-address 172.16.202.117/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_117 then static-nat prefix 10.250.32.117/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_118 match destination-address 172.16.202.118/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_118 then static-nat prefix 10.250.32.118/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_119 match destination-address 172.16.202.119/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_119 then static-nat prefix 10.250.32.119/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_120 match destination-address 172.16.202.120/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_120 then static-nat prefix 10.250.32.120/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_121 match destination-address 172.16.202.121/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_121 then static-nat prefix 10.250.32.121/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_122 match destination-address 172.16.202.122/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_122 then static-nat prefix 10.250.32.122/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_123 match destination-address 172.16.202.123/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_123 then static-nat prefix 10.250.32.123/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_124 match destination-address 172.16.202.124/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_124 then static-nat prefix 10.250.32.124/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_125 match destination-address 172.16.202.125/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_125 then static-nat prefix 10.250.32.125/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_126 match destination-address 172.16.202.126/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_126 then static-nat prefix 10.250.32.126/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_127 match destination-address 172.16.202.127/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_127 then static-nat prefix 10.250.32.127/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_128 match destination-address 172.16.202.128/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_128 then static-nat prefix 10.250.32.128/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_129 match destination-address 172.16.202.129/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_129 then static-nat prefix 10.250.32.129/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_130 match destination-address 172.16.202.130/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_130 then static-nat prefix 10.250.32.130/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_131 match destination-address 172.16.202.131/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_131 then static-nat prefix 10.250.32.131/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_132 match destination-address 172.16.202.132/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_132 then static-nat prefix 10.250.32.132/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_133 match destination-address 172.16.202.133/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_133 then static-nat prefix 10.250.32.133/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_134 match destination-address 172.16.202.134/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_134 then static-nat prefix 10.250.32.134/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_135 match destination-address 172.16.202.135/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_135 then static-nat prefix 10.250.32.135/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_136 match destination-address 172.16.202.136/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_136 then static-nat prefix 10.250.32.136/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_137 match destination-address 172.16.202.137/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_137 then static-nat prefix 10.250.32.137/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_138 match destination-address 172.16.202.138/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_138 then static-nat prefix 10.250.32.138/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_139 match destination-address 172.16.202.139/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_139 then static-nat prefix 10.250.32.139/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_140 match destination-address 172.16.202.140/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_140 then static-nat prefix 10.250.32.140/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_141 match destination-address 172.16.202.141/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_141 then static-nat prefix 10.250.32.141/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_142 match destination-address 172.16.202.142/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_142 then static-nat prefix 10.250.32.142/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_143 match destination-address 172.16.202.143/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_143 then static-nat prefix 10.250.32.143/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_144 match destination-address 172.16.202.144/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_144 then static-nat prefix 10.250.32.144/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_145 match destination-address 172.16.202.145/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_145 then static-nat prefix 10.250.32.145/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_146 match destination-address 172.16.202.146/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_146 then static-nat prefix 10.250.32.146/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_147 match destination-address 172.16.202.147/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_147 then static-nat prefix 10.250.32.147/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_148 match destination-address 172.16.202.148/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_148 then static-nat prefix 10.250.32.148/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_149 match destination-address 172.16.202.149/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_149 then static-nat prefix 10.250.32.149/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_150 match destination-address 172.16.202.150/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_150 then static-nat prefix 10.250.32.150/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_151 match destination-address 172.16.202.151/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_151 then static-nat prefix 10.250.32.151/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_152 match destination-address 172.16.202.152/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_152 then static-nat prefix 10.250.32.152/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_153 match destination-address 172.16.202.153/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_153 then static-nat prefix 10.250.32.153/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_154 match destination-address 172.16.202.154/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_154 then static-nat prefix 10.250.32.154/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_155 match destination-address 172.16.202.155/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_155 then static-nat prefix 10.250.32.155/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_156 match destination-address 172.16.202.156/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_156 then static-nat prefix 10.250.32.156/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_157 match destination-address 172.16.202.157/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_157 then static-nat prefix 10.250.32.157/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_158 match destination-address 172.16.202.158/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_158 then static-nat prefix 10.250.32.158/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_159 match destination-address 172.16.202.159/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_159 then static-nat prefix 10.250.32.159/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_160 match destination-address 172.16.202.160/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_160 then static-nat prefix 10.250.32.160/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_161 match destination-address 172.16.202.161/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_161 then static-nat prefix 10.250.32.161/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_162 match destination-address 172.16.202.162/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_162 then static-nat prefix 10.250.32.162/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_163 match destination-address 172.16.202.163/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_163 then static-nat prefix 10.250.32.163/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_164 match destination-address 172.16.202.164/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_164 then static-nat prefix 10.250.32.164/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_165 match destination-address 172.16.202.165/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_165 then static-nat prefix 10.250.32.165/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_166 match destination-address 172.16.202.166/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_166 then static-nat prefix 10.250.32.166/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_167 match destination-address 172.16.202.167/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_167 then static-nat prefix 10.250.32.167/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_168 match destination-address 172.16.202.168/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_168 then static-nat prefix 10.250.32.168/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_169 match destination-address 172.16.202.169/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_169 then static-nat prefix 10.250.32.169/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_170 match destination-address 172.16.202.170/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_170 then static-nat prefix 10.250.32.170/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_171 match destination-address 172.16.202.171/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_171 then static-nat prefix 10.250.32.171/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_172 match destination-address 172.16.202.172/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_172 then static-nat prefix 10.250.32.172/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_173 match destination-address 172.16.202.173/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_173 then static-nat prefix 10.250.32.173/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_174 match destination-address 172.16.202.174/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_174 then static-nat prefix 10.250.32.174/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_175 match destination-address 172.16.202.175/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_175 then static-nat prefix 10.250.32.175/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_176 match destination-address 172.16.202.176/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_176 then static-nat prefix 10.250.32.176/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_177 match destination-address 172.16.202.177/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_177 then static-nat prefix 10.250.32.177/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_178 match destination-address 172.16.202.178/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_178 then static-nat prefix 10.250.32.178/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_179 match destination-address 172.16.202.179/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_179 then static-nat prefix 10.250.32.179/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_180 match destination-address 172.16.202.180/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_180 then static-nat prefix 10.250.32.180/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_181 match destination-address 172.16.202.181/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_181 then static-nat prefix 10.250.32.181/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_182 match destination-address 172.16.202.182/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_182 then static-nat prefix 10.250.32.182/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_183 match destination-address 172.16.202.183/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_183 then static-nat prefix 10.250.32.183/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_184 match destination-address 172.16.202.184/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_184 then static-nat prefix 10.250.32.184/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_185 match destination-address 172.16.202.185/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_185 then static-nat prefix 10.250.32.185/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_186 match destination-address 172.16.202.186/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_186 then static-nat prefix 10.250.32.186/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_187 match destination-address 172.16.202.187/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_187 then static-nat prefix 10.250.32.187/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_188 match destination-address 172.16.202.188/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_188 then static-nat prefix 10.250.32.188/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_189 match destination-address 172.16.202.189/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_189 then static-nat prefix 10.250.32.189/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_190 match destination-address 172.16.202.190/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_190 then static-nat prefix 10.250.32.190/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_191 match destination-address 172.16.202.191/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_191 then static-nat prefix 10.250.32.191/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_192 match destination-address 172.16.202.192/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_192 then static-nat prefix 10.250.32.192/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_193 match destination-address 172.16.202.193/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_193 then static-nat prefix 10.250.32.193/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_194 match destination-address 172.16.202.194/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_194 then static-nat prefix 10.250.32.194/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_195 match destination-address 172.16.202.195/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_195 then static-nat prefix 10.250.32.195/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_196 match destination-address 172.16.202.196/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_196 then static-nat prefix 10.250.32.196/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_197 match destination-address 172.16.202.197/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_197 then static-nat prefix 10.250.32.197/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_198 match destination-address 172.16.202.198/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_198 then static-nat prefix 10.250.32.198/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_199 match destination-address 172.16.202.199/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_199 then static-nat prefix 10.250.32.199/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_200 match destination-address 172.16.202.200/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_200 then static-nat prefix 10.250.32.200/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_201 match destination-address 172.16.202.201/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_201 then static-nat prefix 10.250.32.201/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_202 match destination-address 172.16.202.202/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_202 then static-nat prefix 10.250.32.202/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_203 match destination-address 172.16.202.203/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_203 then static-nat prefix 10.250.32.203/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_204 match destination-address 172.16.202.204/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_204 then static-nat prefix 10.250.32.204/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_205 match destination-address 172.16.202.205/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_205 then static-nat prefix 10.250.32.205/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_206 match destination-address 172.16.202.206/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_206 then static-nat prefix 10.250.32.206/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_207 match destination-address 172.16.202.207/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_207 then static-nat prefix 10.250.32.207/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_208 match destination-address 172.16.202.208/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_208 then static-nat prefix 10.250.32.208/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_209 match destination-address 172.16.202.209/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_209 then static-nat prefix 10.250.32.209/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_210 match destination-address 172.16.202.210/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_210 then static-nat prefix 10.250.32.210/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_211 match destination-address 172.16.202.211/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_211 then static-nat prefix 10.250.32.211/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_212 match destination-address 172.16.202.212/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_212 then static-nat prefix 10.250.32.212/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_213 match destination-address 172.16.202.213/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_213 then static-nat prefix 10.250.32.213/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_214 match destination-address 172.16.202.214/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_214 then static-nat prefix 10.250.32.214/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_215 match destination-address 172.16.202.215/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_215 then static-nat prefix 10.250.32.215/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_216 match destination-address 172.16.202.216/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_216 then static-nat prefix 10.250.32.216/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_217 match destination-address 172.16.202.217/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_217 then static-nat prefix 10.250.32.217/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_218 match destination-address 172.16.202.218/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_218 then static-nat prefix 10.250.32.218/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_219 match destination-address 172.16.202.219/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_219 then static-nat prefix 10.250.32.219/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_220 match destination-address 172.16.202.220/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_220 then static-nat prefix 10.250.32.220/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_221 match destination-address 172.16.202.221/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_221 then static-nat prefix 10.250.32.221/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_222 match destination-address 172.16.202.222/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_222 then static-nat prefix 10.250.32.222/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_223 match destination-address 172.16.202.223/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_223 then static-nat prefix 10.250.32.223/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_224 match destination-address 172.16.202.224/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_224 then static-nat prefix 10.250.32.224/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_225 match destination-address 172.16.202.225/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_225 then static-nat prefix 10.250.32.225/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_226 match destination-address 172.16.202.226/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_226 then static-nat prefix 10.250.32.226/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_227 match destination-address 172.16.202.227/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_227 then static-nat prefix 10.250.32.227/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_228 match destination-address 172.16.202.228/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_228 then static-nat prefix 10.250.32.228/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_229 match destination-address 172.16.202.229/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_229 then static-nat prefix 10.250.32.229/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_230 match destination-address 172.16.202.230/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_230 then static-nat prefix 10.250.32.230/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_231 match destination-address 172.16.202.231/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_231 then static-nat prefix 10.250.32.231/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_232 match destination-address 172.16.202.232/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_232 then static-nat prefix 10.250.32.232/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_233 match destination-address 172.16.202.233/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_233 then static-nat prefix 10.250.32.233/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_234 match destination-address 172.16.202.234/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_234 then static-nat prefix 10.250.32.234/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_235 match destination-address 172.16.202.235/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_235 then static-nat prefix 10.250.32.235/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_236 match destination-address 172.16.202.236/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_236 then static-nat prefix 10.250.32.236/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_237 match destination-address 172.16.202.237/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_237 then static-nat prefix 10.250.32.237/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_238 match destination-address 172.16.202.238/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_238 then static-nat prefix 10.250.32.238/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_239 match destination-address 172.16.202.239/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_239 then static-nat prefix 10.250.32.239/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_240 match destination-address 172.16.202.240/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_240 then static-nat prefix 10.250.32.240/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_241 match destination-address 172.16.202.241/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_241 then static-nat prefix 10.250.32.241/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_242 match destination-address 172.16.202.242/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_242 then static-nat prefix 10.250.32.242/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_243 match destination-address 172.16.202.243/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_243 then static-nat prefix 10.250.32.243/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_244 match destination-address 172.16.202.244/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_244 then static-nat prefix 10.250.32.244/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_245 match destination-address 172.16.202.245/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_245 then static-nat prefix 10.250.32.245/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_246 match destination-address 172.16.202.246/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_246 then static-nat prefix 10.250.32.246/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_247 match destination-address 172.16.202.247/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_247 then static-nat prefix 10.250.32.247/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_248 match destination-address 172.16.202.248/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_248 then static-nat prefix 10.250.32.248/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_249 match destination-address 172.16.202.249/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_249 then static-nat prefix 10.250.32.249/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_250 match destination-address 172.16.202.250/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_250 then static-nat prefix 10.250.32.250/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_251 match destination-address 172.16.202.251/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_251 then static-nat prefix 10.250.32.251/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_252 match destination-address 172.16.202.252/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_252 then static-nat prefix 10.250.32.252/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_253 match destination-address 172.16.202.253/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_253 then static-nat prefix 10.250.32.253/32

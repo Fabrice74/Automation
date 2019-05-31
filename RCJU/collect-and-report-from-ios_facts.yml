@@ -1,0 +1,61 @@
+#
+# The playbook collects facts from managed devices
+# and saves them to one or more files in results directory
+#
+# Bug:
+#   - I already had to delete manualy the existing version.log file in
+#     order to have the new version of the file generated
+#
+
+---
+- hosts: localhost
+  tasks:
+  - file: path=results state=absent
+  - file: path=results state=directory
+  - name: Ansible create file if it doesn't exist example
+    file: path=results/serial.log state=touch
+# Collect all facts from the device
+- name: Collect ios_facts
+  hosts: ios
+  tasks:
+#
+# The playbook first collect data
+  - name: COLLECT IOS_FACTS
+    ios_facts:
+    when: ansible_network_os == 'ios'
+    register: result
+
+
+#
+# Then data are saved in one or more files
+  - name: SAVE IOS_FACTS INTO A JSON FILE
+    copy:
+      content: "{{result.ansible_facts}}"
+      dest: "results/{{inventory_hostname}}_ios_facts.json"
+
+  - name: SAVE IOS_FACTS INTO A YML FILE
+    copy:
+      content: "{{result.ansible_facts|to_nice_yaml(indent=4)}}"
+      dest: "results/{{inventory_hostname}}_ios_facts.yml"
+
+  - name: SAVE ALL ANSIBLE HOST VARIABLES INTO A YAML FILE
+    copy:
+      content: "{{hostvars[inventory_hostname]|to_nice_yaml(indent=4)}}"
+      dest: "results/{{inventory_hostname}}_test.yml"
+
+  - name: CREATE A REPORT FROM A TEMPLATE MODULE AND SAVE IT INTO A TEXT FILE
+    template:
+      src:  "template/text.j2"
+      dest: "results/serial.txt"
+
+  - name: CREATE A REPORT FROM A TEMPLATE MODULE AND SAVE IT INTO A HTML FILE
+    template:
+      src:  "template/html.j2"
+      dest: "results/serial.html"
+
+# Do not work. Sometimes, only two lines in the report
+  - name: SAVE SERIALS INTO INTO A FILE
+    lineinfile:
+      path: "results/serial.log"
+      regexp: "{{inventory_hostname}}"
+      line: "{{'%20s %8s'|format(inventory_hostname,ansible_net_serialnum)}}"

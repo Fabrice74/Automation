@@ -1,0 +1,14 @@
+---
+- hosts: h1
+  order: sorted
+  gather_facts: False
+  tasks:
+    - name: Basic Template Example
+      template:
+        src: ./srxnat.j2
+        dest: ./output.txt
+
+
+#    - shell: echo 'test'
+#      register: foo
+#    - debug: msg="the echo was {{ foo.stdout }}"

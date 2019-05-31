@@ -1,0 +1,248 @@
+ansible_check_mode: false
+ansible_connection: network_cli
+ansible_diff_mode: false
+ansible_facts:
+    net_all_ipv4_addresses:
+    - 10.0.0.3
+    - 192.168.65.103
+    net_all_ipv6_addresses: []
+    net_filesystems:
+    - 'system:'
+    net_filesystems_info:
+        'system:': {}
+    net_gather_subset:
+    - hardware
+    - default
+    - interfaces
+    net_hostname: R3
+    net_image: unix:/opt/unetlab/addons/iol/bin/i86bi-linux-l3-adventerprisek9-15.4
+    net_interfaces:
+        Ethernet0/0:
+            bandwidth: 10000
+            description: null
+            duplex: null
+            ipv4:
+            -   address: 192.168.65.103
+                subnet: '24'
+            lineprotocol: 'up '
+            macaddress: aabb.cc00.3000
+            mediatype: null
+            mtu: 1500
+            operstatus: up
+            type: AmdP2
+        Ethernet0/1:
+            bandwidth: 10000
+            description: null
+            duplex: null
+            ipv4:
+            -   address: 10.0.0.3
+                subnet: '24'
+            lineprotocol: 'up '
+            macaddress: aabb.cc00.3010
+            mediatype: null
+            mtu: 1500
+            operstatus: up
+            type: AmdP2
+        Ethernet0/2:
+            bandwidth: 10000
+            description: null
+            duplex: null
+            ipv4: []
+            lineprotocol: 'down '
+            macaddress: aabb.cc00.3020
+            mediatype: null
+            mtu: 1500
+            operstatus: administratively down
+            type: AmdP2
+        Ethernet0/3:
+            bandwidth: 10000
+            description: null
+            duplex: null
+            ipv4: []
+            lineprotocol: 'down '
+            macaddress: aabb.cc00.3030
+            mediatype: null
+            mtu: 1500
+            operstatus: administratively down
+            type: AmdP2
+    net_memfree_mb: 299277
+    net_memtotal_mb: 367096
+    net_model: null
+    net_serialnum: '67108912'
+    net_version: 15.4(1)T
+ansible_forks: 5
+ansible_host: 192.168.65.103
+ansible_inventory_sources:
+- /home/fab/Dropbox/Git/Automation/RCJU/hosts
+ansible_net_all_ipv4_addresses:
+- 10.0.0.3
+- 192.168.65.103
+ansible_net_all_ipv6_addresses: []
+ansible_net_filesystems:
+- 'system:'
+ansible_net_filesystems_info:
+    'system:': {}
+ansible_net_gather_subset:
+- hardware
+- default
+- interfaces
+ansible_net_hostname: R3
+ansible_net_image: unix:/opt/unetlab/addons/iol/bin/i86bi-linux-l3-adventerprisek9-15.4
+ansible_net_interfaces:
+    Ethernet0/0:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 192.168.65.103
+            subnet: '24'
+        lineprotocol: 'up '
+        macaddress: aabb.cc00.3000
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: AmdP2
+    Ethernet0/1:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4:
+        -   address: 10.0.0.3
+            subnet: '24'
+        lineprotocol: 'up '
+        macaddress: aabb.cc00.3010
+        mediatype: null
+        mtu: 1500
+        operstatus: up
+        type: AmdP2
+    Ethernet0/2:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: aabb.cc00.3020
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: AmdP2
+    Ethernet0/3:
+        bandwidth: 10000
+        description: null
+        duplex: null
+        ipv4: []
+        lineprotocol: 'down '
+        macaddress: aabb.cc00.3030
+        mediatype: null
+        mtu: 1500
+        operstatus: administratively down
+        type: AmdP2
+ansible_net_memfree_mb: 299277
+ansible_net_memtotal_mb: 367096
+ansible_net_model: null
+ansible_net_serialnum: '67108912'
+ansible_net_version: 15.4(1)T
+ansible_network_os: ios
+ansible_playbook_python: /usr/bin/python3
+ansible_run_tags:
+- all
+ansible_skip_tags: []
+ansible_ssh_pass: ansible
+ansible_user: ansible
+ansible_verbosity: 0
+ansible_version:
+    full: 2.7.0
+    major: 2
+    minor: 7
+    revision: 0
+    string: 2.7.0
+group_names:
+- ios
+groups:
+    all:
+    - R1
+    - R2
+    - R3
+    ios:
+    - R1
+    - R2
+    - R3
+    ungrouped: []
+inventory_dir: /home/fab/Dropbox/Git/Automation/RCJU
+inventory_file: /home/fab/Dropbox/Git/Automation/RCJU/hosts
+inventory_hostname: R3
+inventory_hostname_short: R3
+omit: __omit_place_holder__d61d9cfcc4a51a31d5bcc6dc3c31d0a734439713
+playbook_dir: /home/fab/Dropbox/Git/Automation/RCJU
+result:
+    ansible_facts:
+        ansible_net_all_ipv4_addresses:
+        - 10.0.0.3
+        - 192.168.65.103
+        ansible_net_all_ipv6_addresses: []
+        ansible_net_filesystems:
+        - 'system:'
+        ansible_net_filesystems_info:
+            'system:': {}
+        ansible_net_gather_subset:
+        - hardware
+        - default
+        - interfaces
+        ansible_net_hostname: R3
+        ansible_net_image: unix:/opt/unetlab/addons/iol/bin/i86bi-linux-l3-adventerprisek9-15.4
+        ansible_net_interfaces:
+            Ethernet0/0:
+                bandwidth: 10000
+                description: null
+                duplex: null
+                ipv4:
+                -   address: 192.168.65.103
+                    subnet: '24'
+                lineprotocol: 'up '
+                macaddress: aabb.cc00.3000
+                mediatype: null
+                mtu: 1500
+                operstatus: up
+                type: AmdP2
+            Ethernet0/1:
+                bandwidth: 10000
+                description: null
+                duplex: null
+                ipv4:
+                -   address: 10.0.0.3
+                    subnet: '24'
+                lineprotocol: 'up '
+                macaddress: aabb.cc00.3010
+                mediatype: null
+                mtu: 1500
+                operstatus: up
+                type: AmdP2
+            Ethernet0/2:
+                bandwidth: 10000
+                description: null
+                duplex: null
+                ipv4: []
+                lineprotocol: 'down '
+                macaddress: aabb.cc00.3020
+                mediatype: null
+                mtu: 1500
+                operstatus: administratively down
+                type: AmdP2
+            Ethernet0/3:
+                bandwidth: 10000
+                description: null
+                duplex: null
+                ipv4: []
+                lineprotocol: 'down '
+                macaddress: aabb.cc00.3030
+                mediatype: null
+                mtu: 1500
+                operstatus: administratively down
+                type: AmdP2
+        ansible_net_memfree_mb: 299277
+        ansible_net_memtotal_mb: 367096
+        ansible_net_model: null
+        ansible_net_serialnum: '67108912'
+        ansible_net_version: 15.4(1)T
+    changed: false
+    failed: false

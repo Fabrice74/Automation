@@ -1,0 +1,5 @@
+
+{% for i in range(1,254) %}
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_{{i}} match destination-address 172.16.202.{{i}}/32
+set security nat static rule-set static-nat-DMZ-BSource1 rule Temp_ESC_{{i}} then static-nat prefix 10.250.32.{{i}}/32
+{% endfor %}

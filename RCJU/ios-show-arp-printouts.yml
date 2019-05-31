@@ -1,0 +1,13 @@
+---
+- name: Execute show version
+  hosts: ios
+  gather_facts: no
+  tasks:
+    - ios_command:
+        commands: show arp
+      register: results
+    - debug: var=results
+    - template:
+        src: ios-show-arp-printouts.j2
+        dest: "{{inventory_hostname}}.txt"
+      delegate_to: localhost

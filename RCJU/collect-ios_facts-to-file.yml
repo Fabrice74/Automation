@@ -1,0 +1,21 @@
+---
+# This playbook collect ios_facts
+# and copy the result in one file per device
+
+- hosts: localhost
+  tasks:
+  - file: path=results state=absent
+  - file: path=results state=directory
+
+# Collect all facts from the device
+- name: Collect ios_facts
+  hosts: ios
+  tasks:
+  - ios_facts:
+    register: result
+  - copy:
+      content: "{{result.ansible_facts}}"
+      dest: "results/{{inventory_hostname}}_ios_facts.json"
+  - copy:
+      content: "{{result.ansible_facts|to_nice_yaml(indent=4)}}"
+      dest: "results/{{inventory_hostname}}_ios_facts.yml"

@@ -1,0 +1,5 @@
+{% for host in vars['ansible_play_hosts'] %}
+{%   if error_no_community is defined %}
+{{host}}: Missing SNMP community {{snmp_community}}
+{%   endif %}
+{% endfor %}

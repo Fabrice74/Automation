@@ -1,0 +1,7 @@
+{% for host in vars['ansible_play_hosts'] %}
+{%     if 'cisco' in result.stdout[0]  %}
+{{host}}: Present SNMP community |debug:{{result.stdout[0]}}
+{%     else %}
+{{host}}: Missing SNMP community |debug:{{result.stdout[0]}}
+{%     endif %}
+{% endfor %}

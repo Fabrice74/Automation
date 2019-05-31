@@ -1,0 +1,29 @@
+---
+# Compliance check:
+# • Log into individual devices
+# • Execute show version
+# • Compare printout with desired software version
+# • Report (or fail) when there’s a version mismatch
+
+- name: Check ios version
+  hosts: ios
+  gather_facts: no
+  vars:
+    - version: "15.4(1)"
+  tasks:
+    - ios_command:
+        commands: show version
+      register: result
+# -- 1st method --
+#    - fail: msg="Wrong Cisco IOS version"
+#      when: "not ('Version {{version}}' in result.stdout[0])"
+
+# -- 2nd method --
+# Warning: Might result in data loss, use assemble (see “Working with Files”) _from ipSpace
+# file version_report.txt needs to be existing
+# Target version on cmd: ansible-playbook check-ios-version.yml --extra-vars version=15.6
+    - lineinfile:
+        dest: version_report.txt
+        regexp: "{{inventory_hostname}}"
+        line: "{{inventory_hostname}}: wrong IOS version"
+      when: "not ('Version {{version}}' in result.stdout[0])"
