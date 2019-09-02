@@ -1,0 +1,11 @@
+# NTP Compliance report:
+# ----------------------
+Host: R1, NTP_server: 192.168.254.1, Synchronized: False, KO
+Host: R2, NTP_server: 192.168.254.2, Synchronized: False, KO
+Host: R3, NTP_server: 192.168.254.1, Synchronized: False, KO
+Host: R3, NTP_server: 192.168.254.3, Synchronized: False, KO
+# SSHv2 Compliance report:
+# ------------------------
+Host: R1, SSH_version: ip ssh version 2, OK
+Host: R2, SSH_version: ip ssh version 2, OK
+Host: R3, SSH_version: ip ssh version 2, OK

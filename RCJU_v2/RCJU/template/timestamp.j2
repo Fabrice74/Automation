@@ -1,0 +1,16 @@
+{#} This template will recap the timestamp configured for each device.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, timestamp debug: datetime msec localtime show-timezone, OK
+Host: R1, timestamp log: datetime msec localtime show-timezone, OK
+Host: R2, timestamp debug: datetime msec, KO
+Host: R2, timestamp log: datetime msec, KO
+{#}
+# Timestamp Compliance report:
+# ------------------------
+{% for host,facts in hostvars|dictsort %}
+Host: {{host}}, timestamp debug: {{facts.ts_debug_value[0]}}, {% if facts.result_ts_debug.stdout[0] == ts_debug %}OK{% else %}KO{% endif %}
+
+Host: {{host}}, timestamp log: {{facts.ts_log_value[0]}}, {% if facts.result_ts_log.stdout[0] == ts_log %}OK{% else %}KO{% endif %}
+
+{% endfor %}

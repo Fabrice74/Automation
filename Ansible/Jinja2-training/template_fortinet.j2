@@ -1,0 +1,8 @@
+{% for i in fortinet %}
+config firewall address
+edit "h_{{i.ip}}_{{i.name}}"
+set associated-interface "WAN1"
+set subnet {{i.ip}} 255.255.255.255
+next
+
+{% endfor %}

@@ -1,0 +1,17 @@
+#
+# Generate "create report from a template" module
+#
+# Variables
+#   results - output directory
+#   fmt     - desired template
+#   output  - destination file name
+#
+---
+# Check if uptime information from NAPALM are present or not. Fail if not present
+
+# Choose a jinja2 template to report the result
+- template:
+    src: "../template/ntp.j2"
+    #src:  "template/uptime-{{fmt|default('text')}}.j2"
+    dest: "../results/report-ntp.txt"
+  run_once: true

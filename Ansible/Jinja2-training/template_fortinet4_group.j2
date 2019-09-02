@@ -1,0 +1,5 @@
+config firewall addrgrp
+edit "g_Prts_Agences"
+set member {% for i in Printers%} h_{{i.ip_start}}-239_{{i.name}}{% endfor %}
+next
+end

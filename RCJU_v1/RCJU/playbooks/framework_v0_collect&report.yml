@@ -1,0 +1,19 @@
+---
+- name: Read data. Create report.
+  hosts: ios
+  vars:
+  - inventory_dir: "."
+  - results: "{{inventory_dir}}/results"
+  tasks:
+
+  # Framework starts with collectiong facts.
+  # Could be :
+  #     - napalm    > for collecting fact with napalm
+  #     - ansible   > for collecting facts from ansible
+  #     - vars    > for collecting fact from text files.
+  # ansible-playbook framerworkxxx -e src="ansible"
+#  - include: "./collect/collect-ios-facts-{{src|default('napalm')}}.yml"
+  - include: "./collect/collect-ios-facts-napalm.yml"
+
+  - include: "./report/report-ntp.yml"
+#  - include: "report/report-{{dst|default('text')}}.yml"

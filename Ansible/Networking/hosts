@@ -1,16 +1,12 @@
-[routers]
-r1 ansible_host=192.168.65.101  os=ios
-r2 ansible_host=192.168.65.102  os=nxos
-r3 ansible_host=192.168.65.103  os=ios
 [ios]
-r1 ansible_host=192.168.65.101  os=ios
-r3 ansible_host=192.168.65.103  os=ios
-[nxos]
-r2 ansible_host=192.168.65.102  os=nxos
-
-
+R1  ansible_host=192.168.65.101
+R2  ansible_host=192.168.65.102
+R3  ansible_host=192.168.65.103
 
 [all:vars]
+ansible_connection=network_cli
 ansible_user=ansible
 ansible_ssh_pass=ansible
-ansible_connection=local
+
+[ios:vars]
+ansible_network_os=ios

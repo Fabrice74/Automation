@@ -1,5 +1,5 @@
 ---
-- hosts: r1
+- hosts: R1
   tasks:
     - name: Collect all facts from the device
       ios_facts:

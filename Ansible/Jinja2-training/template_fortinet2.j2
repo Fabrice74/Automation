@@ -1,0 +1,7 @@
+config firewall addrgrp
+edit "Grp_banco_prod_all"
+set member {% for i in fortinet%} h_{{i.ip}}_{{i.name}}{% endfor %}
+
+set color 6
+next
+end

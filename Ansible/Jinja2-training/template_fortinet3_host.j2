@@ -1,0 +1,9 @@
+{% for i in Printers %}
+edit "h_{{i.ip_start}}-239_{{i.name}}"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip {{i.ip_start}}
+    set end-ip {{i.ip_end}}
+next
+{% endfor %}

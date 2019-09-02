@@ -1,0 +1,1368 @@
+config firewall address
+edit "h_10.225.121.11_btaigle121-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.121.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.121.12_btaigle121-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.121.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.11.11_btaigle11-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.11.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.11.12_btaigle11-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.11.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.11.13_btaigle11-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.11.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.31.11_btallam31-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.31.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.122.11_btaubon122-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.122.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.123.11_btaubon123-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.123.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.32.11_btaubon32-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.32.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.32.12_btaubon32-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.32.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.124.11_btavenc124-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.124.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.33.11_btavenc33-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.33.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.33.12_btavenc33-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.33.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.125.11_btballa125-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.125.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.126.11_btbaulm126-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.126.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.127.11_btbavoi127-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.127.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.22_btst-fr127-22.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.22 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.23_btst-fr127-23.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.23 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.24_btst-fr127-24.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.24 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.25_btst-fr127-25.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.25 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.26_btst-fr127-26.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.26 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.27_btst-fr127-27.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.27 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.28_btst-fr127-28.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.28 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.29_btst-fr127-29.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.29 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.127.30_btst-fr127-30.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.127.30 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.191.11_btlausa191-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.191.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.191.12_btlausa191-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.191.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.191.13_btlausa191-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.191.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.191.14_btlausa191-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.191.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.34.11_btbex34-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.34.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.34.12_btbex34-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.34.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.35.11_btblona35-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.35.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.35.12_btblona35-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.35.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.128.11_btbursi128-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.128.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.36.11_btbussi36-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.36.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.36.12_btbussi36-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.36.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.129.11_btbussi129-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.129.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.63.23_btprill63-23.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.63.23 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.63.22_btprill63-22.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.63.22 255.255.255.255
+next
+
+config firewall address
+edit "h_10.124.63.21_btprill63-21.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.124.63.21 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.131.11_btst-pr131-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.131.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.37.11_btchate37-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.37.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.37.12_btchate37-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.37.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.38.11_btchavo38-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.38.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.38.12_btchavo38-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.38.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.132.11_btchese132-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.132.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.39.11_btchese39-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.39.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.39.12_btchese39-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.39.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.40.11_btchexb40-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.40.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.40.12_btchexb40-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.40.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.41.11_btclare41-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.41.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.41.12_btclare41-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.41.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.42.11_btcoppe42-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.42.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.42.12_btcoppe42-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.42.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.133.11_btcorce133-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.133.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.43.11_btcosso43-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.43.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.43.12_btcosso43-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.43.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.44.11_btcriss44-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.44.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.44.12_btcriss44-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.44.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.44.13_btcriss44-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.44.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.44.14_btcriss44-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.44.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.45.11_btcugy45-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.45.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.45.12_btcugy45-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.45.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.46.11_btcully46-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.46.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.46.12_btcully46-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.46.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.47.11_btdenge47-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.47.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.47.12_btdenge47-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.47.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.134.11_btdorig134-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.134.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.12.11_btechal12-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.12.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.12.12_btechal12-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.12.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.48.11_btecubl48-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.48.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.48.12_btecubl48-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.48.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.48.13_btecubl48-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.48.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.48.14_btecubl48-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.48.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.135.11_btepali135-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.135.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.49.11_btepali49-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.49.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.49.12_btepali49-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.49.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.136.11_btgland136-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.136.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.50.11_btgland50-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.50.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.50.12_btgland50-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.50.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.50.13_btgland50-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.50.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.50.14_btgland50-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.50.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.51.11_btgrand51-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.51.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.51.12_btgrand51-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.51.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.137.11_btgrang137-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.137.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.138.11_btlasar138-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.138.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.180.11_btpeilz180-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.180.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.52.11_btpeilz52-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.52.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.52.12_btpeilz52-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.52.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.53.11_btlausa53-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.53.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.53.12_btlausa53-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.53.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.54.11_btlausa54-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.54.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.54.12_btlausa54-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.54.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.56.11_btlausa56-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.56.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.56.12_btlausa56-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.56.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.57.11_btlausa57-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.57.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.57.12_btlausa57-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.57.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.139.11_btlausa139-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.139.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.140.11_btlausa140-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.140.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.120.11_btlausa120-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.120.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.59.11_btlausa59-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.59.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.59.12_btlausa59-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.59.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.59.13_btlausa59-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.59.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.59.14_btlausa59-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.59.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.143.11_btlausa143-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.143.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.144.11_btlausa144-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.144.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.144.12_btlausa144-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.144.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.145.11_btlausa145-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.145.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.60.11_btlausa60-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.60.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.60.12_btlausa60-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.60.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.61.11_btlausa61-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.61.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.61.12_btlausa61-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.61.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.146.11_btlausa146-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.146.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.147.11_btlausa147-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.147.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.148.11_btlausa148-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.148.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.149.11_btlausa149-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.149.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.150.11_btlausa150-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.150.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.150.12_btlausa150-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.150.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.151.11_btlausa151-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.151.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.62.11_btlausa62-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.62.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.62.12_btlausa62-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.62.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.152.11_btlausa152-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.152.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.153.11_btlausa153-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.153.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.154.11_btlavau154-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.154.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.155.11_btlavey155-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.155.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.157.11_btlemon157-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.157.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.158.11_btlepon158-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.158.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.63.11_btlesen63-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.63.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.63.12_btlesen63-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.63.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.64.11_btlesdi64-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.64.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.64.12_btlesdi64-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.64.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.65.11_btleysi65-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.65.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.65.12_btleysi65-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.65.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.66.11_btlucen66-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.66.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.66.12_btlucen66-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.66.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.67.11_btlutry67-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.67.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.67.12_btlutry67-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.67.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.159.11_btmalle159-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.159.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.160.11_btmetro160-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.160.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.160.12_btmetro160-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.160.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.160.13_btmetro160-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.160.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.161.11_btmex161-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.161.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.68.11_btmezie68-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.68.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.68.12_btmezie68-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.68.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.162.11_btmonta162-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.162.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.13.11_btmontr13-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.13.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.13.12_btmontr13-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.13.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.13.13_btmontr13-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.13.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.163.11_btmontr163-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.163.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.14.11_btmorge14-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.14.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.14.12_btmorge14-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.14.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.14.13_btmorge14-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.14.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.164.11_btmorge164-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.164.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.165.11_btmorge165-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.165.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.165.12_btmorge165-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.165.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.165.13_btmorge165-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.165.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.69.11_btmoudo69-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.69.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.69.12_btmoudo69-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.69.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.69.13_btmoudo69-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.69.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.166.11_btnestl166-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.166.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.167.11_btnyon167-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.167.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.15.11_btnyon15-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.15.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.15.12_btnyon15-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.15.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.15.13_btnyon15-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.15.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.15.14_btnyon15-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.15.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.15.15_btnyon15-05.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.15.15 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.70.11_btorbe70-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.70.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.70.12_btorbe70-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.70.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.168.11_btorbe168-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.168.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.169.11_btoron169-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.169.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.71.11_btoron-71-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.71.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.71.12_btoron-71-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.71.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.170.11_btpayer170-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.170.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.16.11_btpayer16-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.16.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.16.12_btpayer16-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.16.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.72.11_btpenth72-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.72.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.72.12_btpenth72-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.72.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.74.11_btprill74-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.74.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.74.12_btprill74-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.74.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.172.11_btprill172-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.172.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.17.11_btpully17-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.17.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.17.12_btpully17-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.17.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.173.11_btrenen173-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.173.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.174.11_btrenen174-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.174.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.75.11_btrenen75-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.75.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.75.12_btrenen75-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.75.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.75.13_btrenen75-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.75.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.75.14_btrenen75-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.75.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.175.11_btrolle175-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.175.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.76.11_btrolle76-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.76.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.76.12_btrolle76-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.76.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.176.11_btromai176-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.176.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.177.11_btroman177-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.177.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.77.11_btroman77-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.77.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.77.12_btroman77-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.77.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.77.13_btroman77-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.77.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.77.14_btroman77-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.77.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.77.15_btroman77-05.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.77.15 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.78.11_btsaint78-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.78.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.78.12_btsaint78-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.78.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.79.11_btsavig79-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.79.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.79.12_btsavig79-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.79.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.80.11_btsigny80-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.80.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.80.12_btsigny80-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.80.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.81.11_btst-pr81-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.81.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.81.12_btst-pr81-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.81.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.178.11_btst-su178-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.178.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.82.11_btvallo82-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.82.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.82.12_btvallo82-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.82.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.83.11_btvevey83-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.83.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.181.11_btvevey181-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.181.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.18.11_btvevey18-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.18.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.18.12_btvevey18-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.18.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.18.13_btvevey18-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.18.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.18.14_btvevey18-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.18.14 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.184.11_btvevey184-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.184.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.84.11_btvilla84-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.84.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.84.12_btvilla84-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.84.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.85.11_btville85-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.85.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.85.12_btville85-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.85.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.85.13_btville85-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.85.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.183.11_btville183-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.183.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.185.11_btyverd185-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.185.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.186.11_btyverd186-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.186.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.19.11_btyverd19-01.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.19.11 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.19.12_btyverd19-02.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.19.12 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.19.13_btyverd19-03.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.19.13 255.255.255.255
+next
+
+config firewall address
+edit "h_10.225.19.14_btyverd19-04.bcvdintra.ch"
+set associated-interface "WAN1"
+set subnet 10.225.19.14 255.255.255.255
+next
+

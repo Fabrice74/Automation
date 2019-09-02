@@ -1,0 +1,5 @@
+- name: Run ios_facts module
+  ios_facts:
+  register: result
+- name: Display result of ios_facts
+  debug: var=result

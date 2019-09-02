@@ -1,0 +1,34 @@
+---
+- name: Get facts
+  hosts: all
+  connection: local                       # code is run locally
+  gather_facts: no                        # don't gather facts
+  vars:
+  - ntp_server: "192.168.254.1"
+  - ntp_source_if: "Vlan99"
+  tasks:
+    - name: get facts from device
+      napalm_get_facts:                   # NAPALM plugin
+        hostname: "{{ ansible_host }}"    # start of connection parameters
+        username: "{{ ansible_user }}"
+        dev_os: "{{ os }}"
+        password: "{{ ansible_ssh_pass }}"
+        filter: ['ntp_peers','ntp_servers','ntp_stats'] # which NAPALM getters to use
+      register: napalm_facts             # store information here
+    - name: Print gathered facts
+      debug:
+        msg: "{{ napalm_facts.ansible_facts|to_nice_yaml(indent=4) }}"
+      tags: [print_action]
+
+    - assert:                             # Check if NTP conf/status is compliant
+        that:
+          - "napalm_facts.ansible_facts is defined"
+          - "ntp_server in napalm_facts.ansible_facts.napalm_ntp_stats[0].remote"
+          - "napalm_facts.ansible_facts.napalm_ntp_stats[0].synchronized == 0"
+        fail_msg: "Fail: no NTP server defined, or Wrong NTP server or Unsynchronized state"
+        success_msg: "Success: a NTP server is defined"
+      ignore_errors: yes
+    
+    - template:                           # Store in a file the NTP status of each device
+        src: ../template/ntp.j2
+        dest: ./report/result_ntp.txt

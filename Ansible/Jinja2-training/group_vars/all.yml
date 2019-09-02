@@ -40,3 +40,300 @@ users:
 - { username: cisco, password: cisco }
 - { username: admin, password: admin, privilege: 15}
 - { username: autocommand, password: auto, autocommand: vty}
+
+fortinet:
+- { ip: 10.225.121.11, name: btaigle121-01.bcvdintra.ch}
+- { ip: 10.225.121.12, name: btaigle121-02.bcvdintra.ch}
+- { ip: 10.225.11.11, name: btaigle11-01.bcvdintra.ch}
+- { ip: 10.225.11.12, name: btaigle11-02.bcvdintra.ch}
+- { ip: 10.225.11.13, name: btaigle11-03.bcvdintra.ch}
+- { ip: 10.225.31.11, name: btallam31-01.bcvdintra.ch}
+- { ip: 10.225.122.11, name: btaubon122-01.bcvdintra.ch}
+- { ip: 10.225.123.11, name: btaubon123-01.bcvdintra.ch}
+- { ip: 10.225.32.11, name: btaubon32-01.bcvdintra.ch}
+- { ip: 10.225.32.12, name: btaubon32-02.bcvdintra.ch}
+- { ip: 10.225.124.11, name: btavenc124-01.bcvdintra.ch}
+- { ip: 10.225.33.11, name: btavenc33-01.bcvdintra.ch}
+- { ip: 10.225.33.12, name: btavenc33-02.bcvdintra.ch}
+- { ip: 10.225.125.11, name: btballa125-01.bcvdintra.ch}
+- { ip: 10.225.126.11, name: btbaulm126-01.bcvdintra.ch}
+- { ip: 10.225.127.11, name: btbavoi127-01.bcvdintra.ch}
+- { ip: 10.124.127.22, name: btst-fr127-22.bcvdintra.ch}
+- { ip: 10.124.127.23, name: btst-fr127-23.bcvdintra.ch}
+- { ip: 10.124.127.24, name: btst-fr127-24.bcvdintra.ch}
+- { ip: 10.124.127.25, name: btst-fr127-25.bcvdintra.ch}
+- { ip: 10.124.127.26, name: btst-fr127-26.bcvdintra.ch}
+- { ip: 10.124.127.27, name: btst-fr127-27.bcvdintra.ch}
+- { ip: 10.124.127.28, name: btst-fr127-28.bcvdintra.ch}
+- { ip: 10.124.127.29, name: btst-fr127-29.bcvdintra.ch}
+- { ip: 10.124.127.30, name: btst-fr127-30.bcvdintra.ch}
+- { ip: 10.124.191.11, name: btlausa191-01.bcvdintra.ch}
+- { ip: 10.124.191.12, name: btlausa191-02.bcvdintra.ch}
+- { ip: 10.124.191.13, name: btlausa191-03.bcvdintra.ch}
+- { ip: 10.124.191.14, name: btlausa191-04.bcvdintra.ch}
+- { ip: 10.225.34.11, name: btbex34-01.bcvdintra.ch}
+- { ip: 10.225.34.12, name: btbex34-02.bcvdintra.ch}
+- { ip: 10.225.35.11, name: btblona35-01.bcvdintra.ch}
+- { ip: 10.225.35.12, name: btblona35-02.bcvdintra.ch}
+- { ip: 10.225.128.11, name: btbursi128-01.bcvdintra.ch}
+- { ip: 10.225.36.11, name: btbussi36-01.bcvdintra.ch}
+- { ip: 10.225.36.12, name: btbussi36-02.bcvdintra.ch}
+- { ip: 10.225.129.11, name: btbussi129-01.bcvdintra.ch}
+- { ip: 10.124.63.23, name: btprill63-23.bcvdintra.ch}
+- { ip: 10.124.63.22, name: btprill63-22.bcvdintra.ch}
+- { ip: 10.124.63.21, name: btprill63-21.bcvdintra.ch}
+- { ip: 10.225.131.11, name: btst-pr131-01.bcvdintra.ch}
+- { ip: 10.225.37.11, name: btchate37-01.bcvdintra.ch}
+- { ip: 10.225.37.12, name: btchate37-02.bcvdintra.ch}
+- { ip: 10.225.38.11, name: btchavo38-01.bcvdintra.ch}
+- { ip: 10.225.38.12, name: btchavo38-02.bcvdintra.ch}
+- { ip: 10.225.132.11, name: btchese132-01.bcvdintra.ch}
+- { ip: 10.225.39.11, name: btchese39-01.bcvdintra.ch}
+- { ip: 10.225.39.12, name: btchese39-02.bcvdintra.ch}
+- { ip: 10.225.40.11, name: btchexb40-01.bcvdintra.ch}
+- { ip: 10.225.40.12, name: btchexb40-02.bcvdintra.ch}
+- { ip: 10.225.41.11, name: btclare41-01.bcvdintra.ch}
+- { ip: 10.225.41.12, name: btclare41-02.bcvdintra.ch}
+- { ip: 10.225.42.11, name: btcoppe42-01.bcvdintra.ch}
+- { ip: 10.225.42.12, name: btcoppe42-02.bcvdintra.ch}
+- { ip: 10.225.133.11, name: btcorce133-01.bcvdintra.ch}
+- { ip: 10.225.43.11, name: btcosso43-01.bcvdintra.ch}
+- { ip: 10.225.43.12, name: btcosso43-02.bcvdintra.ch}
+- { ip: 10.225.44.11, name: btcriss44-01.bcvdintra.ch}
+- { ip: 10.225.44.12, name: btcriss44-02.bcvdintra.ch}
+- { ip: 10.225.44.13, name: btcriss44-03.bcvdintra.ch}
+- { ip: 10.225.44.14, name: btcriss44-04.bcvdintra.ch}
+- { ip: 10.225.45.11, name: btcugy45-01.bcvdintra.ch}
+- { ip: 10.225.45.12, name: btcugy45-02.bcvdintra.ch}
+- { ip: 10.225.46.11, name: btcully46-01.bcvdintra.ch}
+- { ip: 10.225.46.12, name: btcully46-02.bcvdintra.ch}
+- { ip: 10.225.47.11, name: btdenge47-01.bcvdintra.ch}
+- { ip: 10.225.47.12, name: btdenge47-02.bcvdintra.ch}
+- { ip: 10.225.134.11, name: btdorig134-01.bcvdintra.ch}
+- { ip: 10.225.12.11, name: btechal12-01.bcvdintra.ch}
+- { ip: 10.225.12.12, name: btechal12-02.bcvdintra.ch}
+- { ip: 10.225.48.11, name: btecubl48-01.bcvdintra.ch}
+- { ip: 10.225.48.12, name: btecubl48-02.bcvdintra.ch}
+- { ip: 10.225.48.13, name: btecubl48-03.bcvdintra.ch}
+- { ip: 10.225.48.14, name: btecubl48-04.bcvdintra.ch}
+- { ip: 10.225.135.11, name: btepali135-01.bcvdintra.ch}
+- { ip: 10.225.49.11, name: btepali49-01.bcvdintra.ch}
+- { ip: 10.225.49.12, name: btepali49-02.bcvdintra.ch}
+- { ip: 10.225.136.11, name: btgland136-01.bcvdintra.ch}
+- { ip: 10.225.50.11, name: btgland50-01.bcvdintra.ch}
+- { ip: 10.225.50.12, name: btgland50-02.bcvdintra.ch}
+- { ip: 10.225.50.13, name: btgland50-03.bcvdintra.ch}
+- { ip: 10.225.50.14, name: btgland50-04.bcvdintra.ch}
+- { ip: 10.225.51.11, name: btgrand51-01.bcvdintra.ch}
+- { ip: 10.225.51.12, name: btgrand51-02.bcvdintra.ch}
+- { ip: 10.225.137.11, name: btgrang137-01.bcvdintra.ch}
+- { ip: 10.225.138.11, name: btlasar138-01.bcvdintra.ch}
+- { ip: 10.225.180.11, name: btpeilz180-01.bcvdintra.ch}
+- { ip: 10.225.52.11, name: btpeilz52-01.bcvdintra.ch}
+- { ip: 10.225.52.12, name: btpeilz52-02.bcvdintra.ch}
+- { ip: 10.225.53.11, name: btlausa53-01.bcvdintra.ch}
+- { ip: 10.225.53.12, name: btlausa53-02.bcvdintra.ch}
+- { ip: 10.225.54.11, name: btlausa54-01.bcvdintra.ch}
+- { ip: 10.225.54.12, name: btlausa54-02.bcvdintra.ch}
+- { ip: 10.225.56.11, name: btlausa56-01.bcvdintra.ch}
+- { ip: 10.225.56.12, name: btlausa56-02.bcvdintra.ch}
+- { ip: 10.225.57.11, name: btlausa57-01.bcvdintra.ch}
+- { ip: 10.225.57.12, name: btlausa57-02.bcvdintra.ch}
+- { ip: 10.225.139.11, name: btlausa139-01.bcvdintra.ch}
+- { ip: 10.225.140.11, name: btlausa140-01.bcvdintra.ch}
+- { ip: 10.225.120.11, name: btlausa120-01.bcvdintra.ch}
+- { ip: 10.225.59.11, name: btlausa59-01.bcvdintra.ch}
+- { ip: 10.225.59.12, name: btlausa59-02.bcvdintra.ch}
+- { ip: 10.225.59.13, name: btlausa59-03.bcvdintra.ch}
+- { ip: 10.225.59.14, name: btlausa59-04.bcvdintra.ch}
+- { ip: 10.225.143.11, name: btlausa143-01.bcvdintra.ch}
+- { ip: 10.225.144.11, name: btlausa144-01.bcvdintra.ch}
+- { ip: 10.225.144.12, name: btlausa144-02.bcvdintra.ch}
+- { ip: 10.225.145.11, name: btlausa145-01.bcvdintra.ch}
+- { ip: 10.225.60.11, name: btlausa60-01.bcvdintra.ch}
+- { ip: 10.225.60.12, name: btlausa60-02.bcvdintra.ch}
+- { ip: 10.225.61.11, name: btlausa61-01.bcvdintra.ch}
+- { ip: 10.225.61.12, name: btlausa61-02.bcvdintra.ch}
+- { ip: 10.225.146.11, name: btlausa146-01.bcvdintra.ch}
+- { ip: 10.225.147.11, name: btlausa147-01.bcvdintra.ch}
+- { ip: 10.225.148.11, name: btlausa148-01.bcvdintra.ch}
+- { ip: 10.225.149.11, name: btlausa149-01.bcvdintra.ch}
+- { ip: 10.225.150.11, name: btlausa150-01.bcvdintra.ch}
+- { ip: 10.225.150.12, name: btlausa150-02.bcvdintra.ch}
+- { ip: 10.225.151.11, name: btlausa151-01.bcvdintra.ch}
+- { ip: 10.225.62.11, name: btlausa62-01.bcvdintra.ch}
+- { ip: 10.225.62.12, name: btlausa62-02.bcvdintra.ch}
+- { ip: 10.225.152.11, name: btlausa152-01.bcvdintra.ch}
+- { ip: 10.225.153.11, name: btlausa153-01.bcvdintra.ch}
+- { ip: 10.225.154.11, name: btlavau154-01.bcvdintra.ch}
+- { ip: 10.225.155.11, name: btlavey155-01.bcvdintra.ch}
+- { ip: 10.225.157.11, name: btlemon157-01.bcvdintra.ch}
+- { ip: 10.225.158.11, name: btlepon158-01.bcvdintra.ch}
+- { ip: 10.225.63.11, name: btlesen63-01.bcvdintra.ch}
+- { ip: 10.225.63.12, name: btlesen63-02.bcvdintra.ch}
+- { ip: 10.225.64.11, name: btlesdi64-01.bcvdintra.ch}
+- { ip: 10.225.64.12, name: btlesdi64-02.bcvdintra.ch}
+- { ip: 10.225.65.11, name: btleysi65-01.bcvdintra.ch}
+- { ip: 10.225.65.12, name: btleysi65-02.bcvdintra.ch}
+- { ip: 10.225.66.11, name: btlucen66-01.bcvdintra.ch}
+- { ip: 10.225.66.12, name: btlucen66-02.bcvdintra.ch}
+- { ip: 10.225.67.11, name: btlutry67-01.bcvdintra.ch}
+- { ip: 10.225.67.12, name: btlutry67-02.bcvdintra.ch}
+- { ip: 10.225.159.11, name: btmalle159-01.bcvdintra.ch}
+- { ip: 10.225.160.11, name: btmetro160-01.bcvdintra.ch}
+- { ip: 10.225.160.12, name: btmetro160-02.bcvdintra.ch}
+- { ip: 10.225.160.13, name: btmetro160-03.bcvdintra.ch}
+- { ip: 10.225.161.11, name: btmex161-01.bcvdintra.ch}
+- { ip: 10.225.68.11, name: btmezie68-01.bcvdintra.ch}
+- { ip: 10.225.68.12, name: btmezie68-02.bcvdintra.ch}
+- { ip: 10.225.162.11, name: btmonta162-01.bcvdintra.ch}
+- { ip: 10.225.13.11, name: btmontr13-01.bcvdintra.ch}
+- { ip: 10.225.13.12, name: btmontr13-02.bcvdintra.ch}
+- { ip: 10.225.13.13, name: btmontr13-03.bcvdintra.ch}
+- { ip: 10.225.163.11, name: btmontr163-01.bcvdintra.ch}
+- { ip: 10.225.14.11, name: btmorge14-01.bcvdintra.ch}
+- { ip: 10.225.14.12, name: btmorge14-02.bcvdintra.ch}
+- { ip: 10.225.14.13, name: btmorge14-03.bcvdintra.ch}
+- { ip: 10.225.164.11, name: btmorge164-01.bcvdintra.ch}
+- { ip: 10.225.165.11, name: btmorge165-01.bcvdintra.ch}
+- { ip: 10.225.165.12, name: btmorge165-02.bcvdintra.ch}
+- { ip: 10.225.165.13, name: btmorge165-03.bcvdintra.ch}
+- { ip: 10.225.69.11, name: btmoudo69-01.bcvdintra.ch}
+- { ip: 10.225.69.12, name: btmoudo69-02.bcvdintra.ch}
+- { ip: 10.225.69.13, name: btmoudo69-03.bcvdintra.ch}
+- { ip: 10.225.166.11, name: btnestl166-01.bcvdintra.ch}
+- { ip: 10.225.167.11, name: btnyon167-01.bcvdintra.ch}
+- { ip: 10.225.15.11, name: btnyon15-01.bcvdintra.ch}
+- { ip: 10.225.15.12, name: btnyon15-02.bcvdintra.ch}
+- { ip: 10.225.15.13, name: btnyon15-03.bcvdintra.ch}
+- { ip: 10.225.15.14, name: btnyon15-04.bcvdintra.ch}
+- { ip: 10.225.15.15, name: btnyon15-05.bcvdintra.ch}
+- { ip: 10.225.70.11, name: btorbe70-01.bcvdintra.ch}
+- { ip: 10.225.70.12, name: btorbe70-02.bcvdintra.ch}
+- { ip: 10.225.168.11, name: btorbe168-01.bcvdintra.ch}
+- { ip: 10.225.169.11, name: btoron169-01.bcvdintra.ch}
+- { ip: 10.225.71.11, name: btoron-71-01.bcvdintra.ch}
+- { ip: 10.225.71.12, name: btoron-71-02.bcvdintra.ch}
+- { ip: 10.225.170.11, name: btpayer170-01.bcvdintra.ch}
+- { ip: 10.225.16.11, name: btpayer16-01.bcvdintra.ch}
+- { ip: 10.225.16.12, name: btpayer16-02.bcvdintra.ch}
+- { ip: 10.225.72.11, name: btpenth72-01.bcvdintra.ch}
+- { ip: 10.225.72.12, name: btpenth72-02.bcvdintra.ch}
+- { ip: 10.225.74.11, name: btprill74-01.bcvdintra.ch}
+- { ip: 10.225.74.12, name: btprill74-02.bcvdintra.ch}
+- { ip: 10.225.172.11, name: btprill172-01.bcvdintra.ch}
+- { ip: 10.225.17.11, name: btpully17-01.bcvdintra.ch}
+- { ip: 10.225.17.12, name: btpully17-02.bcvdintra.ch}
+- { ip: 10.225.173.11, name: btrenen173-01.bcvdintra.ch}
+- { ip: 10.225.174.11, name: btrenen174-01.bcvdintra.ch}
+- { ip: 10.225.75.11, name: btrenen75-01.bcvdintra.ch}
+- { ip: 10.225.75.12, name: btrenen75-02.bcvdintra.ch}
+- { ip: 10.225.75.13, name: btrenen75-03.bcvdintra.ch}
+- { ip: 10.225.75.14, name: btrenen75-04.bcvdintra.ch}
+- { ip: 10.225.175.11, name: btrolle175-01.bcvdintra.ch}
+- { ip: 10.225.76.11, name: btrolle76-01.bcvdintra.ch}
+- { ip: 10.225.76.12, name: btrolle76-02.bcvdintra.ch}
+- { ip: 10.225.176.11, name: btromai176-01.bcvdintra.ch}
+- { ip: 10.225.177.11, name: btroman177-01.bcvdintra.ch}
+- { ip: 10.225.77.11, name: btroman77-01.bcvdintra.ch}
+- { ip: 10.225.77.12, name: btroman77-02.bcvdintra.ch}
+- { ip: 10.225.77.13, name: btroman77-03.bcvdintra.ch}
+- { ip: 10.225.77.14, name: btroman77-04.bcvdintra.ch}
+- { ip: 10.225.77.15, name: btroman77-05.bcvdintra.ch}
+- { ip: 10.225.78.11, name: btsaint78-01.bcvdintra.ch}
+- { ip: 10.225.78.12, name: btsaint78-02.bcvdintra.ch}
+- { ip: 10.225.79.11, name: btsavig79-01.bcvdintra.ch}
+- { ip: 10.225.79.12, name: btsavig79-02.bcvdintra.ch}
+- { ip: 10.225.80.11, name: btsigny80-01.bcvdintra.ch}
+- { ip: 10.225.80.12, name: btsigny80-02.bcvdintra.ch}
+- { ip: 10.225.81.11, name: btst-pr81-01.bcvdintra.ch}
+- { ip: 10.225.81.12, name: btst-pr81-02.bcvdintra.ch}
+- { ip: 10.225.178.11, name: btst-su178-01.bcvdintra.ch}
+- { ip: 10.225.82.11, name: btvallo82-01.bcvdintra.ch}
+- { ip: 10.225.82.12, name: btvallo82-02.bcvdintra.ch}
+- { ip: 10.225.83.11, name: btvevey83-01.bcvdintra.ch}
+- { ip: 10.225.181.11, name: btvevey181-01.bcvdintra.ch}
+- { ip: 10.225.18.11, name: btvevey18-01.bcvdintra.ch}
+- { ip: 10.225.18.12, name: btvevey18-02.bcvdintra.ch}
+- { ip: 10.225.18.13, name: btvevey18-03.bcvdintra.ch}
+- { ip: 10.225.18.14, name: btvevey18-04.bcvdintra.ch}
+- { ip: 10.225.184.11, name: btvevey184-01.bcvdintra.ch}
+- { ip: 10.225.84.11, name: btvilla84-01.bcvdintra.ch}
+- { ip: 10.225.84.12, name: btvilla84-02.bcvdintra.ch}
+- { ip: 10.225.85.11, name: btville85-01.bcvdintra.ch}
+- { ip: 10.225.85.12, name: btville85-02.bcvdintra.ch}
+- { ip: 10.225.85.13, name: btville85-03.bcvdintra.ch}
+- { ip: 10.225.183.11, name: btville183-01.bcvdintra.ch}
+- { ip: 10.225.185.11, name: btyverd185-01.bcvdintra.ch}
+- { ip: 10.225.186.11, name: btyverd186-01.bcvdintra.ch}
+- { ip: 10.225.19.11, name: btyverd19-01.bcvdintra.ch}
+- { ip: 10.225.19.12, name: btyverd19-02.bcvdintra.ch}
+- { ip: 10.225.19.13, name: btyverd19-03.bcvdintra.ch}
+- { ip: 10.225.19.14, name: btyverd19-04.bcvdintra.ch}
+
+Printers:
+- { ip_start: 10.224.0.230, ip_end: 10.224.0.239, name: CAB_PRT}
+- { ip_start: 10.224.11.230, ip_end: 10.224.11.239, name: Aigle_PRT}
+- { ip_start: 10.224.12.230, ip_end: 10.224.12.239, name: Echallens_PRT}
+- { ip_start: 10.224.13.230, ip_end: 10.224.13.239, name: Montreux_PRT}
+- { ip_start: 10.224.14.230, ip_end: 10.224.14.239, name: Morges_PRT}
+- { ip_start: 10.224.15.230, ip_end: 10.224.15.239, name: Nyon_PRT}
+- { ip_start: 10.224.16.230, ip_end: 10.224.16.239, name: Payerne_PRT}
+- { ip_start: 10.224.17.230, ip_end: 10.224.17.239, name: Pully_PRT}
+- { ip_start: 10.224.18.230, ip_end: 10.224.18.239, name: Vevey_PRT}
+- { ip_start: 10.224.19.230, ip_end: 10.224.19.239, name: Yverdon-les-Bains_PRT}
+- { ip_start: 10.224.31.230, ip_end: 10.224.31.239, name: Allaman_PRT}
+- { ip_start: 10.224.32.230, ip_end: 10.224.32.239, name: Aubonne_PRT}
+- { ip_start: 10.224.33.230, ip_end: 10.224.33.239, name: Avenches_PRT}
+- { ip_start: 10.224.34.230, ip_end: 10.224.34.239, name: Bex_PRT}
+- { ip_start: 10.224.35.230, ip_end: 10.224.35.239, name: Blonay_PRT}
+- { ip_start: 10.224.36.230, ip_end: 10.224.36.239, name: Bussigny_PRT}
+- { ip_start: 10.224.37.230, ip_end: 10.224.37.239, name: Chateau_PRT}
+- { ip_start: 10.224.38.230, ip_end: 10.224.38.239, name: Chavornay_PRT}
+- { ip_start: 10.224.39.230, ip_end: 10.224.39.239, name: Cheseaux_PRT}
+- { ip_start: 10.224.40.230, ip_end: 10.224.40.239, name: Chexbres_PRT}
+- { ip_start: 10.224.41.230, ip_end: 10.224.41.239, name: Clarens_PRT}
+- { ip_start: 10.224.42.230, ip_end: 10.224.42.239, name: Coppet_PRT}
+- { ip_start: 10.224.43.230, ip_end: 10.224.43.239, name: Cossonay_PRT}
+- { ip_start: 10.224.44.230, ip_end: 10.224.44.239, name: Crissier_PRT}
+- { ip_start: 10.224.45.230, ip_end: 10.224.45.239, name: Cugy_PRT}
+- { ip_start: 10.224.46.230, ip_end: 10.224.46.239, name: Cully_PRT}
+- { ip_start: 10.224.47.230, ip_end: 10.224.47.239, name: Denges_PRT}
+- { ip_start: 10.224.48.230, ip_end: 10.224.48.239, name: Ecublens_PRT}
+- { ip_start: 10.224.49.230, ip_end: 10.224.49.239, name: Epalinges_PRT}
+- { ip_start: 10.224.50.230, ip_end: 10.224.50.239, name: Gland_PRT}
+- { ip_start: 10.224.51.230, ip_end: 10.224.51.239, name: Grandson_PRT}
+- { ip_start: 10.224.52.230, ip_end: 10.224.52.239, name: La_PRT}
+- { ip_start: 10.224.53.230, ip_end: 10.224.53.239, name: Lausanne_PRT}
+- { ip_start: 10.224.54.230, ip_end: 10.224.54.239, name: Lausanne_PRT}
+- { ip_start: 10.224.55.230, ip_end: 10.224.55.239, name: Lausanne_PRT}
+- { ip_start: 10.224.56.230, ip_end: 10.224.56.239, name: Lausanne_PRT}
+- { ip_start: 10.224.57.230, ip_end: 10.224.57.239, name: Lausanne_PRT}
+- { ip_start: 10.224.58.230, ip_end: 10.224.58.239, name: Lausanne_PRT}
+- { ip_start: 10.224.59.230, ip_end: 10.224.59.239, name: Lausanne_PRT}
+- { ip_start: 10.224.60.230, ip_end: 10.224.60.239, name: Lausanne_PRT}
+- { ip_start: 10.224.61.230, ip_end: 10.224.61.239, name: Lausanne_PRT}
+- { ip_start: 10.224.62.230, ip_end: 10.224.62.239, name: Lausanne_PRT}
+- { ip_start: 10.224.63.230, ip_end: 10.224.63.239, name: Le_PRT}
+- { ip_start: 10.224.64.230, ip_end: 10.224.64.239, name: Les_PRT}
+- { ip_start: 10.224.65.230, ip_end: 10.224.65.239, name: Leysin_PRT}
+- { ip_start: 10.224.66.230, ip_end: 10.224.66.239, name: Lucens_PRT}
+- { ip_start: 10.224.67.230, ip_end: 10.224.67.239, name: Lutry_PRT}
+- { ip_start: 10.224.68.230, ip_end: 10.224.68.239, name: Mezieres_PRT}
+- { ip_start: 10.224.69.230, ip_end: 10.224.69.239, name: Moudon_PRT}
+- { ip_start: 10.224.70.230, ip_end: 10.224.70.239, name: Orbe_PRT}
+- { ip_start: 10.224.71.230, ip_end: 10.224.71.239, name: Oron-la-Ville_PRT}
+- { ip_start: 10.224.72.230, ip_end: 10.224.72.239, name: Penthalaz_PRT}
+- { ip_start: 10.224.74.230, ip_end: 10.224.74.239, name: Prilly_PRT}
+- { ip_start: 10.224.75.230, ip_end: 10.224.75.239, name: Renens_PRT}
+- { ip_start: 10.224.76.230, ip_end: 10.224.76.239, name: Rolle_PRT}
+- { ip_start: 10.224.77.230, ip_end: 10.224.77.239, name: Romanel_PRT}
+- { ip_start: 10.224.78.230, ip_end: 10.224.78.239, name: Sainte-Croix_PRT}
+- { ip_start: 10.224.79.230, ip_end: 10.224.79.239, name: Savigny_PRT}
+- { ip_start: 10.224.80.230, ip_end: 10.224.80.239, name: Signy_PRT}
+- { ip_start: 10.224.81.230, ip_end: 10.224.81.239, name: St-Prex_PRT}
+- { ip_start: 10.224.82.230, ip_end: 10.224.82.239, name: Vallorbe_PRT}
+- { ip_start: 10.224.83.230, ip_end: 10.224.83.239, name: Vevey_PRT}
+- { ip_start: 10.224.84.230, ip_end: 10.224.84.239, name: Villars_PRT}
+- { ip_start: 10.224.85.230, ip_end: 10.224.85.239, name: Villeneuve_PRT}
+- { ip_start: 10.224.120.230, ip_end: 10.224.120.239, name: Lausanne_PRT}

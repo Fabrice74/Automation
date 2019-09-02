@@ -1,0 +1,4 @@
+---
+- hosts: R1
+  tasks:
+    - debug: var=vars

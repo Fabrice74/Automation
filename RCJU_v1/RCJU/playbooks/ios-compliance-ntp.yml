@@ -1,0 +1,48 @@
+---
+# Compliance check:
+# • Log into individual devices
+# • Execute show run | i ntp
+# • Compare printout and get:
+#   - if desired ntp server is configured
+#   - if desired ntp server is synchronized
+#   - if other ntp servers are configured
+# • Report
+
+
+- name: Check ntp version
+  hosts: ios
+  gather_facts: no
+  serial: 1
+  ignore_errors: yes
+  vars:
+    - result_dir: "../report"
+  tasks:
+    - ios_command:
+        commands: show run | i ntp
+      register: result
+    - debug: var=result.stdout_lines
+# -- 1st method --
+#    - fail: msg="Wrong Cisco IOS version"
+#      when: "not ('Version {{version}}' in result.stdout[0])"
+
+# -- 2nd method --
+# Warning: Might result in data loss, use assemble (see “Working with Files”) _from ipSpace
+# file version_report.txt needs to be existing
+# Target version on cmd: ansible-playbook check-ios-version.yml --extra-vars version=15.6
+#    - file:
+#        path: "{{result_dir}}/report-ssh.txt"
+#        state: touch
+#        mode: u=rw,g=rw,o=rw
+#      run_once: true
+#    - name: lineinfile if wrong
+#      lineinfile:
+#        dest: "{{result_dir}}/report-ssh.txt"
+#        regexp: "{{inventory_hostname}}"
+#        line: "{{inventory_hostname}}: wrong ssh version"
+#      when: "not ('{{sshv2}}' in result.stdout[0])"
+#    - name: lineinfile if right
+#      lineinfile:
+#        dest: "{{result_dir}}/report-ssh.txt"
+#        regexp: "{{inventory_hostname}}"
+#        line: "{{inventory_hostname}}: right ssh version"
+#      when: "'{{sshv2}}' in result.stdout[0]"

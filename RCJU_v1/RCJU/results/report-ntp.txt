@@ -1,0 +1,440 @@
+R1 192.168.254.1
+R2 192.168.254.1
+R3 192.168.254.1
+
+!---------------------------------------
+R1:
+    ansible_check_mode: false
+    ansible_connection: network_cli
+    ansible_diff_mode: false
+    ansible_facts:
+        napalm_facts:
+            fqdn: R1.lab.local
+            hostname: R1
+            interface_list:
+            - Ethernet0/0
+            - Ethernet0/1
+            - Ethernet0/2
+            - Ethernet0/3
+            model: Unknown
+            os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+                DEVELOPMENT TEST SOFTWARE
+            serial_number: '67108880'
+            uptime: 98700
+            vendor: Cisco
+        napalm_fqdn: R1.lab.local
+        napalm_hostname: R1
+        napalm_interface_list:
+        - Ethernet0/0
+        - Ethernet0/1
+        - Ethernet0/2
+        - Ethernet0/3
+        napalm_model: Unknown
+        napalm_ntp_peers:
+            192.168.254.1: {}
+        napalm_ntp_servers:
+            192.168.254.1: {}
+        napalm_ntp_stats:
+        -   delay: 0.0
+            hostpoll: 1024
+            jitter: 15937.0
+            offset: 0.0
+            reachability: 0
+            referenceid: .INIT.
+            remote: 192.168.254.1
+            stratum: 16
+            synchronized: false
+            type: '-'
+            when: '-'
+        napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version
+            15.4(1)T, DEVELOPMENT TEST SOFTWARE
+        napalm_serial_number: '67108880'
+        napalm_uptime: 98700
+        napalm_vendor: Cisco
+    ansible_forks: 5
+    ansible_host: 192.168.65.101
+    ansible_inventory_sources:
+    - /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+    ansible_limit: R1
+    ansible_network_os: ios
+    ansible_playbook_python: /usr/bin/python3
+    ansible_run_tags:
+    - all
+    ansible_skip_tags: []
+    ansible_ssh_pass: ansible
+    ansible_user: ansible
+    ansible_verbosity: 0
+    ansible_version:
+        full: 2.7.0
+        major: 2
+        minor: 7
+        revision: 0
+        string: 2.7.0
+    facts:
+        ansible_facts:
+            napalm_facts:
+                fqdn: R1.lab.local
+                hostname: R1
+                interface_list:
+                - Ethernet0/0
+                - Ethernet0/1
+                - Ethernet0/2
+                - Ethernet0/3
+                model: Unknown
+                os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version
+                    15.4(1)T, DEVELOPMENT TEST SOFTWARE
+                serial_number: '67108880'
+                uptime: 98700
+                vendor: Cisco
+            napalm_fqdn: R1.lab.local
+            napalm_hostname: R1
+            napalm_interface_list:
+            - Ethernet0/0
+            - Ethernet0/1
+            - Ethernet0/2
+            - Ethernet0/3
+            napalm_model: Unknown
+            napalm_ntp_peers:
+                192.168.254.1: {}
+            napalm_ntp_servers:
+                192.168.254.1: {}
+            napalm_ntp_stats:
+            -   delay: 0.0
+                hostpoll: 1024
+                jitter: 15937.0
+                offset: 0.0
+                reachability: 0
+                referenceid: .INIT.
+                remote: 192.168.254.1
+                stratum: 16
+                synchronized: false
+                type: '-'
+                when: '-'
+            napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version
+                15.4(1)T, DEVELOPMENT TEST SOFTWARE
+            napalm_serial_number: '67108880'
+            napalm_uptime: 98700
+            napalm_vendor: Cisco
+        changed: false
+        failed: false
+    group_names:
+    - ios
+    groups:
+        all:
+        - R1
+        - R2
+        - R3
+        ios:
+        - R1
+        - R2
+        - R3
+        ungrouped: &id001 []
+    inventory_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks
+    inventory_file: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+    inventory_hostname: R1
+    inventory_hostname_short: R1
+    napalm_facts:
+        fqdn: R1.lab.local
+        hostname: R1
+        interface_list:
+        - Ethernet0/0
+        - Ethernet0/1
+        - Ethernet0/2
+        - Ethernet0/3
+        model: Unknown
+        os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+            DEVELOPMENT TEST SOFTWARE
+        serial_number: '67108880'
+        uptime: 98700
+        vendor: Cisco
+    napalm_fqdn: R1.lab.local
+    napalm_hostname: R1
+    napalm_interface_list:
+    - Ethernet0/0
+    - Ethernet0/1
+    - Ethernet0/2
+    - Ethernet0/3
+    napalm_model: Unknown
+    napalm_ntp_peers:
+        192.168.254.1: {}
+    napalm_ntp_servers:
+        192.168.254.1: {}
+    napalm_ntp_stats:
+    -   delay: 0.0
+        hostpoll: 1024
+        jitter: 15937.0
+        offset: 0.0
+        reachability: 0
+        referenceid: .INIT.
+        remote: 192.168.254.1
+        stratum: 16
+        synchronized: false
+        type: '-'
+        when: '-'
+    napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+        DEVELOPMENT TEST SOFTWARE
+    napalm_serial_number: '67108880'
+    napalm_uptime: 98700
+    napalm_vendor: Cisco
+    omit: __omit_place_holder__87bc0fc21d040660c9d6bfdf100e57e4e9aab100
+    playbook_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks
+R2:
+    ansible_check_mode: false
+    ansible_connection: network_cli
+    ansible_diff_mode: false
+    ansible_facts: {}
+    ansible_forks: 5
+    ansible_host: 192.168.65.102
+    ansible_inventory_sources:
+    - /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+    ansible_limit: R1
+    ansible_network_os: ios
+    ansible_playbook_python: /usr/bin/python3
+    ansible_run_tags:
+    - all
+    ansible_skip_tags: []
+    ansible_ssh_pass: ansible
+    ansible_user: ansible
+    ansible_verbosity: 0
+    ansible_version:
+        full: 2.7.0
+        major: 2
+        minor: 7
+        revision: 0
+        string: 2.7.0
+    group_names:
+    - ios
+    groups:
+        all:
+        - R1
+        - R2
+        - R3
+        ios:
+        - R1
+        - R2
+        - R3
+        ungrouped: *id001
+    inventory_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks
+    inventory_file: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+    inventory_hostname: R2
+    inventory_hostname_short: R2
+    omit: __omit_place_holder__87bc0fc21d040660c9d6bfdf100e57e4e9aab100
+    playbook_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks
+R3:
+    ansible_check_mode: false
+    ansible_connection: network_cli
+    ansible_diff_mode: false
+    ansible_facts: {}
+    ansible_forks: 5
+    ansible_host: 192.168.65.103
+    ansible_inventory_sources:
+    - /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+    ansible_limit: R1
+    ansible_network_os: ios
+    ansible_playbook_python: /usr/bin/python3
+    ansible_run_tags:
+    - all
+    ansible_skip_tags: []
+    ansible_ssh_pass: ansible
+    ansible_user: ansible
+    ansible_verbosity: 0
+    ansible_version:
+        full: 2.7.0
+        major: 2
+        minor: 7
+        revision: 0
+        string: 2.7.0
+    group_names:
+    - ios
+    groups:
+        all:
+        - R1
+        - R2
+        - R3
+        ios:
+        - R1
+        - R2
+        - R3
+        ungrouped: *id001
+    inventory_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks
+    inventory_file: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+    inventory_hostname: R3
+    inventory_hostname_short: R3
+    omit: __omit_place_holder__87bc0fc21d040660c9d6bfdf100e57e4e9aab100
+    playbook_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks
+
+!---------------------------------------
+ansible_check_mode: false
+ansible_connection: network_cli
+ansible_diff_mode: false
+ansible_facts:
+    napalm_facts:
+        fqdn: R1.lab.local
+        hostname: R1
+        interface_list:
+        - Ethernet0/0
+        - Ethernet0/1
+        - Ethernet0/2
+        - Ethernet0/3
+        model: Unknown
+        os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+            DEVELOPMENT TEST SOFTWARE
+        serial_number: '67108880'
+        uptime: 98700
+        vendor: Cisco
+    napalm_fqdn: R1.lab.local
+    napalm_hostname: R1
+    napalm_interface_list:
+    - Ethernet0/0
+    - Ethernet0/1
+    - Ethernet0/2
+    - Ethernet0/3
+    napalm_model: Unknown
+    napalm_ntp_peers:
+        192.168.254.1: {}
+    napalm_ntp_servers:
+        192.168.254.1: {}
+    napalm_ntp_stats:
+    -   delay: 0.0
+        hostpoll: 1024
+        jitter: 15937.0
+        offset: 0.0
+        reachability: 0
+        referenceid: .INIT.
+        remote: 192.168.254.1
+        stratum: 16
+        synchronized: false
+        type: '-'
+        when: '-'
+    napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+        DEVELOPMENT TEST SOFTWARE
+    napalm_serial_number: '67108880'
+    napalm_uptime: 98700
+    napalm_vendor: Cisco
+ansible_forks: 5
+ansible_host: 192.168.65.101
+ansible_inventory_sources:
+- /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+ansible_limit: R1
+ansible_network_os: ios
+ansible_playbook_python: /usr/bin/python3
+ansible_run_tags:
+- all
+ansible_skip_tags: []
+ansible_ssh_pass: ansible
+ansible_user: ansible
+ansible_verbosity: 0
+ansible_version:
+    full: 2.7.0
+    major: 2
+    minor: 7
+    revision: 0
+    string: 2.7.0
+facts:
+    ansible_facts:
+        napalm_facts:
+            fqdn: R1.lab.local
+            hostname: R1
+            interface_list:
+            - Ethernet0/0
+            - Ethernet0/1
+            - Ethernet0/2
+            - Ethernet0/3
+            model: Unknown
+            os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+                DEVELOPMENT TEST SOFTWARE
+            serial_number: '67108880'
+            uptime: 98700
+            vendor: Cisco
+        napalm_fqdn: R1.lab.local
+        napalm_hostname: R1
+        napalm_interface_list:
+        - Ethernet0/0
+        - Ethernet0/1
+        - Ethernet0/2
+        - Ethernet0/3
+        napalm_model: Unknown
+        napalm_ntp_peers:
+            192.168.254.1: {}
+        napalm_ntp_servers:
+            192.168.254.1: {}
+        napalm_ntp_stats:
+        -   delay: 0.0
+            hostpoll: 1024
+            jitter: 15937.0
+            offset: 0.0
+            reachability: 0
+            referenceid: .INIT.
+            remote: 192.168.254.1
+            stratum: 16
+            synchronized: false
+            type: '-'
+            when: '-'
+        napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version
+            15.4(1)T, DEVELOPMENT TEST SOFTWARE
+        napalm_serial_number: '67108880'
+        napalm_uptime: 98700
+        napalm_vendor: Cisco
+    changed: false
+    failed: false
+group_names:
+- ios
+groups:
+    all:
+    - R1
+    - R2
+    - R3
+    ios:
+    - R1
+    - R2
+    - R3
+    ungrouped: []
+inventory_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks
+inventory_file: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks/hosts
+inventory_hostname: R1
+inventory_hostname_short: R1
+napalm_facts:
+    fqdn: R1.lab.local
+    hostname: R1
+    interface_list:
+    - Ethernet0/0
+    - Ethernet0/1
+    - Ethernet0/2
+    - Ethernet0/3
+    model: Unknown
+    os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+        DEVELOPMENT TEST SOFTWARE
+    serial_number: '67108880'
+    uptime: 98700
+    vendor: Cisco
+napalm_fqdn: R1.lab.local
+napalm_hostname: R1
+napalm_interface_list:
+- Ethernet0/0
+- Ethernet0/1
+- Ethernet0/2
+- Ethernet0/3
+napalm_model: Unknown
+napalm_ntp_peers:
+    192.168.254.1: {}
+napalm_ntp_servers:
+    192.168.254.1: {}
+napalm_ntp_stats:
+-   delay: 0.0
+    hostpoll: 1024
+    jitter: 15937.0
+    offset: 0.0
+    reachability: 0
+    referenceid: .INIT.
+    remote: 192.168.254.1
+    stratum: 16
+    synchronized: false
+    type: '-'
+    when: '-'
+napalm_os_version: Linux Software (I86BI_LINUX-ADVENTERPRISEK9-M), Version 15.4(1)T,
+    DEVELOPMENT TEST SOFTWARE
+napalm_serial_number: '67108880'
+napalm_uptime: 98700
+napalm_vendor: Cisco
+omit: __omit_place_holder__87bc0fc21d040660c9d6bfdf100e57e4e9aab100
+playbook_dir: /home/fab/Dropbox/Git/Automation/RCJU/RCJU/Playbooks

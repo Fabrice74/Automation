@@ -1,0 +1,19 @@
+---
+- name: Get facts
+  hosts: R1
+  connection: local                       # code is run locally
+  gather_facts: no                        # don't gather facts
+  tasks:
+    - name: get facts from device
+      napalm_get_facts:                   # NAPALM plugin
+        hostname: "{{ ansible_host }}"    # start of connection parameters
+        username: "{{ ansible_user }}"
+        dev_os: "{{ os }}"
+        password: "{{ ansible_ssh_pass }}"
+        filter: ['ntp_peers','ntp_servers','ntp_stats'] # which NAPALM getters to use
+      register: napalm_facts             # store information here
+    - name: Print gathered facts
+      debug:
+        msg: "{{ napalm_facts.ansible_facts|to_nice_json }}"
+      tags: [print_action]
+

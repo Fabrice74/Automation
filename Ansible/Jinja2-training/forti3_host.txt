@@ -1,0 +1,455 @@
+edit "h_10.224.0.230-239_CAB_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.0.230
+    set end-ip 10.224.0.239
+next
+edit "h_10.224.11.230-239_Aigle_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.11.230
+    set end-ip 10.224.11.239
+next
+edit "h_10.224.12.230-239_Echallens_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.12.230
+    set end-ip 10.224.12.239
+next
+edit "h_10.224.13.230-239_Montreux_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.13.230
+    set end-ip 10.224.13.239
+next
+edit "h_10.224.14.230-239_Morges_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.14.230
+    set end-ip 10.224.14.239
+next
+edit "h_10.224.15.230-239_Nyon_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.15.230
+    set end-ip 10.224.15.239
+next
+edit "h_10.224.16.230-239_Payerne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.16.230
+    set end-ip 10.224.16.239
+next
+edit "h_10.224.17.230-239_Pully_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.17.230
+    set end-ip 10.224.17.239
+next
+edit "h_10.224.18.230-239_Vevey_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.18.230
+    set end-ip 10.224.18.239
+next
+edit "h_10.224.19.230-239_Yverdon-les-Bains_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.19.230
+    set end-ip 10.224.19.239
+next
+edit "h_10.224.31.230-239_Allaman_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.31.230
+    set end-ip 10.224.31.239
+next
+edit "h_10.224.32.230-239_Aubonne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.32.230
+    set end-ip 10.224.32.239
+next
+edit "h_10.224.33.230-239_Avenches_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.33.230
+    set end-ip 10.224.33.239
+next
+edit "h_10.224.34.230-239_Bex_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.34.230
+    set end-ip 10.224.34.239
+next
+edit "h_10.224.35.230-239_Blonay_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.35.230
+    set end-ip 10.224.35.239
+next
+edit "h_10.224.36.230-239_Bussigny_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.36.230
+    set end-ip 10.224.36.239
+next
+edit "h_10.224.37.230-239_Chateau_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.37.230
+    set end-ip 10.224.37.239
+next
+edit "h_10.224.38.230-239_Chavornay_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.38.230
+    set end-ip 10.224.38.239
+next
+edit "h_10.224.39.230-239_Cheseaux_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.39.230
+    set end-ip 10.224.39.239
+next
+edit "h_10.224.40.230-239_Chexbres_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.40.230
+    set end-ip 10.224.40.239
+next
+edit "h_10.224.41.230-239_Clarens_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.41.230
+    set end-ip 10.224.41.239
+next
+edit "h_10.224.42.230-239_Coppet_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.42.230
+    set end-ip 10.224.42.239
+next
+edit "h_10.224.43.230-239_Cossonay_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.43.230
+    set end-ip 10.224.43.239
+next
+edit "h_10.224.44.230-239_Crissier_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.44.230
+    set end-ip 10.224.44.239
+next
+edit "h_10.224.45.230-239_Cugy_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.45.230
+    set end-ip 10.224.45.239
+next
+edit "h_10.224.46.230-239_Cully_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.46.230
+    set end-ip 10.224.46.239
+next
+edit "h_10.224.47.230-239_Denges_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.47.230
+    set end-ip 10.224.47.239
+next
+edit "h_10.224.48.230-239_Ecublens_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.48.230
+    set end-ip 10.224.48.239
+next
+edit "h_10.224.49.230-239_Epalinges_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.49.230
+    set end-ip 10.224.49.239
+next
+edit "h_10.224.50.230-239_Gland_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.50.230
+    set end-ip 10.224.50.239
+next
+edit "h_10.224.51.230-239_Grandson_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.51.230
+    set end-ip 10.224.51.239
+next
+edit "h_10.224.52.230-239_La_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.52.230
+    set end-ip 10.224.52.239
+next
+edit "h_10.224.53.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.53.230
+    set end-ip 10.224.53.239
+next
+edit "h_10.224.54.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.54.230
+    set end-ip 10.224.54.239
+next
+edit "h_10.224.55.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.55.230
+    set end-ip 10.224.55.239
+next
+edit "h_10.224.56.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.56.230
+    set end-ip 10.224.56.239
+next
+edit "h_10.224.57.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.57.230
+    set end-ip 10.224.57.239
+next
+edit "h_10.224.58.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.58.230
+    set end-ip 10.224.58.239
+next
+edit "h_10.224.59.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.59.230
+    set end-ip 10.224.59.239
+next
+edit "h_10.224.60.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.60.230
+    set end-ip 10.224.60.239
+next
+edit "h_10.224.61.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.61.230
+    set end-ip 10.224.61.239
+next
+edit "h_10.224.62.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.62.230
+    set end-ip 10.224.62.239
+next
+edit "h_10.224.63.230-239_Le_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.63.230
+    set end-ip 10.224.63.239
+next
+edit "h_10.224.64.230-239_Les_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.64.230
+    set end-ip 10.224.64.239
+next
+edit "h_10.224.65.230-239_Leysin_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.65.230
+    set end-ip 10.224.65.239
+next
+edit "h_10.224.66.230-239_Lucens_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.66.230
+    set end-ip 10.224.66.239
+next
+edit "h_10.224.67.230-239_Lutry_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.67.230
+    set end-ip 10.224.67.239
+next
+edit "h_10.224.68.230-239_Mezieres_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.68.230
+    set end-ip 10.224.68.239
+next
+edit "h_10.224.69.230-239_Moudon_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.69.230
+    set end-ip 10.224.69.239
+next
+edit "h_10.224.70.230-239_Orbe_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.70.230
+    set end-ip 10.224.70.239
+next
+edit "h_10.224.71.230-239_Oron-la-Ville_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.71.230
+    set end-ip 10.224.71.239
+next
+edit "h_10.224.72.230-239_Penthalaz_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.72.230
+    set end-ip 10.224.72.239
+next
+edit "h_10.224.74.230-239_Prilly_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.74.230
+    set end-ip 10.224.74.239
+next
+edit "h_10.224.75.230-239_Renens_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.75.230
+    set end-ip 10.224.75.239
+next
+edit "h_10.224.76.230-239_Rolle_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.76.230
+    set end-ip 10.224.76.239
+next
+edit "h_10.224.77.230-239_Romanel_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.77.230
+    set end-ip 10.224.77.239
+next
+edit "h_10.224.78.230-239_Sainte-Croix_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.78.230
+    set end-ip 10.224.78.239
+next
+edit "h_10.224.79.230-239_Savigny_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.79.230
+    set end-ip 10.224.79.239
+next
+edit "h_10.224.80.230-239_Signy_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.80.230
+    set end-ip 10.224.80.239
+next
+edit "h_10.224.81.230-239_St-Prex_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.81.230
+    set end-ip 10.224.81.239
+next
+edit "h_10.224.82.230-239_Vallorbe_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.82.230
+    set end-ip 10.224.82.239
+next
+edit "h_10.224.83.230-239_Vevey_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.83.230
+    set end-ip 10.224.83.239
+next
+edit "h_10.224.84.230-239_Villars_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.84.230
+    set end-ip 10.224.84.239
+next
+edit "h_10.224.85.230-239_Villeneuve_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.85.230
+    set end-ip 10.224.85.239
+next
+edit "h_10.224.120.230-239_Lausanne_PRT"
+    set type iprange
+    set comment "Printers"
+    set associated-interface "LAN_core"
+    set start-ip 10.224.120.230
+    set end-ip 10.224.120.239
+next

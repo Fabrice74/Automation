@@ -1,0 +1,67 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run | i logging
+# Compare printout with desired logging version
+# Report (or fail) when there’s a version mismatch
+
+- name: Check ios logging
+  hosts: ios
+  gather_facts: no
+  ignore_errors: yes
+  vars:
+    - logging_buffer_size: "64000"
+    - logging_level: "debugging"
+    - logging_server: "logging host 10.28.4.54"
+    - result_dir: "../report"
+  tasks:
+    # Collect syslog server information and print the result
+    - name: Get "show run | i logging host"    
+      ios_command:
+        commands: show run | i logging host
+      register: result_srv
+    - name: Print gathered facts
+      debug: var=result_srv.stdout
+      tags: [print_action]
+
+    # Collect syslog buffered information and print the result
+    - name: Get "show run | i logging buffered"
+      ios_command:
+        commands: show run | i logging buffered
+      register: result_buf
+    - name: Print gathered facts
+      debug: var=result_buf.stdout
+      tags: [print_action]
+    - name : Set_fact with only the buffer value
+      set_fact:
+        buf: "{{result_buf.stdout_lines[0]|regex_replace('logging buffered ','')}}"
+
+    # Collect syslog buffered information and print the result
+    - name: Get "show run | i logging trap"
+      ios_command:
+        commands: show run | i logging trap
+      register: result_trap
+    - name: Print gathered facts
+      debug: var=result_trap.stdout
+      tags: [print_action]
+    - name : Set_fact with only the trap level value
+      set_fact:
+        trap: "{{result_trap.stdout_lines[0]|regex_replace('logging trap ','')}}"
+
+# Check if syslog conf is compliant
+    - name: Compliance check
+      assert:
+        that:
+          - result_srv.stdout is defined
+          - "'{{logging_server}}' in result_srv.stdout"
+          - "'logging buffered {{logging_buffer_size}}' in result_buf.stdout"
+          - "'logging trap {{logging_level}}' in result_trap.stdout"
+        fail_msg: "Fail: wrong syslog server configured"
+        success_msg: "Success: right Syslog configuration"
+      ignore_errors: yes
+
+# Store in a file the SSHv2 status of each device
+    - name: Store result in file
+      template:
+        src: ../template/logging.j2
+        dest: ./report/result_logging.txt
