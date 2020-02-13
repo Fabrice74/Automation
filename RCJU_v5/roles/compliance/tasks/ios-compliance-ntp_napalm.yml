@@ -1,0 +1,37 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute napalm get facts to get the NTP configuration
+# Compare printout with desired NTP config
+# Report (or fail) when there’s a version mismatch
+#
+# !!! WARNING !!! 
+# if no NTP config is set at all, napalm gets no entry and no line appears
+# in the result_ntp.txt file for this device
+#
+
+- name: get facts from device
+  napalm_get_facts:                   # NAPALM plugin
+    hostname: "{{ ansible_host }}"    # start of connection parameters
+    username: "{{ ansible_user }}"
+    dev_os: "{{ os }}"
+    password: "{{ ansible_ssh_pass }}"
+    filter: ['ntp_peers','ntp_servers','ntp_stats'] # which NAPALM getters to use
+  register: napalm_facts             # store information here
+- name: Print gathered facts
+  debug:
+    msg: "{{ napalm_facts.ansible_facts|to_nice_yaml(indent=4) }}"
+  tags: [print_action]
+
+- assert:                             # Check if NTP conf/status is compliant
+    that:
+      - "napalm_facts.ansible_facts is defined"
+      - "ntp_server in napalm_facts.ansible_facts.napalm_ntp_stats[0].remote"
+      - "napalm_facts.ansible_facts.napalm_ntp_stats[0].synchronized == 0"
+    fail_msg: "Fail: no NTP server defined, or Wrong NTP server or Unsynchronized state"
+    success_msg: "Success: a NTP server is defined"
+  ignore_errors: yes
+
+- template:                           # Store in a file the NTP status of each device
+    src: ./roles/compliance/templates/ntp.j2
+    dest: ./roles/compliance/files/result_ntp.txt

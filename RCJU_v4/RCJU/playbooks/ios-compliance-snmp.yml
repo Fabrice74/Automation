@@ -1,0 +1,71 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run | i snmp
+# Compare printout with desired snmp configuration
+# Report (or fail) when there’s a configuration mismatch
+
+- name: Check snmp logging
+  hosts: ios
+  gather_facts: no
+  ignore_errors: yes
+  vars:
+    - result_dir: "../results"
+    - snmp_contact: "\"secr.sdi@jura.ch - RCJU/SDI Route de Mouthier 109, 2800 Delémont\""
+    - snmp_community: "5NMPNETD5D1"
+    - snmp_host_1: "10.28.0.211"
+    - snmp_host_2: "10.28.0.25"
+    - snmp_host_3: "10.28.2.211"
+    - snmp_host_4: "10.28.1.20"
+    - snmp_conf_1: "snmp-server group READONLY v3 priv read SNMPv3-RO"
+    - snmp_conf_2: "snmp-server group readonly v3 auth read readview"
+    - snmp_conf_3: "snmp-server group readonly v3 priv"
+    - snmp_conf_4: "snmp-server view readview internet included"
+    - snmp_conf_5: "snmp-server view readview system included"
+    - snmp_conf_6: "snmp-server community {{snmp_community}} RO"
+    - snmp_conf_7: "snmp-server contact {{snmp_contact}}"
+    - snmp_conf_8: "snmp-server enable traps"
+    - snmp_conf_9: "snmp-server host {{snmp_host_1}} version 2c 5NMPNETD5D1"
+    - snmp_conf_10: "snmp-server host {{snmp_host_2}} version 2c 5NMPNETD5D1"
+    - snmp_conf_11: "snmp-server host {{snmp_host_3}} version 2c 5NMPNETD5D1"
+    - snmp_conf_12: "snmp-server host {{snmp_host_4}} version 3 priv readonly"
+
+  tasks:
+    # Collect snmp server information and print the result
+    - name: Get "show run | i snmp"    
+      ios_command:
+        commands: show run | i snmp
+      register: result_conf
+    - name: Print gathered facts
+      debug: var=result_conf.stdout
+      tags: [print_action]
+
+
+    # Check if snmp conf is compliant
+    - name: Compliance check
+      assert:
+        that:
+          #- result_conf.stdout is defined
+          - result_conf.stdout[0].find("{{snmp_conf_1}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_2}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_3}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_4}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_5}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_6}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_7}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_8}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_9}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_10}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_11}}") != -1
+          - result_conf.stdout[0].find("{{snmp_conf_12}}") != -1
+          #- "'logging buffered {{logging_buffer_size}}' in result_buf.stdout"
+          #- "'logging trap {{logging_level}}' in result_trap.stdout"
+        fail_msg: "Fail: wrong snmp server configured"
+        success_msg: "Success: right snmp configuration"
+      ignore_errors: yes
+
+# Store in a file the snmp status of each device
+    - name: Store result in file
+      template:
+        src: ../template/snmp.j2
+        dest: ../results/result_snmp.txt

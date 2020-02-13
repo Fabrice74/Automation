@@ -1,0 +1,17 @@
+{#} This template will recap the main NTP information for each Hosts.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, NTP_server: 192.168.254.1, Synchronized: True, OK
+Host: R2, NTP_server: 192.168.254.2, Synchronized: False, KO
+
+Note: NTP source interface is not tested
+{#}
+# NTP Compliance report:
+# ----------------------
+{% for host,facts in hostvars|dictsort %}
+{%     for item in facts.ansible_facts.napalm_ntp_stats %}
+Host: {{host}}, NTP_server: {{item.remote}}, Synchronized: {{item.synchronized}}, {% if item.remote == ntp_server and item.synchronized == 1 %}OK{% else %}KO{% endif %}
+
+{%     endfor %}
+{% endfor %}
+

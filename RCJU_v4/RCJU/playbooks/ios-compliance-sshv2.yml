@@ -1,0 +1,36 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run | i ip ssh
+# Compare printout with desired ssh version
+# Report (or fail) when there’s a version mismatch
+
+- name: Check ios ssh version
+  hosts: ios
+  gather_facts: no
+  ignore_errors: yes
+  vars:
+    - sshv2: "ip ssh version 2"
+    - result_dir: "../report"
+  tasks:
+    - name: Get "show run | i ip ssh"    # Collect data
+      ios_command:
+        commands: show run | i ip ssh
+      register: result
+    - name: Print gathered facts         # Print the result
+      debug: var=result.stdout
+      tags: [print_action]
+
+    - name: Compliance check            # Check if SSH conf is compliant
+      assert:
+        that:
+          - result.stdout is defined
+          - sshv2 in result.stdout
+        fail_msg: "Fail: wrong ssh version 2, got: {{result.stdout}}"
+        success_msg: "Success: right ssh version"
+      ignore_errors: yes
+
+    - name: Store result in file        # Store in a file the SSHv2 status of each device
+      template:
+        src: ../template/sshv2.j2
+        dest: ../results/result_sshv2.txt

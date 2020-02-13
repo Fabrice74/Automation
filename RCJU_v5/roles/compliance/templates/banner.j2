@@ -1,0 +1,12 @@
+{#} This template will recap the banner configuration for each device.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, banners exist, OK
+Host: R2, banners not configured, KO
+{#}
+# Banner Compliance report:
+# ------------------------
+{% for host,facts in hostvars|dictsort %}
+Host: {{host}}, {% if "banner exec" in facts.result.stdout[0] and "banner motd" in facts.result.stdout[0] %}banners exist, OK{% else %}banners not configured, KO{% endif %}
+
+{% endfor %}

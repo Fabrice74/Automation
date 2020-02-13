@@ -1,0 +1,61 @@
+---
+- hosts: localhost
+  tasks:
+  - file: path=facts_results state=absent
+  - file: path=facts_results state=directory
+
+- hosts: R1
+  gather_facts: no
+  roles:
+    - clay584.parse_genie
+  vars:
+    collect:
+    - show version
+    - show inventory
+    - show arp
+  tasks:
+  - name: Get Data From Device
+    ios_command:
+      commands: "{{ collect }}"
+    register: result
+  - name: Get Data From Device
+    ios_command:
+      commands: "show version"
+    register: result2
+#  - name: Print Structured Data
+#    debug:
+#      msg: "{{ result['stdout'][index] | parse_genie(command=index, os='ios') }}"
+#    delegate_to: localhost
+#    loop: "{{ collect }}"
+#    loop_control:
+#      index_var: index
+
+  - name: Debug
+    debug:
+     msg: "{{ result.stdout[index] }}"
+    delegate_to: localhost
+    loop: "{{ collect }}"
+    loop_control:
+      index_var: index
+  - name: Debug2
+    debug:
+     msg: "{{result2.stdout }}"
+    delegate_to: localhost
+  - name: Debug3
+    debug:
+     msg: "{{result2.stdout[0] }}"
+    delegate_to: localhost
+
+#"{{ arp_output['stdout'][0] | parse_genie(command='show arp', os='ios') }}"
+#  - name: Set fact with Genie filter plugin
+#    set_fact:
+#      fact: "{{ result.stdout[index] | parse_genie(command=index, os='ios') }}"
+#    delegate_to: localhost
+#    loop: "{{ collect }}"
+#    loop_control:
+#      index_var: index#
+#
+#  - name: Debug pyATS facts - all
+#    debug:
+#     var: fact.version
+#    delegate_to: localhost

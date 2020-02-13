@@ -1,0 +1,33 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run | i banner
+# Compare printout with desired banner version
+# Report (or fail) when there’s a version mismatch
+
+
+# Collect banner server information and print the result
+- name: Get "show run | i banner"    
+  ios_command:
+    commands: show run | i banner
+  register: result
+- name: Print gathered facts
+  debug: var=result.stdout
+  tags: [print_action]
+
+# Check if banner conf is compliant
+- name: Compliance check
+  assert:
+    that:
+      - result.stdout is defined
+      - "'banner exec' in result.stdout[0]"
+      - "'banner motd' in result.stdout[0]"
+
+    fail_msg: "Fail: wrong banner server configured"
+    success_msg: "Success: banners are configured"
+  ignore_errors: yes
+
+- name: Store result in file        # Store in a file the banner status of each device
+  template:
+    src: ./roles/compliance/templates/banner.j2
+    dest: ./roles/compliance/files/result_banner.txt

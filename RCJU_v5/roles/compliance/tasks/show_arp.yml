@@ -1,0 +1,8 @@
+---
+- name: show_arp.yml - Run show ip arp on remote devices
+  ios_command:
+    commands: show ip arp
+  register: result
+
+- name: show_arp.yml - Debug show arp result
+  debug: var=result.stdout_lines

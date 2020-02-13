@@ -1,7 +1,7 @@
 [ios]
-R1  ansible_host=192.168.150.101
-R2  ansible_host=192.168.150.102
-R3  ansible_host=192.168.150.103
+R1  ansible_host=192.168.125.101
+R2  ansible_host=192.168.125.102
+R3  ansible_host=192.168.125.103
 
 [all:vars]
 ansible_connection=network_cli

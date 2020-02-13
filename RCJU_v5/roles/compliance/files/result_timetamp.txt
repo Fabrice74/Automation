@@ -1,0 +1,8 @@
+# Timestamp Compliance report:
+# ------------------------
+Host: R1, timestamp debug: datetime msec localtime show-timezone, OK
+Host: R1, timestamp log: datetime msec localtime show-timezone, OK
+Host: R2, timestamp debug: datetime msec, KO
+Host: R2, timestamp log: datetime msec localtime show-timezone, OK
+Host: R3, timestamp debug: datetime msec, KO
+Host: R3, timestamp log: datetime msec, KO

@@ -1,0 +1,26 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run xxxxxxxxxxxxx
+
+- name: Grab configuration
+  ios_command:
+    commands: show running
+  register: cfg
+- set_fact: config={{ cfg.stdout[0]|regex_replace("\A[^!]*","") }}
+
+- name: Save configuration to local file
+  copy:
+    content: "{{config}}"
+    dest: ./roles/compliance/files/{{inventory_hostname}}.cfg
+  delegate_to: localhost
+
+- name: Debug Config
+  debug:
+    var: config
+
+# Set the config file in a variable for future use
+- set_fact: 
+    conf{{inventory_hostname}}: "{{ lookup('R1.cfg', 'input') }}"
+- debug: 
+    var: conf{{inventory_hostname}}

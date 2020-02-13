@@ -1,0 +1,12 @@
+{#} This template will recap the SSH version configured for each device.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, SSH_version: 2, OK
+Host: R2, SSH_version: 1, NOK
+{#}
+# SSHv2 Compliance report:
+# ------------------------
+{% for host,facts in hostvars|dictsort %}
+Host: {{host}}, SSH_version: {{facts.result.stdout[0]}}, {% if facts.result.stdout[0] == sshv2 %}OK{% else %}KO{% endif %}
+
+{% endfor %}

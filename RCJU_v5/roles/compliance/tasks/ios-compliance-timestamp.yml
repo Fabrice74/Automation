@@ -1,0 +1,55 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run | i timestamp
+# Compare printout with desired timestamp
+# Report (or fail) when there’s a version mismatch
+
+# --- Part 1 - Timestamp debug ---#
+# --------------------------------#
+- name: Get "show run | i timestamps debug"    # Collect data
+  ios_command:
+    commands: show run | i timestamps debug
+  register: result_ts_debug
+- name: Print gathered facts         # Print the result
+  debug: var=result_ts_debug.stdout
+  tags: [print_action]
+- name : Set_fact with only the timestamp value # Add a new variable with only the timestamp value
+  set_fact:
+    ts_debug_value: "{{result_ts_debug.stdout_lines[0]|regex_replace('service timestamps debug ','')}}"
+
+- name: Compliance check            # Check if conf is compliant
+  assert:
+    that:
+      - result_ts_debug.stdout is defined
+      - ts_debug in result_ts_debug.stdout
+    fail_msg: "Fail: wrong timestamp debug configuration, got: {{result_ts_debug.stdout}}"
+    success_msg: "Success: right timestamp debug configuration"
+  ignore_errors: yes
+
+# --- Part 2 - Timestamp log ---#
+# ------------------------------#
+- name: Get "show run | i timestamps log"    # Collect data
+  ios_command:
+    commands: show run | i timestamps log
+  register: result_ts_log
+- name: Print gathered facts         # Print the result
+  debug: var=result_ts_log.stdout
+  tags: [print_action]
+- name : Set_fact with only the timestamp value # Add a new variable with only the timestamp value
+  set_fact:
+    ts_log_value: "{{result_ts_log.stdout_lines[0]|regex_replace('service timestamps log ','')}}"
+
+- name: Compliance check            # Check if conf is compliant
+  assert:
+    that:
+      - result_ts_log.stdout is defined
+      - ts_log in result_ts_log.stdout
+    fail_msg: "Fail: wrong timestamp log configuration, got: {{result_ts_log.stdout}}"
+    success_msg: "Success: right timestamp log configuration"
+  ignore_errors: yes
+
+- name: Store result in file        # Store in a file the status of each device
+  template:
+    src: ./roles/compliance/templates/timestamp.j2
+    dest: ./roles/compliance/files/result_timetamp.txt

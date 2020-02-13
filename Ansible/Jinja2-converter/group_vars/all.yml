@@ -1,0 +1,18 @@
+---
+# Needed for connection to the hosts
+ansible_user: ansible
+ansible_ssh_pass: ansible
+#ansible_connection=smart
+StrictHostKeyChecking: no
+gather_facts: no
+
+# Enter below variables for the jinja2 templating
+fortinet:
+- { ip: 10.225.121.11, name: btaigle121-01.bcvdintra.ch}
+
+palo:
+- { address: SRV-FIBADC-02, ip-netmask: 10.100.1.221/32}
+- { address: 	SRV-FIBADC-02	, ip-netmask: 	10.100.1.221	}
+
+set address FIBA_Azure_VNET ip-netmask 10.200.0.0/16
+set address 	SRV-FIBADC-02	ip-netmask 	10.100.1.221	/32

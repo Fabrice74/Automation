@@ -1,0 +1,12 @@
+{#} This template will recap the main syslog information for each Hosts.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, SNMP partially implemented, KO
+Host: R2, SNMP implemented, OK
+Host: R3, SNMP not implemented, KO
+{#}
+# SNMP Compliance report:
+# ------------------------
+{% for host,facts in hostvars|dictsort %}
+Host: {{host}}, {% if facts.result.stdout[0] == "TOTO" %}OK{% else %}KO{% endif %}
+{% endfor %}

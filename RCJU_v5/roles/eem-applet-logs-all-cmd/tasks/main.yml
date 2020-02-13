@@ -1,0 +1,3 @@
+---
+- name: Import config-eem-applet.yml
+  import_tasks: config-eem-applet.yml

@@ -1,0 +1,16 @@
+---
+# NTP variables
+ntp_server: "192.168.254.1"
+ntp_source_if: "Vlan99"
+
+# SYSLOG/Logging variables
+logging_buffer_size: "64000"
+logging_level: "debugging"
+logging_server: "logging host 10.28.4.54"
+
+# SSH
+sshv2: "ip ssh version 2"
+
+# Timestamp
+ts_debug: "service timestamps debug datetime msec localtime show-timezone"
+ts_log: "service timestamps log datetime msec localtime show-timezone"

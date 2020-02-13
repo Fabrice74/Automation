@@ -1,0 +1,16 @@
+{#} This template will recap the main syslog information for each Hosts.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, SYSLOG_server: 10.28.4.54, buffered: 64000, trap: debugging, OK
+Host: R2, SYSLOG_server: 192.168.1.2, buffered: 64000, trap: debugging, OK
+{#}
+# SYSLOG Compliance report:
+# ------------------------
+{% for host,facts in hostvars|dictsort %}
+{%     for item in facts.result_srv.stdout_lines %}
+{%         for i in item %}
+Host: {{host}}, SYSLOG_server: {{i}}, buffered: {{facts.buf[0]}}, trap: {{facts.trap[0]}}, {% if i == logging_server and facts.buf[0] ==  logging_buffer_size and facts.trap[0] == logging_level %}OK{% else %}KO{% endif %}
+
+{%         endfor %}
+{%     endfor %}
+{% endfor %}

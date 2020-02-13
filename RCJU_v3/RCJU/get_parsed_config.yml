@@ -1,0 +1,21 @@
+---
+- hosts: R1
+  gather_facts: no
+  roles:
+    - clay584.parse_genie
+
+  tasks:
+#--- role could be included in two ways ---
+#  - name: Read in parse_genie role
+#    include_role:
+#      name: clay584.parse_genie
+
+  - name: Get Data From Device
+    ios_command:
+      commands: show arp
+    register: arp_output
+
+  - name: Print Structured Data
+    debug:
+      msg: "{{ arp_output['stdout'][0] | parse_genie(command='show arp', os='ios') }}"
+    delegate_to: localhost

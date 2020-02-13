@@ -1,0 +1,9 @@
+{% for i in palo %}
+config firewall address
+edit "h_{{i.ip}}_{{i.name}}"
+set associated-interface "WAN1"
+set subnet {{i.ip}} 255.255.255.255
+next
+
+set address FIBA_Azure_VNET ip-netmask 10.200.0.0/16
+{% endfor %}

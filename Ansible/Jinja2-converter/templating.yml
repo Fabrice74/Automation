@@ -1,0 +1,10 @@
+---
+- hosts: localhost
+  order: sorted
+  gather_facts: False
+  tasks:
+    # The variables to treat has to be imported, for exemple through the group_vars\all.yml file
+    - name: Templating task
+      template:
+        src: ./template_palo.j2
+        dest: ./palo.txt

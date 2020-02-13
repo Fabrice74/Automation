@@ -1,0 +1,48 @@
+---
+- hosts: all
+  gather_facts: no
+  roles:
+    - clay584.parse_genie
+
+  tasks:
+#--- role could be included in two ways ---
+#  - name: Read in parse_genie role
+#    include_role:
+#      name: clay584.parse_genie
+
+  - name: Get Data From Device
+    ios_command:
+      commands: show version
+      
+    register: version_output
+
+  - name: Print Structured Data
+    debug:
+      msg: "{{ version_output['stdout'][0] | parse_genie(command='show version', os='ios') }}"
+    delegate_to: localhost
+#--- second way to do it
+  - name: Set fact with Genie filter plugin
+    set_fact:
+      pyats_version: "{{ version_output['stdout'][0] | parse_genie(command='show version', os='ios') }}"
+    delegate_to: localhost
+
+  - name: Debug pyATS facts - all
+    debug:
+     var: pyats_version.version
+    delegate_to: localhost
+
+  - name: Debug pyATS facts - version
+    debug:
+     var: pyats_version.version.version
+    delegate_to: localhost
+
+  - name: Debug pyATS facts - uptime
+    debug:
+     var: pyats_version.version.uptime
+    delegate_to: localhost
+
+  - name: Copy parsed facts in text files
+    copy:
+      content: "{{ version_output['stdout'][0] | parse_genie(command='show version', os='ios') }}"
+      dest: ./facts_results/{{inventory_hostname}}.txt
+    delegate_to: localhost

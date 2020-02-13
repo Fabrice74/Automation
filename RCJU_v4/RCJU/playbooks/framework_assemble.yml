@@ -1,0 +1,11 @@
+---
+# This playbook will assemble in one file, all the result files collected
+
+- name: Assemble in one file all compliance report
+  hosts: localhost
+  gather_facts: no
+  tasks:
+    - name: Assemble the reports
+      assemble:
+        src: ../results/
+        dest: ../results/assemble_report.txt
