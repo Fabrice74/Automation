@@ -1,0 +1,8 @@
+---
+# This playbook will assemble in one file, all the result files collected
+
+- name: Assemble the reports
+  assemble:
+    src: ./roles/compliance/files/
+    dest: ./roles/compliance/files/assemble_report.txt
+

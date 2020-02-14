@@ -1,0 +1,12 @@
+---
+- name: TEST PLAYBOOK
+  hosts: all
+  connection: local                       # code is run locally
+  gather_facts: no                        # don't gather facts
+
+  vars_files:
+  - ./rcju/vars/rcju.yml
+
+  roles:
+    - compliance
+

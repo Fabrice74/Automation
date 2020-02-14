@@ -1,0 +1,9 @@
+---
+- name: CONFIG EEM APPLET LOS ALL CMD
+  hosts: all
+  connection: local                       # code is run locally
+  gather_facts: no                        # don't gather facts
+
+  roles:
+    - eem-applet-logs-all-cmd
+

@@ -1,0 +1,5 @@
+# Banner Compliance report:
+# ------------------------
+Host: R1, banners exist, OK
+Host: R2, banners not configured, KO
+Host: R3, banners not configured, KO
