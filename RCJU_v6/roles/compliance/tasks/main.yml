@@ -2,10 +2,10 @@
 # This task allows to test the import and tag mechanism
 # A specific task could be executed with:  --tags <task_name>
 
-- name: Import NTP compliance report
-  # Warning: if no NTP server is defined, the result file does not display 
-  import_tasks: ios-compliance-ntp_napalm.yml
-  tags: ntp
+#- name: Import NTP compliance report
+#  # Warning: if no NTP server is defined, the result file does not display 
+#  import_tasks: ios-compliance-ntp_napalm.yml
+#  tags: ntp
 
 - name: Import SYSLOG/logging compliance report
   import_tasks: ios-compliance-logging.yml
