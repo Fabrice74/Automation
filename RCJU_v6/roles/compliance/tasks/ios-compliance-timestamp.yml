@@ -53,3 +53,4 @@
   template:
     src: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/templates/timestamp.j2
     dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/filesresult_timetamp.txt
+  delegate_to: localhost
