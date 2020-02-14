@@ -1,0 +1,5 @@
+# SSHv2 Compliance report:
+# ------------------------
+Host: R1, SSH_version: ip ssh version 2, OK
+Host: R2, SSH_version: ip ssh version 2, OK
+Host: R3, SSH_version: ip ssh version 2, OK

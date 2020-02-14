@@ -14,7 +14,7 @@
 - name: Print gathered facts         # Print the result
   debug: var=result_ts_debug.stdout
   tags: [print_action]
-- name : Set_fact with only the timestamp value # Add a new variable with only the timestamp value
+- name: Set_fact with only the timestamp value # Add a new variable with only the timestamp value
   set_fact:
     ts_debug_value: "{{result_ts_debug.stdout_lines[0]|regex_replace('service timestamps debug ','')}}"
 
@@ -36,7 +36,7 @@
 - name: Print gathered facts         # Print the result
   debug: var=result_ts_log.stdout
   tags: [print_action]
-- name : Set_fact with only the timestamp value # Add a new variable with only the timestamp value
+- name: Set_fact with only the timestamp value # Add a new variable with only the timestamp value
   set_fact:
     ts_log_value: "{{result_ts_log.stdout_lines[0]|regex_replace('service timestamps log ','')}}"
 
@@ -51,5 +51,5 @@
 
 - name: Store result in file        # Store in a file the status of each device
   template:
-    src: ./roles/compliance/templates/timestamp.j2
-    dest: ./roles/compliance/files/result_timetamp.txt
+    src: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/templates/timestamp.j2
+    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/filesresult_timetamp.txt

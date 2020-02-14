@@ -12,7 +12,7 @@
 - name: Save configuration to local file
   copy:
     content: "{{config}}"
-    dest: ./roles/compliance/files/{{inventory_hostname}}.cfg
+    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/files{{inventory_hostname}}.cfg
   delegate_to: localhost
 
 - name: Debug Config

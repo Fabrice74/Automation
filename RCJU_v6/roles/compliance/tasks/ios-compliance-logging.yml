@@ -54,5 +54,5 @@
 # Store in a file the SSHv2 status of each device
 - name: Store result in file
   template:
-    src: ./roles/compliance/templates/logging.j2
-    dest: ./roles/compliance/files/result_logging.txt
+    src: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/templates/logging.j2
+    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/filesresult_logging.txt

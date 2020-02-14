@@ -25,5 +25,5 @@
 
 - name: Store result in file        # Store in a file the SSHv2 status of each device
   template:
-    src: ./roles/compliance/templates/sshv2.j2
-    dest: ./roles/compliance/files/result_sshv2.txt
+    src: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/templates/sshv2.j2
+    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/filesresult_sshv2.txt
