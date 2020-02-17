@@ -14,11 +14,11 @@
   shell:          
     cmd: "pwd"
 
-#- name: Import SYSLOG/logging compliance report
-#  import_tasks: ios-compliance-logging.yml
-#  tags: 
-#    - logging
-#    - syslog
+- name: Import SYSLOG/logging compliance report
+  import_tasks: ios-compliance-logging.yml
+  tags: 
+    - logging
+    - syslog
 
 #- name: Import SSH compliance report
 #  import_tasks: ios-compliance-sshv2.yml
