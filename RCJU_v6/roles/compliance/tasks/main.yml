@@ -7,32 +7,39 @@
 #  import_tasks: ios-compliance-ntp_napalm.yml
 #  tags: ntp
 
-- name: Import SYSLOG/logging compliance report
-  import_tasks: ios-compliance-logging.yml
-  tags: 
-    - logging
-    - syslog
+- name: "pwd >> somelog.txt"
+  shell:          
+    cmd: "pwd >> somelog.txt"
+- name: pwd
+  shell:          
+    cmd: "pwd"
 
-- name: Import SSH compliance report
-  import_tasks: ios-compliance-sshv2.yml
-  tags: ssh
+#- name: Import SYSLOG/logging compliance report
+#  import_tasks: ios-compliance-logging.yml
+#  tags: 
+#    - logging
+#    - syslog
 
-- name: Import timestamp compliance report
-  import_tasks: ios-compliance-timestamp.yml
-  tags: timestamp
+#- name: Import SSH compliance report
+#  import_tasks: ios-compliance-sshv2.yml
+#  tags: ssh
 
-- name: Import banner compliance report
-  import_tasks: ios-compliance-banner.yml
-  tags: banner
+#- name: Import timestamp compliance report
+#  import_tasks: ios-compliance-timestamp.yml
+#  tags: timestamp
+
+#- name: Import banner compliance report
+#  import_tasks: ios-compliance-banner.yml
+#  tags: banner
 
 #- name: Import generic compliance report
 #  import_tasks: ios-compliance-generic.yml
 #  tags: generic
 
-- name: Create a summary report assemblying all the reports
-  import_tasks: framework_assemble.yml
-  run_once: true
-  delegate_to: localhost
-  tags: framework_assemble
+#- name: Create a summary report assemblying all the reports
+#  import_tasks: framework_assemble.yml
+#  run_once: true
+#  delegate_to: localhost
+#  tags: framework_assemble
 
 
