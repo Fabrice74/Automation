@@ -55,5 +55,5 @@
 - name: Store result in file
   template:
     src: logging.j2
-    dest: {{result_dir}}filesresult_logging.txt
+    dest: "{{result_dir}}filesresult_logging.txt"
 #  delegate_to: localhost
