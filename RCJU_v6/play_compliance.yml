@@ -9,6 +9,7 @@
 
   vars:
     result_dir: /var/lib/awx/projects/
+  
   roles:
-    - compliance
+    - compliance                        # run the compliance role
 

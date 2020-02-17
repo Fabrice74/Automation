@@ -14,3 +14,11 @@ sshv2: "ip ssh version 2"
 # Timestamp
 ts_debug: "service timestamps debug datetime msec localtime show-timezone"
 ts_log: "service timestamps log datetime msec localtime show-timezone"
+
+# SNMP
+snmp_contact: "secr.sdi@jura.ch - RCJU/SDI Route de Mouthier 109, 2800 Del"
+snmp_community: "5NMPNETD5D1"
+snmp_host_1: 10.28.0.211
+snmp_host_2: 10.28.0.25
+snmp_host_3: 10.28.2.211
+snmp_host_4: 10.28.1.20

@@ -1,0 +1,44 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run | i snmp
+# Compare printout with desired snmp config
+# Report (or fail) when there’s a version mismatch
+
+
+# Collect banner server information and print the result
+- name: Get "show run | i snmp"    
+  ios_command:
+    commands: show run | i snmp
+  register: result
+- name: Print gathered facts
+  debug: var=result.stdout
+  tags: [print_action]
+
+# Check if snmp conf is compliant
+- name: Compliance check
+  assert:
+    that:
+      - result.stdout is defined
+      - "'snmp-server group readonly v3 priv read SNMPv3-RO' in result.stdout[0]"
+      - "'snmp-server group readonly v3 auth read readview' in result.stdout[0]"
+      - "'snmp-server group readonly v3 priv' in result.stdout[0]"
+      - "'snmp-server view readview internet included' in result.stdout[0]"
+      - "'snmp-server view readview system included' in result.stdout[0]"
+      - "'snmp-server community {{snmp_community}} RO' in result.stdout[0]"
+      - "'snmp-server contact {{snmp_contact}}' in result.stdout[0]"
+      - "'snmp-server enable traps' in result.stdout[0]"
+      - "'snmp-server host {{snmp_host_1}} version 2c {{snmp_community}}' in result.stdout[0]"
+      - "'snmp-server host {{snmp_host_2}} version 2c {{snmp_community}}' in result.stdout[0]"
+      - "'snmp-server host {{snmp_host_3}} version 2c {{snmp_community}}' in result.stdout[0]"
+      - "'snmp-server host {{snmp_host_4}} version 3 priv readonly' in result.stdout[0]"
+    fail_msg: "Fail: wrong snmp configuration"
+    success_msg: "Success: snmp configured"
+  ignore_errors: yes
+  register: log_result
+- debug: var=log_result
+- name: Store result in file        # Store in a file the snmp status of each device
+  template:
+    src: snmp.j2
+    dest: "{{result_dir}}filesresult_snmp.txt"
+  connection: local

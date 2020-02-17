@@ -1,0 +1,12 @@
+{#} This template will recap the snmp configuration for each device.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, SNMP correctly configured, OK
+Host: R2, SNMP not configured, KO
+{#}
+# SNMP Compliance report:
+# ------------------------
+{% for host,facts in hostvars|dictsort %}
+Host: {{host}},{% if not facts.log_result.failed  %} SNMP configured, OK{% else %} SNMP not configured, KO{% endif %}
+
+{% endfor %}

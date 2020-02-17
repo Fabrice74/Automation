@@ -7,13 +7,6 @@
 #  import_tasks: ios-compliance-ntp_napalm.yml
 #  tags: ntp
 
-- name: "pwd >> somelog.txt"
-  shell:          
-    cmd: "pwd >> somelog.txt"
-- name: pwd
-  shell:          
-    cmd: "pwd"
-
 - name: Import SYSLOG/logging compliance report
   import_tasks: ios-compliance-logging.yml
   tags: 
@@ -31,6 +24,10 @@
 - name: Import banner compliance report
   import_tasks: ios-compliance-banner.yml
   tags: banner
+
+- name: Import snmp compliance report
+  import_tasks: ios-compliance-snmp.yml
+  tags: snmp
 
 #- name: Import generic compliance report
 #  import_tasks: ios-compliance-generic.yml
