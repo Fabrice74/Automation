@@ -3,6 +3,5 @@
 
 - name: Assemble the reports
   assemble:
-    src: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/files
-    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/files/filesassemble_report.txt
-
+    src: "{{result_dir}}"
+    dest: "{{result_dir}}filesassemble_report.txt"

@@ -20,26 +20,26 @@
     - logging
     - syslog
 
-#- name: Import SSH compliance report
-#  import_tasks: ios-compliance-sshv2.yml
-#  tags: ssh
+- name: Import SSH compliance report
+  import_tasks: ios-compliance-sshv2.yml
+  tags: ssh
 
-#- name: Import timestamp compliance report
-#  import_tasks: ios-compliance-timestamp.yml
-#  tags: timestamp
+- name: Import timestamp compliance report
+  import_tasks: ios-compliance-timestamp.yml
+  tags: timestamp
 
-#- name: Import banner compliance report
-#  import_tasks: ios-compliance-banner.yml
-#  tags: banner
+- name: Import banner compliance report
+  import_tasks: ios-compliance-banner.yml
+  tags: banner
 
 #- name: Import generic compliance report
 #  import_tasks: ios-compliance-generic.yml
 #  tags: generic
 
-#- name: Create a summary report assemblying all the reports
-#  import_tasks: framework_assemble.yml
-#  run_once: true
-#  delegate_to: localhost
-#  tags: framework_assemble
+- name: Create a summary report assemblying all the reports
+  import_tasks: framework_assemble.yml
+  run_once: true
+  delegate_to: localhost
+  tags: framework_assemble
 
 
