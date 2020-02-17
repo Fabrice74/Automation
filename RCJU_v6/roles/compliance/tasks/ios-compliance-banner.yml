@@ -30,5 +30,5 @@
 - name: Store result in file        # Store in a file the banner status of each device
   template:
     src: banner.j2
-    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/files/filesresult_banner.txt
+    dest: ./roles/compliance/files/filesresult_banner.txt
   connection: local

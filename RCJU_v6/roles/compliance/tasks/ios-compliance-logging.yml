@@ -55,5 +55,5 @@
 - name: Store result in file
   template:
     src: logging.j2
-    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/files/filesresult_logging.txt
+    dest: ./roles/compliance/files/filesresult_logging.txt
   connection: local
