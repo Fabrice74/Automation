@@ -56,4 +56,4 @@
   template:
     src: logging.j2
     dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/filesresult_logging.txt
-  connection: local
+  delegate_to: localhost
