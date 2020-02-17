@@ -29,6 +29,6 @@
 
 - name: Store result in file        # Store in a file the banner status of each device
   template:
-    src: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/templates/banner.j2
-    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/filesresult_banner.txt
-  delegate_to: localhost
+    src: banner.j2
+    dest: /home/fab/Dropbox/Git/Automation/RCJU_v6/roles/compliance/files/filesresult_banner.txt
+  connection: local
