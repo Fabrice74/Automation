@@ -29,7 +29,11 @@
   import_tasks: ios-compliance-snmp.yml
   tags: snmp
 
-#- name: Import generic compliance report
+- name: Import aaa compliance report
+  import_tasks: ios-compliance-aaa.yml
+  tags: aaa
+
+  #- name: Import generic compliance report
 #  import_tasks: ios-compliance-generic.yml
 #  tags: generic
 

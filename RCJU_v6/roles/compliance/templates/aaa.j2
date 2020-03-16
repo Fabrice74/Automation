@@ -1,0 +1,13 @@
+{#} This template will recap the aaa configuration for each device.
+And will perform a check of the values to give a compliance result OK or KO
+exemple:
+Host: R1, aaa correctly configured, OK
+Host: R2, aaa not configured, KO
+
+# aaa Compliance report:
+# ------------------------
+{% for host,facts in hostvars|dictsort %}
+Host: {{host}},{% if not facts.log_result.failed  %} aaa configured, OK{% else %} aaa not configured, KO{% endif %}
+
+{% endfor %}
+{#}
