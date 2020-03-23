@@ -1,0 +1,33 @@
+---
+- hosts: all
+  connection: local                       # code is run locally
+  gather_facts: no                        # don't gather facts
+  
+  tasks:
+  - name: Grab configuration
+    ios_command:
+      commands: show running
+    register: cfg
+  - set_fact: config={{ cfg.stdout[0]|regex_replace("\A[^!]*","") }}
+  - name: Save configuration to local file
+    copy:
+      content: "{{config}}"
+      dest: "{{result_dir}}{{inventory_hostname}}.cfg"
+    delegate_to: localhost
+
+#
+#
+# - name: Save configuration to local file
+#   copy:
+#     content: "{{config}}"
+#     dest: "{{repository}}/{{inventory_hostname}}.cfg"
+#   delegate_to: localhost
+#
+# - name: configurable backup path
+#   ios_config:
+#     src: ios_template.j2
+#     backup: yes
+#     backup_options:
+#       filename: backup.cfg
+#       dir_path: /home/user
+#
