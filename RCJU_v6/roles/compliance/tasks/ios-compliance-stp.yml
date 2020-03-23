@@ -1,0 +1,35 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run
+# Compare printout with desired stp config
+# Report (or fail) when there’s a version mismatch
+
+
+# Collect banner server information and print the result
+- name: Get "show run"    
+  ios_command:
+    commands: "show run"
+  register: result
+- name: Print gathered facts
+  debug: var=result.stdout
+  tags: [print_action]
+
+# Check if stp conf is compliant
+- name: Compliance check
+  assert:
+    that:
+      - result.stdout is defined
+      - "'spanning-tree mode rapid-pvst' in result.stdout[0]"
+      - "'spanning-tree portfast edge default' in result.stdout[0]"
+      - "'spanning-tree portfast edge bpduguard default' in result.stdout[0]"
+      - "'spanning-tree extend system-id' in result.stdout[0]"
+    success_msg: "Success: stp configured"
+  ignore_errors: yes
+  register: log_result
+
+- name: Store result in file        # Store in a file the status of each device
+  template:
+    src: stp.j2
+    dest: "{{result_dir}}filesresult_stp.txt"
+  connection: local

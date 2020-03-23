@@ -1,0 +1,34 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run
+# Compare printout with desired miscellaneous config
+# Report (or fail) when there’s a version mismatch
+
+
+# Collect banner server information and print the result
+- name: Get "show run"    
+  ios_command:
+    commands: "show run"
+  register: result
+- name: Print gathered facts
+  debug: var=result.stdout
+  tags: [print_action]
+
+# Check if miscellaneous conf is compliant
+- name: Compliance check
+  assert:
+    that:
+      - result.stdout is defined
+      - "'clock timezone CET 1 0' in result.stdout[0]" # Clock
+      - "'clock summer-time CEST recurring 1 Sun Mar 2:00 1 Sun Oct 1:00' in result.stdout[0]" # Clock
+    fail_msg: "Fail: wrong miscellaneous configuration"
+    success_msg: "Success: miscellaneous configured"
+  ignore_errors: yes
+  register: log_result
+
+#- name: Store result in file        # Store in a file the status of each device
+#  template:
+#    src: miscellaneous.j2
+#    dest: "{{result_dir}}filesresult_miscellaneous.txt"
+#  connection: local

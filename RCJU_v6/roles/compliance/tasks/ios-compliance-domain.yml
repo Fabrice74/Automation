@@ -1,0 +1,36 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run
+# Compare printout with desired domain config
+# Report (or fail) when there’s a version mismatch
+
+
+# Collect banner server information and print the result
+- name: Get "show run"    
+  ios_command:
+    commands: "show run"
+  register: result
+- name: Print gathered facts
+  debug: var=result.stdout
+  tags: [print_action]
+
+# Check if domain conf is compliant
+- name: Compliance check
+  assert:
+    that:
+      - result.stdout is defined
+      - "'no ip domain lookup' in result.stdout[0]"
+      - "'ip domain name jura.ch' in result.stdout[0]"
+      - "'ip name-server 10.28.4.118' in result.stdout[0]"
+      - "'ip name-server 10.28.4.119' in result.stdout[0]"
+    fail_msg: "Fail: wrong domain configuration"
+    success_msg: "Success: domain configured"
+  ignore_errors: yes
+  register: log_result
+
+- name: Store result in file        # Store in a file the status of each device
+  template:
+    src: domain.j2
+    dest: "{{result_dir}}filesresult_domain.txt"
+  connection: local

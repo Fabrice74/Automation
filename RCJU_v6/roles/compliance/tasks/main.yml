@@ -33,7 +33,29 @@
   import_tasks: ios-compliance-aaa.yml
   tags: aaa
 
-  #- name: Import generic compliance report
+- name: Import domain compliance report
+  import_tasks: ios-compliance-domain.yml
+  tags: domain
+
+- name: Import vtp compliance report
+  import_tasks: ios-compliance-vtp.yml
+  tags: vtp
+
+- name: Import stp compliance report
+  import_tasks: ios-compliance-stp.yml
+  tags: stp
+
+- name: Import vlan1 compliance report
+  import_tasks: ios-compliance-vlan1.yml
+  tags: vlan1
+
+- name: Import miscellaneous compliance report
+  import_tasks: ios-compliance-miscellaneous.yml
+  tags: 
+    - misc
+    - miscellaneous
+
+#- name: Import generic compliance report
 #  import_tasks: ios-compliance-generic.yml
 #  tags: generic
 

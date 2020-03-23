@@ -7,6 +7,9 @@ R3  ansible_host=192.168.125.103
 ansible_connection=network_cli
 ansible_user=ansible
 ansible_ssh_pass=ansible
+ansible_become=yes
+ansible_become_method=enable
+ansible_become_password=cisco
 
 [ios:vars]
 ansible_network_os = ios

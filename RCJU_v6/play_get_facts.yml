@@ -1,0 +1,11 @@
+---
+- name: CONFIG EEM APPLET LOS ALL CMD
+  hosts: all
+  connection: local                       # code is run locally
+  gather_facts: yes                        # don't gather facts
+  tasks:
+    - name: Collect all facts from the device
+      ios_facts:
+        gather_subset: all
+      register: facts
+    - debug: var=facts

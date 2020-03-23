@@ -1,0 +1,36 @@
+---
+# Compliance check:
+# Log into individual devices
+# Execute show run
+# Compare printout with desired vlan1 config
+# Report (or fail) when there’s a version mismatch
+
+# Collect Vlan1 interface status
+
+
+
+- name: Gather L3 interfaces resource and minimal legacy facts
+  ios_facts:
+    gather_subset: min
+    gather_network_resources: interfaces
+  register: result
+
+- name: Print gathered facts
+  debug: var=result
+  tags: [print_action]
+
+# Check if vlan1 conf is compliant = shutdown
+#- name: Compliance check
+#  assert:
+#    that:
+#      - result.stdout is defined
+#      - "'vlan1 mode transparent' in result.stdout[0]"
+#    success_msg: "Success: vlan1 configured"
+#  ignore_errors: yes
+#  register: log_result
+#
+#- name: Store result in file        # Store in a file the status of each device
+#  template:
+#    src: vlan1.j2
+#    dest: "{{result_dir}}filesresult_vlan1.txt"
+#  connection: local
