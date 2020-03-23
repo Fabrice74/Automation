@@ -1,6 +1,6 @@
 ---
 - hosts: all
-  connection: network_cli                       # code is run locally
+  connection: local                       # code is run locally
   gather_facts: no                        # don't gather facts
   tasks:
     - name: Collect all facts from the device
