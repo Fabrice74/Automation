@@ -1,6 +1,7 @@
 ---
 - name: Execute show arp
   hosts: all
+  connection: local                       # code is run locally
   gather_facts: no
   tasks:
     - raw: "show arp"
