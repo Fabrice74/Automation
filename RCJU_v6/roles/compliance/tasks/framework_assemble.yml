@@ -11,8 +11,9 @@
   mail:
     host: "smtp-apps.jura.ch"
     port: 25
-    username: ""
-    password: ""
+    from: "ansible@jura.ch"
+    #username: ""
+    #password: ""
     to: "fabrice.rios@gmail.com"
     subject: "Ansible Compliance report"
     body: "Hello" #"{{lookup('file', '{{result_dir}}/filesassemble_report.txt') }}"
