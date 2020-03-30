@@ -3,7 +3,7 @@
 
 - name: Assemble the reports
   assemble:
-    src: "/"
+    src: "./"
     dest: "filesassemble_report.txt"
 
 # Send the result in email
