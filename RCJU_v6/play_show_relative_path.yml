@@ -2,5 +2,10 @@
 - hosts: all
   connection: local                       # code is run locally
   gather_facts: no                        # don't gather facts
+
+  vars:
+    result_dir: ./roles/compliance/files
+    root_dir: ./
   tasks:
   - debug: var=result_dir
+  - debug: var=root_dir
