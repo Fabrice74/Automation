@@ -1,0 +1,6 @@
+---
+- hosts: all
+  connection: local                       # code is run locally
+  gather_facts: no                        # don't gather facts
+  tasks:
+  - debug: var=result_dir
