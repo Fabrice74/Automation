@@ -11,7 +11,7 @@
   mail:
     host: "smtp-apps.jura.ch"
     port: 25
-    from: "ansible@jura.ch"
+    from: "monitoring@jura.ch"
     #username: ""
     #password: ""
     to: "fabrice.rios@gmail.com"
