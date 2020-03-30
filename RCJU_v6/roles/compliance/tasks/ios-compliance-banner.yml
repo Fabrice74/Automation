@@ -30,5 +30,5 @@
 - name: Store result in file        # Store in a file the banner status of each device
   template:
     src: banner.j2
-    dest: "{{result_dir}}filesresult_banner.txt"
+    dest: "filesresult_banner.txt"
   connection: local

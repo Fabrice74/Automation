@@ -12,7 +12,7 @@
 - name: Save configuration to local file
   copy:
     content: "{{config}}"
-    dest: "{{result_dir}}{{inventory_hostname}}.cfg"
+    dest: "{{inventory_hostname}}.cfg"
   delegate_to: localhost
 
 - name: Debug Config

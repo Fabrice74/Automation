@@ -31,5 +31,5 @@
 - name: Store result in file        # Store in a file the status of each device
   template:
     src: stp.j2
-    dest: "{{result_dir}}filesresult_stp.txt"
+    dest: "filesresult_stp.txt"
   connection: local

@@ -32,5 +32,5 @@
 - name: Store result in file        # Store in a file the status of each device
   template:
     src: domain.j2
-    dest: "{{result_dir}}filesresult_domain.txt"
+    dest: "filesresult_domain.txt"
   connection: local

@@ -28,5 +28,5 @@
 - name: Store result in file        # Store in a file the status of each device
   template:
     src: vtp.j2
-    dest: "{{result_dir}}filesresult_vtp.txt"
+    dest: "filesresult_vtp.txt"
   connection: local

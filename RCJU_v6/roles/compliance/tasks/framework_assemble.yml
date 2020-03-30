@@ -3,5 +3,5 @@
 
 - name: Assemble the reports
   assemble:
-    src: "{{result_dir}}"
-    dest: "{{result_dir}}filesassemble_report.txt"
+    src: ""
+    dest: "filesassemble_report.txt"
