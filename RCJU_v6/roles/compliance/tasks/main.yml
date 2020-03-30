@@ -63,6 +63,8 @@
   import_tasks: framework_assemble.yml
   run_once: true
   delegate_to: localhost
-  tags: framework_assemble
+  tags: 
+    - assemble
+    - framework_assemble
 
 
