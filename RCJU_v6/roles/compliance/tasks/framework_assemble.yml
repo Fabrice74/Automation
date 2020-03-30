@@ -15,7 +15,7 @@
     password: "=!XZUJ01"
     to: "fabrice.rios@gmail.com"
     subject: "Ansible Compliance report"
-    body: "{{lookup('file', 'filesassemble_report.txt') }}"
+    body: "Hello"
     secure: starttls
   delegate_to: localhost
   run_once: true
