@@ -9,7 +9,7 @@
 
 - name: Ansible delete file glob
   find:
-    paths: "{{result_dir}}/"
+    paths: "{{result_dir}}/roles/compliance/files/"
     patterns: "*.txt"
   register: files_to_delete
   tags: 
