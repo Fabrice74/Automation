@@ -36,6 +36,13 @@
     - framework_assemble
   run_once: true
   delegate_to: localhost
+
+- name: DEBUG LS {{result_dir}}/roles/compliance/files/
+  shell:
+    cmd: "ls -al {{result_dir}}/roles/compliance/files/"
+  run_once: true
+  delegate_to: localhost   
+
 #------- STOP CLEANING ----------
 
 
