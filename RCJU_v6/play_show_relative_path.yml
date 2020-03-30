@@ -6,6 +6,8 @@
   vars:
     result_dir: ./roles/compliance/files
     root_dir: ./
+
   tasks:
-  - debug: var=result_dir
-  - debug: var=root_dir
+  - name: Generate a log file
+    shell:
+      cmd: "pwd"
