@@ -7,6 +7,14 @@
 #  import_tasks: ios-compliance-ntp_napalm.yml
 #  tags: ntp
 
+
+#------- START CLEANING ----------
+- name: DEBUG LS {{result_dir}}/roles/compliance/files/
+  shell:
+    cmd: "ls -al {{result_dir}}/roles/compliance/files/"
+  run_once: true
+  delegate_to: localhost   
+
 - name: Ansible delete file glob
   find:
     paths: "{{result_dir}}/roles/compliance/files/"
@@ -15,6 +23,9 @@
   tags: 
     - assemble
     - framework_assemble
+  run_once: true
+  delegate_to: localhost
+
 - name: Ansible remove file glob
   file:
     path: "{{ item.path }}"
@@ -23,8 +34,12 @@
   tags: 
     - assemble
     - framework_assemble
+  run_once: true
+  delegate_to: localhost
+#------- STOP CLEANING ----------
 
-    
+
+
 - name: Import SYSLOG/logging compliance report
   import_tasks: ios-compliance-logging.yml
   tags: 
