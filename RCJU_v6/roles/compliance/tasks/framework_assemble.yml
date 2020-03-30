@@ -9,13 +9,13 @@
 # Send the result in email
 - name: Send mail using Ansible
   mail:
-    host: "smtp.gmail.com"
-    port: 587
-    username: "fabrice.rios@gmail.com"
-    password: "=!XZUJ01"
+    host: "smtp-apps.jura.ch"
+    port: 25
+    username: ""
+    password: ""
     to: "fabrice.rios@gmail.com"
     subject: "Ansible Compliance report"
-    body: "{{lookup('file', '{{result_dir}}/filesassemble_report.txt') }}"
-    secure: starttls
+    body: "Hello" #"{{lookup('file', '{{result_dir}}/filesassemble_report.txt') }}"
+    secure: none #starttls
   delegate_to: localhost
   run_once: true
