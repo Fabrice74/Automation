@@ -3,8 +3,8 @@
 
 - name: Assemble the reports
   assemble:
-    src:  "{{result_dir}}/"
-    dest: "{{result_dir}}/filesassemble_report.txt"
+    src:  "{{result_dir}}/roles/compliance/files/"
+    dest: "{{result_dir}}/roles/compliance/files/filesassemble_report.txt"
 - name: DEBUG PWD
   shell:
     cmd: "pwd"
@@ -21,7 +21,7 @@
     #password: ""
     to: "fabrice.rios@swisscom.com"
     subject: "Ansible Compliance report"
-    body: "{{lookup('file', '{{result_dir}}/filesassemble_report.txt') }}"
+    body: "{{ lookup('file', '{{result_dir}}/roles/compliance/files/filesassemble_report.txt') }}"
     secure: never #starttls
   delegate_to: localhost
   run_once: true
