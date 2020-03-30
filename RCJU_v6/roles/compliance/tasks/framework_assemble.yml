@@ -14,9 +14,9 @@
     from: "monitoring@jura.ch"
     #username: ""
     #password: ""
-    to: "fabrice.rios@gmail.com"
+    to: "fabrice.rios@swisscom.com"
     subject: "Ansible Compliance report"
-    body: "Hello" #"{{lookup('file', '{{result_dir}}/filesassemble_report.txt') }}"
+    body: "{{lookup('file', '{{result_dir}}/filesassemble_report.txt') }}"
     secure: never #starttls
   delegate_to: localhost
   run_once: true
