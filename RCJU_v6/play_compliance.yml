@@ -8,7 +8,7 @@
   - ./rcju/vars/rcju.yml
 
   vars:
-    result_dir: /var/lib/awx/projects/
+    result_dir: ./var/lib/awx/projects/
   
   roles:
     - compliance                        # run the compliance role

@@ -1,0 +1,18 @@
+---
+- hosts: all
+  connection: local                       # code is run locally
+  gather_facts: no                        # don't gather facts
+  tasks:
+    - name: Send mail using Ansible
+      mail:
+        host: "smtp.gmail.com"
+        port: 587
+        username: "fabrice.rios@gmail.com"
+        password: "=!XZUJ01"
+        to: "fabrice.rios@gmail.com"
+        subject: "Ansible test"
+        body: "Hello from Ansible"
+        secure: starttls
+      delegate_to: localhost
+      run_once: true
+
