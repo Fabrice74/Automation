@@ -5,7 +5,12 @@
   assemble:
     src:  "{{result_dir}}/"
     dest: "{{result_dir}}/filesassemble_report.txt"
-
+- name: DEBUG PWD
+  shell:
+    cmd: "pwd"
+- name: DEBUG LS
+  shell:
+    cmd: "ls -al ./"
 # Send the result in email
 - name: Send mail using Ansible
   mail:
