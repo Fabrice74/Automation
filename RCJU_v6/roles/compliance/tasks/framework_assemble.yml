@@ -16,6 +16,6 @@
     to: "fabrice.rios@gmail.com"
     subject: "Ansible Compliance report"
     body: "Hello"
-    secure: starttls
+    secure: never #starttls
   delegate_to: localhost
   run_once: true
