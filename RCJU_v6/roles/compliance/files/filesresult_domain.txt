@@ -1,0 +1,5 @@
+# domain Compliance report:
+# ------------------------
+Host: R1, domain not configured correctly, KO
+Host: R2, domain configured, OK
+Host: R3, domain not configured correctly, KO

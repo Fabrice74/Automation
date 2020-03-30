@@ -1,0 +1,5 @@
+# stp Compliance report:
+# ------------------------
+Host: R1, stp not configured correctly, KO
+Host: R2, stp not configured correctly, KO
+Host: R3, stp not configured correctly, KO

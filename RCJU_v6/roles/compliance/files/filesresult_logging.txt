@@ -1,0 +1,5 @@
+# SYSLOG Compliance report:
+# ------------------------
+Host: R1, SYSLOG_server: logging host 10.28.4.54, buffered: 64000, trap: debugging, OK
+Host: R2, SYSLOG_server: , buffered: , trap: , KO
+Host: R3, SYSLOG_server: logging host 10.28.4.54, buffered: 640000, trap: debugging, KO

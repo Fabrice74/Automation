@@ -26,5 +26,5 @@
 - name: Store result in file        # Store in a file the SSHv2 status of each device
   template:
     src: sshv2.j2
-    dest: "filesresult_sshv2.txt"
+    dest: "{{result_dir}}/filesresult_sshv2.txt"
   connection: local

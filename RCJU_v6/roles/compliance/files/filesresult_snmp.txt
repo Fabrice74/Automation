@@ -1,0 +1,5 @@
+# SNMP Compliance report:
+# ------------------------
+Host: R1, SNMP not configured, KO
+Host: R2, SNMP not configured, KO
+Host: R3, SNMP not configured, KO

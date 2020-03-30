@@ -32,5 +32,5 @@
 #- name: Store result in file        # Store in a file the status of each device
 #  template:
 #    src: vlan1.j2
-#    dest: "{{result_dir}}filesresult_vlan1.txt"
+#    dest: "{{result_dir}}/filesresult_vlan1.txt"
 #  connection: local

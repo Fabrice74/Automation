@@ -3,8 +3,8 @@
 
 - name: Assemble the reports
   assemble:
-    src: "./"
-    dest: "filesassemble_report.txt"
+    src:  "{{result_dir}}/"
+    dest: "{{result_dir}}/filesassemble_report.txt"
 
 # Send the result in email
 - name: Send mail using Ansible
@@ -15,7 +15,7 @@
     password: "=!XZUJ01"
     to: "fabrice.rios@gmail.com"
     subject: "Ansible Compliance report"
-    body: "Hello"
+    body: "{{lookup('file', '{{result_dir}}/filesassemble_report.txt') }}"
     secure: starttls
   delegate_to: localhost
   run_once: true

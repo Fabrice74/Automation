@@ -7,6 +7,24 @@
 #  import_tasks: ios-compliance-ntp_napalm.yml
 #  tags: ntp
 
+- name: Ansible delete file glob
+  find:
+    paths: "{{result_dir}}/"
+    patterns: "*.txt"
+  register: files_to_delete
+  tags: 
+    - assemble
+    - framework_assemble
+- name: Ansible remove file glob
+  file:
+    path: "{{ item.path }}"
+    state: absent
+  with_items: "{{ files_to_delete.files }}"
+  tags: 
+    - assemble
+    - framework_assemble
+
+    
 - name: Import SYSLOG/logging compliance report
   import_tasks: ios-compliance-logging.yml
   tags: 

@@ -40,5 +40,5 @@
 - name: Store result in file        # Store in a file the snmp status of each device
   template:
     src: snmp.j2
-    dest: "filesresult_snmp.txt"
+    dest: "{{result_dir}}/filesresult_snmp.txt"
   connection: local

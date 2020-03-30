@@ -1,0 +1,5 @@
+# aaa Compliance report:
+# ------------------------
+Host: R1, aaa configured, OK
+Host: R2, aaa not configured correctly, KO
+Host: R3, aaa not configured correctly, KO

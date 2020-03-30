@@ -52,5 +52,5 @@
 - name: Store result in file        # Store in a file the status of each device
   template:
     src: timestamp.j2
-    dest: "filesresult_timetamp.txt"
+    dest: "{{result_dir}}/filesresult_timetamp.txt"
   connection: local
