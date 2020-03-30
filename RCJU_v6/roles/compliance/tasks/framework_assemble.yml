@@ -8,9 +8,12 @@
 - name: DEBUG PWD
   shell:
     cmd: "pwd"
-- name: DEBUG LS
+- name: DEBUG LS {{result_dir}}/
   shell:
-    cmd: "ls -al ./"
+    cmd: "ls -al {{result_dir}}/"
+- name: DEBUG LS {{result_dir}}/roles/compliance/files/
+  shell:
+    cmd: "ls -al {{result_dir}}/roles/compliance/files/"
 # Send the result in email
 - name: Send mail using Ansible
   mail:
